@@ -1,5 +1,7 @@
 # MGI JSON Schema Collaborative Development Space
 
+The purpose of this repository is to enable community development of JSON schema within materials science and engineering. 
+
 ## Disclaimer
 
 This repository serves as a platform for open community collaboration
