@@ -1,0 +1,25 @@
+{
+    "$schema": "http://json-schema.org/draft-04/schema#",
+    "type": "object",
+    "title": "MaterialProperty",
+    "definitions": {"MaterialProperty": {
+        "type": "object",
+        "properties": {
+            "@context": {
+                "type": "string",
+                "default": "http://schema.org/"
+            },
+            "@type": {
+                "type": "string",
+                "default": "Dataset"
+            },
+            "subjectOf": {"$ref": "subjectOfProject.json#/definitions/subjectOfProject"},
+            "includedInDataCatalog": {"$ref": "includedInDataCatalog.json#/definitions/includedInDataCatalog"},
+            "material": {"$ref": "materialLinked.json#/definitions/materialLinked"},
+            "instrument": {"$ref": "instrumentLinked.json#/definitions/instrumentLinked"},
+            "measurementTechnique": {"$ref": "measurementTechnique.json#/definitions/measurementTechnique"},
+            "variableMeasured": {"$ref": "QuantitativePropertyValue.json#/definitions/QuantitativePropertyValue"}
+        },
+        "required": ["@type"]
+    }}
+}
