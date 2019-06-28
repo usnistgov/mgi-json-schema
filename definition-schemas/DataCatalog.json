@@ -1,0 +1,32 @@
+{
+    "$schema": "http://json-schema.org/draft-04/schema#",
+    "type": "object",
+    "title": "DataCatalog",
+    "definitions": {"DataCatalog": {
+        "type": "object",
+        "properties": {
+            "@context": {
+                "type": "string",
+                "default": "http://schema.org/"
+            },
+            "@type": {
+                "type": "string",
+                "default": "DataCatalog"
+            },
+            "dataset": {
+                "type": "array",
+                "title": "Datasets",
+                "uniqueItems": true,
+                "items": {
+                    "type": "string",
+                    "title": "Dataset",
+                    "cordra": {"type": {"handleReference": {"types": [
+                        "File",
+                        "TabularDataPackage"
+                    ]}}}
+                }
+            }
+        },
+        "required": ["@type"]
+    }}
+}

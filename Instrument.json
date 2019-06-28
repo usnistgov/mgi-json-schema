@@ -1,0 +1,12 @@
+{
+    "$schema": "http://json-schema.org/draft-04/schema#",
+    "type": "object",
+    "title": "Instrument",
+    "description": "This form is for describing an instrument and components/parts of an instrument. Instruments and parts are linked by their identifier.",
+    "allOf": [
+        {"$ref": "definition-schemas/CordraObjectID.json#/definitions/CordraObjectID"},
+        {"$ref": "definition-schemas/Thing.json#/definitions/Thing"},
+        {"$ref": "definition-schemas/CreativeWork.json#/definitions/CreativeWork"},
+        {"$ref": "definition-schemas/Instrument.json#/definitions/Instrument"}
+    ]
+}

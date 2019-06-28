@@ -1,0 +1,33 @@
+{
+    "$schema": "http://json-schema.org/draft-04/schema#",
+    "type": "object",
+    "title": "DefinedTermSet",
+    "definitions": {"DefinedTermSet": {
+        "type": "object",
+        "properties": {
+            "@context": {
+                "type": "string",
+                "default": "http://schema.org/"
+            },
+            "@type": {
+                "type": "string",
+                "default": "DefinedTermSet"
+            },
+            "hasDefinedTerm": {
+                "type": "array",
+                "title": "Has Defined Terms",
+                "uniqueItems": true,
+                "items": {
+                    "type": "string",
+                    "title": "Has Defined Term",
+                    "cordra": {"type": {"handleReference": {"types": ["DefinedTerm"]}}}
+                }
+            },
+            "uploadDate": {
+                "title": "Upload Date",
+                "type": "string"
+            }
+        },
+        "required": ["@type"]
+    }}
+}

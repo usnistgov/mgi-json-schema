@@ -1,0 +1,46 @@
+{
+    "$schema": "http://json-schema.org/draft-04/schema#",
+    "type": "object",
+    "title": "Collection",
+    "definitions": {"Collection": {
+        "type": "object",
+        "properties": {
+            "@context": {
+                "type": "string",
+                "default": "http://schema.org/"
+            },
+            "@type": {
+                "type": "string",
+                "default": "Collection"
+            },
+            "subjectOf": {"$ref": "subjectOfProject.json#/definitions/subjectOfProject"},
+            "hasPart": {
+                "type": "array",
+                "title": "Has Collection Items",
+                "uniqueItems": true,
+                "items": {
+                    "type": "string",
+                    "title": "Has Collection Item",
+                    "cordra": {"type": {"handleReference": {"types": [
+                        "Collection",
+                        "File",
+                        "Material",
+                        "Instrument",
+                        "TabularDataPackage"
+                    ]}}}
+                }
+            },
+            "isPartOf": {
+                "type": "array",
+                "title": "Is part of Collections",
+                "uniqueItems": true,
+                "items": {
+                    "type": "string",
+                    "title": "Is part of Collection",
+                    "cordra": {"type": {"handleReference": {"types": ["Collection"]}}}
+                }
+            }
+        },
+        "required": ["@type"]
+    }}
+}
