@@ -1,0 +1,15 @@
+{
+    "$schema": "http://json-schema.org/draft-04/schema#",
+    "type": "object",
+    "title": "measurementTechnique",
+    "definitions": {"measurementTechnique": {
+        "type": "array",
+        "title": "Measurement Techniques",
+        "uniqueItems": true,
+        "items": {
+            "type": "string",
+            "title": "Measurement Technique",
+            "cordra": {"type": {"handleReference": {"types": ["DefinedTerm"]}}}
+        }
+    }}
+}

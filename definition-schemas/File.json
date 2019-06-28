@@ -1,0 +1,30 @@
+{
+    "$schema": "http://json-schema.org/draft-04/schema#",
+    "type": "object",
+    "title": "File",
+    "definitions": {"File": {
+        "type": "object",
+        "properties": {
+            "@context": {
+                "type": "string",
+                "default": "http://schema.org/"
+            },
+            "@type": {
+                "type": "string",
+                "default": "Dataset"
+            },
+            "subjectOf": {"$ref": "subjectOfProject.json#/definitions/subjectOfProject"},
+            "measurementTechnique": {"$ref": "measurementTechnique.json#/definitions/measurementTechnique"},
+            "variableMeasured": {"$ref": "variableMeasuredDefinedTerm.json#/definitions/variableMeasuredDefinedTerm"},
+            "material": {"$ref": "materialLinked.json#/definitions/materialLinked"},
+            "instrument": {"$ref": "instrumentLinked.json#/definitions/instrumentLinked"},
+            "includedInDataCatalog": {"$ref": "includedInDataCatalog.json#/definitions/includedInDataCatalog"},
+            "uploadDate": {
+                "title": "Upload Date",
+                "type": "string"
+            },
+            "distribution": {"$ref": "DataDownload.json#/definitions/DataDownload"}
+        },
+        "required": ["@type"]
+    }}
+}

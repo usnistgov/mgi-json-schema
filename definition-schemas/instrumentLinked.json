@@ -1,0 +1,15 @@
+{
+    "$schema": "http://json-schema.org/draft-04/schema#",
+    "type": "object",
+    "title": "instrumentLinked",
+    "definitions": {"instrumentLinked": {
+        "type": "array",
+        "title": "Measurement Instruments",
+        "uniqueItems": true,
+        "items": {
+            "type": "string",
+            "title": "Measurement Instrument",
+            "cordra": {"type": {"handleReference": {"types": ["Instrument"]}}}
+        }
+    }}
+}

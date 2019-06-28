@@ -1,0 +1,21 @@
+{
+    "$schema": "http://json-schema.org/draft-04/schema#",
+    "type": "object",
+    "title": "DataDownload",
+    "definitions": {"DataDownload": {
+        "type": "object",
+        "title": "Distribution",
+        "properties": {
+            "@type": {
+                "type": "string",
+                "default": "DataDownload"
+            },
+            "url": {"type": "string"},
+            "encodingFormat": {
+                "type": "string",
+                "cordra": {"type": {"handleReference": {"types": ["DataType"]}}}
+            }
+        },
+        "required": ["@type"]
+    }}
+}

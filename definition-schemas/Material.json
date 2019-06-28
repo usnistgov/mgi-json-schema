@@ -1,0 +1,51 @@
+{
+    "$schema": "http://json-schema.org/draft-04/schema#",
+    "type": "object",
+    "title": "Material",
+    "definitions": {"Material": {
+        "type": "object",
+        "properties": {
+            "@context": {
+                "type": "string",
+                "default": "http://schema.org/"
+            },
+            "@type": {
+                "type": "string",
+                "default": "CreativeWork"
+            },
+            "subjectOf": {
+                "type": "array",
+                "title": "Linked Datasets/Project",
+                "uniqueItems": true,
+                "items": {
+                    "type": "string",
+                    "title": "Linked Dataset/Project",
+                    "cordra": {"type": {"handleReference": {"types": [
+                        "Project",
+                        "File",
+                        "TabularDataPackage"
+                    ]}}}
+                }
+            },
+            "isPartOf": {
+                "title": "Has Parent Materials",
+                "type": "array",
+                "items": {
+                    "title": "Has Parent Material",
+                    "type": "string",
+                    "cordra": {"type": {"handleReference": {"types": ["Material"]}}}
+                }
+            },
+            "hasPart": {
+                "title": "Has Child Materials",
+                "type": "array",
+                "items": {
+                    "title": "Has Child Material",
+                    "type": "string",
+                    "cordra": {"type": {"handleReference": {"types": ["Material"]}}}
+                }
+            }
+        },
+        "required": ["@type"]
+    }}
+}
