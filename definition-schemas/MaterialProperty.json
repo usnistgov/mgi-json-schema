@@ -16,6 +16,7 @@
             "subjectOf": {"$ref": "subjectOfProject.json#/definitions/subjectOfProject"},
             "includedInDataCatalog": {"$ref": "includedInDataCatalog.json#/definitions/includedInDataCatalog"},
             "material": {"$ref": "materialLinked.json#/definitions/materialLinked"},
+            "materialExtent": {"$ref": "QuantitativeValue.json#/definitions/QuantitativeValue"},
             "instrument": {"$ref": "instrumentLinked.json#/definitions/instrumentLinked"},
             "measurementTechnique": {"$ref": "measurementTechnique.json#/definitions/measurementTechnique"},
             "variableMeasured": {"$ref": "QuantitativePropertyValue.json#/definitions/QuantitativePropertyValue"}

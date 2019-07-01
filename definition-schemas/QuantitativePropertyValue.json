@@ -14,28 +14,7 @@
                 "type": "string",
                 "cordra": {"type": {"handleReference": {"types": ["DefinedTerm"]}}}
             },
-            "value": {
-                "title": "Quantitative Value",
-                "type": "object",
-                "properties": {
-                    "@type": {
-                        "type": "string",
-                        "default": "QuantitativeValue"
-                    },
-                    "value": {
-                        "title": "Value",
-                        "type": "number"
-                    },
-                    "unitText": {
-                        "title": "Unit Text",
-                        "type": "string"
-                    },
-                    "unitCode": {
-                        "title": "Unit Code",
-                        "type": "string"
-                    }
-                }
-            },
+            "value": {"$ref": "QuantitativeValue.json#/definitions/QuantitativeValue"},
             "valueReference": {
                 "type": "array",
                 "title": "Reference Values",
@@ -53,28 +32,7 @@
                             "type": "string",
                             "cordra": {"type": {"handleReference": {"types": ["DefinedTerm"]}}}
                         },
-                        "value": {
-                            "title": "Quantitative Value",
-                            "type": "object",
-                            "properties": {
-                                "@type": {
-                                    "type": "string",
-                                    "default": "QuantitativeValue"
-                                },
-                                "value": {
-                                    "title": "Value",
-                                    "type": "number"
-                                },
-                                "unitText": {
-                                    "title": "Unit Text",
-                                    "type": "string"
-                                },
-                                "unitCode": {
-                                    "title": "Unit Code",
-                                    "type": "string"
-                                }
-                            }
-                        }
+                        "value": {"$ref": "QuantitativeValue.json#/definitions/QuantitativeValue"}
                     }
                 }
             }
