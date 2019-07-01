@@ -24,6 +24,7 @@
                     "cordra": {"type": {"handleReference": {"types": [
                         "Collection",
                         "File",
+                        "MaterialProperty",
                         "Material",
                         "Instrument",
                         "TabularDataPackage"
