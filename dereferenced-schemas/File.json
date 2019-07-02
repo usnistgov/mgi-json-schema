@@ -362,6 +362,27 @@
                         }
                     }
                 },
+                "materialExtent": {
+                    "type": "object",
+                    "properties": {
+                        "@type": {
+                            "type": "string",
+                            "default": "QuantitativeValue"
+                        },
+                        "value": {
+                            "title": "Value",
+                            "type": "number"
+                        },
+                        "unitText": {
+                            "title": "Unit Text",
+                            "type": "string"
+                        },
+                        "unitCode": {
+                            "title": "Unit Code",
+                            "type": "string"
+                        }
+                    }
+                },
                 "instrument": {
                     "type": "array",
                     "title": "Measurement Instruments",

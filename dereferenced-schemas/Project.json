@@ -181,6 +181,7 @@
                                         "Collection",
                                         "File",
                                         "TabularDataPackage",
+                                        "MaterialProperty",
                                         "Material",
                                         "Instrument"
                                     ]

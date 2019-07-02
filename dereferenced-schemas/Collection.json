@@ -320,6 +320,7 @@
                                     "types": [
                                         "Collection",
                                         "File",
+                                        "MaterialProperty",
                                         "Material",
                                         "Instrument",
                                         "TabularDataPackage"

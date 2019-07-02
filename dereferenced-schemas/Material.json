@@ -302,7 +302,8 @@
                                     "types": [
                                         "Project",
                                         "File",
-                                        "TabularDataPackage"
+                                        "TabularDataPackage",
+                                        "MaterialProperty"
                                     ]
                                 }
                             }

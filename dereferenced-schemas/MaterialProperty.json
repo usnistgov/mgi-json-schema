@@ -344,6 +344,27 @@
                         }
                     }
                 },
+                "materialExtent": {
+                    "type": "object",
+                    "properties": {
+                        "@type": {
+                            "type": "string",
+                            "default": "QuantitativeValue"
+                        },
+                        "value": {
+                            "title": "Value",
+                            "type": "number"
+                        },
+                        "unitText": {
+                            "title": "Unit Text",
+                            "type": "string"
+                        },
+                        "unitCode": {
+                            "title": "Unit Code",
+                            "type": "string"
+                        }
+                    }
+                },
                 "instrument": {
                     "type": "array",
                     "title": "Measurement Instruments",
@@ -401,7 +422,6 @@
                             }
                         },
                         "value": {
-                            "title": "Quantitative Value",
                             "type": "object",
                             "properties": {
                                 "@type": {
@@ -419,6 +439,55 @@
                                 "unitCode": {
                                     "title": "Unit Code",
                                     "type": "string"
+                                }
+                            }
+                        },
+                        "valueReference": {
+                            "type": "array",
+                            "title": "Reference Values",
+                            "uniqueItems": true,
+                            "items": {
+                                "type": "object",
+                                "title": "Reference Value",
+                                "properties": {
+                                    "@type": {
+                                        "type": "string",
+                                        "default": "PropertyValue"
+                                    },
+                                    "propertyID": {
+                                        "title": "Property ID/Name",
+                                        "type": "string",
+                                        "cordra": {
+                                            "type": {
+                                                "handleReference": {
+                                                    "types": [
+                                                        "DefinedTerm"
+                                                    ]
+                                                }
+                                            }
+                                        }
+                                    },
+                                    "value": {
+                                        "type": "object",
+                                        "properties": {
+                                            "@type": {
+                                                "type": "string",
+                                                "default": "QuantitativeValue"
+                                            },
+                                            "value": {
+                                                "title": "Value",
+                                                "type": "number"
+                                            },
+                                            "unitText": {
+                                                "title": "Unit Text",
+                                                "type": "string"
+                                            },
+                                            "unitCode": {
+                                                "title": "Unit Code",
+                                                "type": "string"
+                                            }
+                                        }
+                                    }
                                 }
                             }
                         }
