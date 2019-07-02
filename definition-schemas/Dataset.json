@@ -1,0 +1,39 @@
+{
+    "$schema": "http://json-schema.org/draft-04/schema#",
+    "type": "object",
+    "title": "Dataset",
+    "definitions": {"Dataset": {
+        "type": "object",
+        "properties": {
+            "@context": {
+                "type": "string",
+                "default": "http://schema.org/"
+            },
+            "@type": {
+                "type": "string",
+                "default": "Dataset"
+            },
+            "subjectOf": {"$ref": "subjectOfProject.json#/definitions/subjectOfProject"},
+            "includedInDataCatalog": {"$ref": "includedInDataCatalog.json#/definitions/includedInDataCatalog"},
+            "material": {"$ref": "materialLinked.json#/definitions/materialLinked"},
+            "materialExtent": {"$ref": "QuantitativeValue.json#/definitions/QuantitativeValue"},
+            "instrument": {"$ref": "instrumentLinked.json#/definitions/instrumentLinked"},
+            "measurementTechnique": {"$ref": "measurementTechnique.json#/definitions/measurementTechnique"},
+            "hasPart": {
+                "type": "array",
+                "title": "Dataset Parts",
+                "uniqueItems": true,
+                "items": {
+                    "type": "string",
+                    "title": "Dataset Part",
+                    "cordra": {"type": {"handleReference": {"types": [
+                        "File",
+                        "MaterialProperty",
+                        "TabularDataPackage"
+                    ]}}}
+                }
+            }
+        },
+        "required": ["@type"]
+    }}
+}
