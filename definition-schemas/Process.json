@@ -119,8 +119,6 @@
                     ]
                 }
             },
-            "supply": {},
-            "tool": {},
             "totalTime": {"type": "string"},
             "yield": {"$ref": "QuantitativeValue.json#/definitions/QuantitativeValue"}
         },
