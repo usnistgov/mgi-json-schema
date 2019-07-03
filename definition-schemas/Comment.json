@@ -1,0 +1,27 @@
+{
+    "$schema": "http://json-schema.org/draft-04/schema#",
+    "type": "object",
+    "title": "Comment",
+    "definitions": {"Comment": {
+        "type": "object",
+        "properties": {
+            "@context": {
+                "type": "string",
+                "default": "http://schema.org/"
+            },
+            "@type": {
+                "type": "string",
+                "default": "Comment"
+            },
+            "text": {
+                "type": "string",
+                "title": "Text of the Comment",
+                "format": "textarea"
+            }
+        },
+        "required": [
+            "@type",
+            "text"
+        ]
+    }}
+}
