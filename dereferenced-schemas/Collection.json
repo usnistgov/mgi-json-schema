@@ -340,6 +340,7 @@
                                         "File",
                                         "MaterialProperty",
                                         "Material",
+                                        "Process",
                                         "Instrument",
                                         "TabularDataPackage",
                                         "Dataset"

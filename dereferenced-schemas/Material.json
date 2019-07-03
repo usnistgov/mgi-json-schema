@@ -307,6 +307,24 @@
                     "type": "string",
                     "default": "CreativeWork"
                 },
+                "exampleOfWork": {
+                    "type": "array",
+                    "title": "Processing History",
+                    "uniqueItems": true,
+                    "items": {
+                        "type": "string",
+                        "title": "Processing History",
+                        "cordra": {
+                            "type": {
+                                "handleReference": {
+                                    "types": [
+                                        "Process"
+                                    ]
+                                }
+                            }
+                        }
+                    }
+                },
                 "subjectOf": {
                     "type": "array",
                     "title": "Linked Datasets/Project",

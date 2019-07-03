@@ -13,6 +13,18 @@
                 "type": "string",
                 "default": "HowTo"
             },
+            "workExample": {
+                "type": "array",
+                "title": "Resulting Materials",
+                "uniqueItems": true,
+                "items": {
+                    "type": "string",
+                    "title": "Resulting Material",
+                    "cordra": {"type": {"handleReference": {"types": [
+                        "Material"
+                    ]}}}
+                }
+            },
             "estimatedCost": {
                 "type": "object",
                 "title": "MonetaryAmount",
