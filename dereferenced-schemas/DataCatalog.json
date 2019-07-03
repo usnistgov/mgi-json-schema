@@ -320,7 +320,8 @@
                                     "types": [
                                         "File",
                                         "TabularDataPackage",
-                                        "MaterialProperty"
+                                        "MaterialProperty",
+                                        "Dataset"
                                     ]
                                 }
                             }

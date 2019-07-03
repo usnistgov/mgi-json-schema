@@ -24,7 +24,8 @@
                         "Project",
                         "File",
                         "TabularDataPackage",
-                        "MaterialProperty"
+                        "MaterialProperty",
+                        "Dataset"
                     ]}}}
                 }
             },

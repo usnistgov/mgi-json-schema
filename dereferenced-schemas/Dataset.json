@@ -434,7 +434,8 @@
                                     "types": [
                                         "File",
                                         "MaterialProperty",
-                                        "TabularDataPackage"
+                                        "TabularDataPackage",
+                                        "Dataset"
                                     ]
                                 }
                             }

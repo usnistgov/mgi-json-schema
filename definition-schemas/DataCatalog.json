@@ -23,7 +23,8 @@
                     "cordra": {"type": {"handleReference": {"types": [
                         "File",
                         "TabularDataPackage",
-                        "MaterialProperty"
+                        "MaterialProperty",
+                        "Dataset"
                     ]}}}
                 }
             }
