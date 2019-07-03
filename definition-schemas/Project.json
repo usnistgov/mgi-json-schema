@@ -82,7 +82,8 @@
                         "TabularDataPackage",
                         "MaterialProperty",
                         "Material",
-                        "Instrument"
+                        "Instrument",
+                        "Dataset"
                     ]}}}
                 }
             }

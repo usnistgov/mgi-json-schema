@@ -275,6 +275,24 @@
                 "datePublished": {
                     "title": "Date Published",
                     "type": "string"
+                },
+                "comment": {
+                    "type": "array",
+                    "title": "Comments",
+                    "uniqueItems": true,
+                    "items": {
+                        "type": "string",
+                        "title": "Comment",
+                        "cordra": {
+                            "type": {
+                                "handleReference": {
+                                    "types": [
+                                        "Comment"
+                                    ]
+                                }
+                            }
+                        }
+                    }
                 }
             }
         },
@@ -303,7 +321,8 @@
                                         "Project",
                                         "File",
                                         "TabularDataPackage",
-                                        "MaterialProperty"
+                                        "MaterialProperty",
+                                        "Dataset"
                                     ]
                                 }
                             }

@@ -1,8 +1,8 @@
 {
     "$schema": "http://json-schema.org/draft-04/schema#",
     "type": "object",
-    "title": "Dataset",
-    "description": "This schema is for describing a Dataset in Cordra.",
+    "title": "SoftwareSourceCode",
+    "description": "This schema is for describing a Software Source Code in Cordra.",
     "allOf": [
         {
             "type": "object",
@@ -305,137 +305,28 @@
                 },
                 "@type": {
                     "type": "string",
-                    "default": "Dataset"
+                    "default": "SoftwareSourceCode"
                 },
-                "subjectOf": {
+                "codeRepository": {
+                    "type": "string",
+                    "title": "Code Repository URL"
+                },
+                "programmingLanguage": {
+                    "type": "string",
+                    "title": "Programming Language"
+                },
+                "targetProduct": {
                     "type": "array",
-                    "title": "Parent Projects",
+                    "title": "Software Applications",
                     "uniqueItems": true,
                     "items": {
                         "type": "string",
-                        "title": "Parent Project",
+                        "title": "Software Application",
                         "cordra": {
                             "type": {
                                 "handleReference": {
                                     "types": [
-                                        "Project"
-                                    ]
-                                }
-                            }
-                        }
-                    }
-                },
-                "includedInDataCatalog": {
-                    "type": "array",
-                    "title": "Included In Data Catalogs",
-                    "uniqueItems": true,
-                    "items": {
-                        "type": "string",
-                        "title": "Included In Data Catalog",
-                        "cordra": {
-                            "type": {
-                                "handleReference": {
-                                    "types": [
-                                        "DataCatalog"
-                                    ]
-                                }
-                            }
-                        }
-                    }
-                },
-                "material": {
-                    "type": "array",
-                    "title": "Materials Measured",
-                    "description": "This field is for linking to any measurable substance (e.g., sample, specimen, material, chemical, etc.), or a specific sup-sample (e.g., location on a larger artifact, sub-portion of a larger artifact, item within a collection of specimens, etc.).",
-                    "uniqueItems": true,
-                    "items": {
-                        "type": "string",
-                        "title": "Material Measured",
-                        "cordra": {
-                            "type": {
-                                "handleReference": {
-                                    "types": [
-                                        "Material"
-                                    ]
-                                }
-                            }
-                        }
-                    }
-                },
-                "materialExtent": {
-                    "type": "object",
-                    "properties": {
-                        "@type": {
-                            "type": "string",
-                            "default": "QuantitativeValue"
-                        },
-                        "value": {
-                            "title": "Value",
-                            "type": "number"
-                        },
-                        "unitText": {
-                            "title": "Unit Text",
-                            "type": "string"
-                        },
-                        "unitCode": {
-                            "title": "Unit Code",
-                            "type": "string"
-                        }
-                    }
-                },
-                "instrument": {
-                    "type": "array",
-                    "title": "Measurement Instruments and Modelling/Simulation/Prediction Software",
-                    "uniqueItems": true,
-                    "items": {
-                        "type": "string",
-                        "title": "Measurement Instrument and Modelling/Simulation/Prediction Software",
-                        "cordra": {
-                            "type": {
-                                "handleReference": {
-                                    "types": [
-                                        "Instrument",
-                                        "SoftwareApplication",
-                                        "SoftwareSourceCode"
-                                    ]
-                                }
-                            }
-                        }
-                    }
-                },
-                "measurementTechnique": {
-                    "type": "array",
-                    "title": "Measurement Techniques",
-                    "uniqueItems": true,
-                    "items": {
-                        "type": "string",
-                        "title": "Measurement Technique",
-                        "cordra": {
-                            "type": {
-                                "handleReference": {
-                                    "types": [
-                                        "DefinedTerm"
-                                    ]
-                                }
-                            }
-                        }
-                    }
-                },
-                "hasPart": {
-                    "type": "array",
-                    "title": "Dataset Parts",
-                    "uniqueItems": true,
-                    "items": {
-                        "type": "string",
-                        "title": "Dataset Part",
-                        "cordra": {
-                            "type": {
-                                "handleReference": {
-                                    "types": [
-                                        "File",
-                                        "MaterialProperty",
-                                        "TabularDataPackage",
-                                        "Dataset"
+                                        "SoftwareApplication"
                                     ]
                                 }
                             }

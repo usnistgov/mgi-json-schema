@@ -1,0 +1,37 @@
+{
+    "$schema": "http://json-schema.org/draft-04/schema#",
+    "type": "object",
+    "title": "SoftwareSourceCode",
+    "definitions": {"SoftwareSourceCode": {
+        "type": "object",
+        "properties": {
+            "@context": {
+                "type": "string",
+                "default": "http://schema.org/"
+            },
+            "@type": {
+                "type": "string",
+                "default": "SoftwareSourceCode"
+            },
+            "codeRepository": {
+                "type": "string",
+                "title": "Code Repository URL"
+            },
+            "programmingLanguage": {
+                "type": "string",
+                "title": "Programming Language"
+            },
+            "targetProduct": {
+                "type": "array",
+                "title": "Software Applications",
+                "uniqueItems": true,
+                "items": {
+                    "type": "string",
+                    "title": "Software Application",
+                    "cordra": {"type": {"handleReference": {"types": ["SoftwareApplication"]}}}
+                }
+            }
+        },
+        "required": ["@type"]
+    }}
+}

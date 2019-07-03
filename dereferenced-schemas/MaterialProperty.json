@@ -275,6 +275,24 @@
                 "datePublished": {
                     "title": "Date Published",
                     "type": "string"
+                },
+                "comment": {
+                    "type": "array",
+                    "title": "Comments",
+                    "uniqueItems": true,
+                    "items": {
+                        "type": "string",
+                        "title": "Comment",
+                        "cordra": {
+                            "type": {
+                                "handleReference": {
+                                    "types": [
+                                        "Comment"
+                                    ]
+                                }
+                            }
+                        }
+                    }
                 }
             }
         },
@@ -367,16 +385,18 @@
                 },
                 "instrument": {
                     "type": "array",
-                    "title": "Measurement Instruments",
+                    "title": "Measurement Instruments and Modelling/Simulation/Prediction Software",
                     "uniqueItems": true,
                     "items": {
                         "type": "string",
-                        "title": "Measurement Instrument",
+                        "title": "Measurement Instrument and Modelling/Simulation/Prediction Software",
                         "cordra": {
                             "type": {
                                 "handleReference": {
                                     "types": [
-                                        "Instrument"
+                                        "Instrument",
+                                        "SoftwareApplication",
+                                        "SoftwareSourceCode"
                                     ]
                                 }
                             }
