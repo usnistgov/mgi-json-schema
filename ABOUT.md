@@ -1,6 +1,6 @@
 # Preface
 
-The summary below has been created for the specific purpose requesting feedback. Please provide feedback via GitHub issue or by contacting sing [zachary.trautt@nist.gov](mailto:zachary.trautt@nist.gov?subject=mgi-json-schema).
+The summary below has been created for the specific purpose requesting feedback. Please provide feedback via GitHub issue or by contacting [zachary.trautt@nist.gov](mailto:zachary.trautt@nist.gov?subject=mgi-json-schema).
 
 # Background
 
@@ -97,6 +97,8 @@ materials information storage and communication methods*
 This highlights the need for renewed focus and perhaps a different approach in the development of essential materials data exchange protocols.
 
 # Introduction
+
+
 
 # Methods
 
