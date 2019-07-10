@@ -79,18 +79,20 @@ Within materials science and engineering, a common way to divide the problem spa
 ![A simplified comparison of coupled and decoupled web application architecture.](img/monolithic-vs-microservice.svg)
 **Figure 1:** A simplified comparison of (a) coupled and (b) decoupled web application architectures.
 
-# Introduction
-
 Two documents, which were published about a decade apart, have made similar statements regarding the state of interoperability in materials science and engineering:
 
-**Integrated Computational Materials Engineering - A Transformational Discipline for Improved Competitiveness and National Security**
+**[2008] Integrated Computational Materials Engineering - A Transformational Discipline for Improved Competitiveness and National Security**
 [https://nap.edu/12199](https://nap.edu/12199)
 > *Currently the schemas for describing the breadth of database types are at varying degrees of maturity.*
 
-**Vision 2040: A Roadmap for Integrated, Multiscale Modeling and Simulation of Materials and Systems**
+**[2018] Vision 2040: A Roadmap for Integrated, Multiscale Modeling and Simulation of Materials and Systems**
 [https://ntrs.nasa.gov/search.jsp?R=20180002010](https://ntrs.nasa.gov/search.jsp?R=20180002010)
 > *Critical Gap: No widely accepted community standards or schema for
 materials information storage and communication methods*
+
+This highlights the need for renewed focus and perhaps a different approach in the development of essential materials data exchange protocols.
+
+# Introduction
 
 # Methods
 
