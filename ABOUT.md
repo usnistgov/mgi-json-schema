@@ -1,3 +1,7 @@
+# Preface
+
+The summary below has been created for the specific purpose requesting feedback. Please provide feedback via GitHub issue or by contacting sing [zachary.trautt@nist.gov](mailto:zachary.trautt@nist.gov?subject=mgi-json-schema).
+
 # Background
 
 The [Materials Genome Initiative](https://mgi.gov/) (MGI) is a multi-agency initiative designed to create a new era of policy, resources, and infrastructure that support U.S. institutions in the effort to discover, manufacture, and deploy advanced materials twice as fast, at a fraction of the cost. The missions of the MGI and National Institute of Standards and Technology (NIST) are tightly aligned. NIST has assumed a leadership role within the MGI, where one focus is the establishment of essential materials data and model exchange protocols. Read more about the [MGI at NIST](https://www.nist.gov/mgi).
