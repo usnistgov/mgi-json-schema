@@ -15,9 +15,9 @@ We have observed that these couplings have limited the pace and comprehensivenes
 
 ## Separation of Concerns
 
-### Comparison of Coupled and Decoupled Syntactic and Semantic Interoperability
+### Comparison of Coupled and Decoupled Syntactic and Semantic Representations
 
-A simple example of **coupled** syntactic and semantic interoperability is shown below:
+A simple example of **coupled** syntactic and semantic representation is shown below:
 ```
 {
     "youngsModulus": {
@@ -36,7 +36,7 @@ A simple example of **coupled** syntactic and semantic interoperability is shown
 ```
 In this example, a semantic concept is explicitly invoked in the underlying data model where `"youngsModulus"` is an expected key name. This tactic, while valid, results in client applications that must have domain-specific understanding of the underlying data model, which drastically increases the overall development burden.
 
-A simple example of **decoupled** syntactic and semantic interoperability is shown below:
+A simple example of **decoupled** syntactic and semantic representation is shown below:
 
 ```
 {
@@ -63,7 +63,7 @@ A simple example of **decoupled** syntactic and semantic interoperability is sho
 }
 ```
 
-In this example, the underlying data model is completely agnostic to the existence of the domain-specific concept of `"Young's Modulus"`. The underlying data model would specify a syntactic representation for the domain agnostic concept of a `"quantity"`. This tactic allows for domain agnostic client applications and reduces the overall development burden. The named concept of `"Young's Modulus"` can also have an associated identifier, which could enable direct linkage to semantic assets such as ontologies, taxonomies, etc. Such concepts can be defined using technologies such as [https://www.w3.org/OWL/](https://www.w3.org/OWL/).
+In this example, the underlying data model is completely agnostic to the existence of the domain-specific concept of `"Young's Modulus"`. The underlying data model would specify a syntactic representation for the domain agnostic concept of a `"quantity"`. This tactic allows for the development of domain agnostic client applications and reduces the overall development burden. The named concept of `"Young's Modulus"` can also have an associated persistent identifier, which could enable direct linkage to semantic assets such as ontologies, taxonomies, etc. Such concepts can be defined using technologies such as [https://www.w3.org/OWL/](https://www.w3.org/OWL/).
 
 ### Comparison of Coupled and Decoupled Model Web Applications
 
@@ -98,7 +98,30 @@ This highlights the need for renewed focus and perhaps a different approach in t
 
 # Introduction
 
-
+The focus of this project is demonstrating maximal usage of existing specifications for syntactic and semantic representation of data and metadata within materials science and engineering. The benefit of maximally leveraging existing specifications is that it enables one to also leverage existing client tools. Within the domain of materials data infrastructure (MDI) and information and communication technologies (ICT) more broadly, there has been numerous efforts and developments. A few that are specifically relevant are:
+- Research Data Alliance (RDA) Activities:
+  - [RDA/CODATA Materials Data, Infrastructure & Interoperability IG](https://www.rd-alliance.org/groups/rdacodata-materials-data-infrastructure-interoperability-ig.html)
+  - [Data Type Registries WG](https://rd-alliance.org/groups/data-type-registries-wg.html)
+  - [Persistent Identification of Instruments WG](https://www.rd-alliance.org/groups/persistent-identification-instruments-wg)
+  - [Physical Samples and Collections in the Research Data Ecosystem IG](https://rd-alliance.org/groups/physical-samples-and-collections-research-data-ecosystem-ig)
+- Materials-related Ontologies, Taxonomies, etc.:
+  - [International Materials Ontology Interest Group](https://emmc.info/matontoint/)
+  - [QUDT Ontologies](http://www.qudt.org/)
+  - [MaterialWays](http://wiki.knoesis.org/index.php/MaterialWays)
+  - [MatVocab](http://wiki.knoesis.org/index.php/MatVocab)
+  - [Ontologies for the MatOnto Project](https://github.com/inovexcorp/MatOnto-Ontologies)
+  - [Simple Knowledge Organization System (SKOS) version of Materials Data Vocabulary](https://doi.org/10.18434/T4/1435037)
+  - [NASA Thesaurus](https://www.sti.nasa.gov/nasa-thesaurus/)
+  - [Materials Property Ontology](https://github.com/cpauloh/semmd/tree/master/onto)
+  - [Semantic Materials, Manufacturing, and Design](https://github.com/cpauloh/semmd)
+  - [Materials Ontology: An Infrastructure for Exchanging Materials Information and Knowledge](https://doi.org/10.2481/dsj.008-041)
+  - [PREMΛP: Knowledge Driven Design of Materials and Engineering Process](https://doi.org/10.1007/978-81-322-1050-4_105)
+  - [A semantic knowledge management system for laminated composites](https://doi.org/10.1016/j.aei.2013.12.004)
+  - [Material Class vocabulary](https://vocabs.ands.org.au/viewById/187)
+  - [The Plinius ontology of ceramic materials](https://pdfs.semanticscholar.org/5f28/06ddecc02786a84a051a2ed0e8f8f20af0c6.pdf)
+  - [A Design for Additive Manufacturing Ontology](https://doi.org/10.1115/1.4035787)
+- Industry-lead development of protocols for machine-actionable representation of data and metadata:
+  - [https://schema.org/Dataset](https://schema.org/Dataset)
 
 # Methods
 
