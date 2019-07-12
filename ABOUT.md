@@ -104,6 +104,7 @@ The focus of this project is demonstrating maximal usage of existing specificati
   - [Data Type Registries WG](https://rd-alliance.org/groups/data-type-registries-wg.html)
   - [Persistent Identification of Instruments WG](https://www.rd-alliance.org/groups/persistent-identification-instruments-wg)
   - [Physical Samples and Collections in the Research Data Ecosystem IG](https://rd-alliance.org/groups/physical-samples-and-collections-research-data-ecosystem-ig)
+  - [Research Metadata Schemas WG](https://www.rd-alliance.org/groups/research-metadata-schemas-wg)
 - Materials-related Ontologies, Taxonomies, etc.:
   - [International Materials Ontology Interest Group](https://emmc.info/matontoint/)
   - [QUDT Ontologies](http://www.qudt.org/)
@@ -122,8 +123,82 @@ The focus of this project is demonstrating maximal usage of existing specificati
   - [A Design for Additive Manufacturing Ontology](https://doi.org/10.1115/1.4035787)
 - Industry-lead development of protocols for machine-actionable representation of data and metadata:
   - [https://schema.org/Dataset](https://schema.org/Dataset)
+    - See also: [Schema.org: evolution of structured data on the web](https://doi.org/10.1145/2844544)
 
 # Methods
+
+Our approach aims to address the following goals:
+
+- Embrace persistent identifiers for samples, instruments, and data
+- Embrace existing specifications for syntactic representation of data (i.e., existing schemas)
+- Embrace existing specifications for semantic meaning of data (i.e., existing ontologies, vocabularies, taxonomies, etc.)
+- Embrace web application design principles where the user interface (UI) layer is decoupled from the data management layer, where the UI layer interacts with the REST API of the data management layer.
+
+Due to the growing adoption of Schema.org specifications among private sector ICT stakeholders, we adopt it as the primary mode of syntactic representation, and extend it where necessary for concepts specific to materials science and engineering. We note that Schema.org is used at [https://www.data.gov/](https://www.data.gov/) and is listed as a [resource](https://resources.data.gov/tools/) for those building infrastructure within Federal Agencies. To test the efficacy of this approach in action, we utilize [Cordra](https://www.cordra.org/) as the data management layer and natively store metadata and some data in JSON, which largely conforms to Schema.org specifications. As we are extending Schema.org specifications for use in materials science and engineering, this could serve as a basis for forming Schema.org sub-communities in materials science and engineering. Schema.org sub-communities already exist in:
+
+- [Life science](https://www.w3.org/community/bioschemas/)
+- [Medical, healthcare and life-science](https://www.w3.org/community/schemed/)
+- [Automotive](https://www.w3.org/community/gao/)
+- [Sports](https://www.w3.org/community/sport-schema/)
+
+The core of our approach centers around the use of the [Dataset](https://schema.org/Dataset) specification at [https://schema.org/](https://schema.org/). We note that the [Dataset](https://schema.org/Dataset) has existing vocabulary relevant to materials science and engineering, including:
+
+- [material](https://schema.org/material)
+  - This is inherited from CreativeWork. Example: a URL link to the record describing the material. Note, the representation of material is one area which could be extended by the materials community (discussed below).
+- [measurementTechnique](https://schema.org/measurementTechnique)
+  - Example: Uniaxial tensile test
+- [distribution](https://schema.org/distribution)
+  - Example: File produced by the instrument
+- [variableMeasured](https://schema.org/variableMeasured)
+  - Example: A [QuantitativeValue](https://schema.org/QuantitativeValue) representing the derived quantity and units of Young's Modulus.
+
+Therefore, the [Dataset](https://schema.org/Dataset) specification can already represent raw and derived data relevant to materials science and engineering:
+
+```
+{
+    "@context": "http://schema.org/",
+    "@type": "Dataset",
+    "name": "Demonstration Dataset",
+    "measurementTechnique": "Uniaxial Tensile Test",
+    "material": "https://www.nist.gov/example/sample/123.json",
+    "distribution": {
+        "@type": "DataDownload",
+        "url": "https://www.nist.gov/example/data/download/tensile-test-123.csv",
+        "encodingFormat": "text/csv"
+    },
+    "variableMeasured": [
+        {
+            "@type": "PropertyValue",
+            "propertyID": "Young's Modulus",
+            "value": {
+                "@type": "QuantitativeValue",
+                "value": 179,
+                "unitText": "GPa"
+            }
+        },
+        {
+            "@type": "PropertyValue",
+            "propertyID": "Ultimate Tensile Strength",
+            "value": {
+                "@type": "QuantitativeValue",
+                "value": 855,
+                "unitText": "MPa"
+            }
+        },
+        {
+            "@type": "PropertyValue",
+            "propertyID": "Yield Strength",
+            "value": {
+                "@type": "QuantitativeValue",
+                "value": 494,
+                "unitText": "MPa"
+            }
+        }
+    ]
+}
+```
+
+In the example above, the values of `"Uniaxial Tensile Test"`, `"Young's Modulus"`, `"Ultimate Tensile Strength"`, and `"Yield Strength"` are free-form text. In later sections, we will discuss replacing thise free-form text fields with direct links to ontologies, taxonomies, vocabularies, and other semantic assets. Try pasting the above JSON code snippet into the [Google Structured Data Testing Tool](https://search.google.com/structured-data/testing-tool) to see how a major search engine will parse this data and metadata.
 
 ## Simplified Object Relational Model
 
