@@ -200,6 +200,8 @@ Therefore, the [Dataset](https://schema.org/Dataset) specification can already r
 
 In the example above, the values of `"Uniaxial Tensile Test"`, `"Young's Modulus"`, `"Ultimate Tensile Strength"`, and `"Yield Strength"` are free-form text. In later sections, we will discuss replacing thise free-form text fields with direct links to ontologies, taxonomies, vocabularies, and other semantic assets. Try pasting the above JSON code snippet into the [Google Structured Data Testing Tool](https://search.google.com/structured-data/testing-tool) to see how a major search engine will parse this data and metadata.
 
+As mentioned previously, the [Dataset](https://schema.org/Dataset) is at the core of our approach. However, there are many other types of information that support a richly-described dataset. We describe our object relational model in the next section.
+
 ## Simplified Object Relational Model
 
 ![A generalized Object Relational Model](img/Material-Dataset-Object-Relation-Simple.svg)
