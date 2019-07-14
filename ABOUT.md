@@ -169,7 +169,7 @@ Therefore, the [Dataset](https://schema.org/Dataset) specification can already r
     "variableMeasured": [
         {
             "@type": "PropertyValue",
-            "propertyID": "Young's Modulus",
+            "name": "Young's Modulus",
             "value": {
                 "@type": "QuantitativeValue",
                 "value": 179,
@@ -178,7 +178,7 @@ Therefore, the [Dataset](https://schema.org/Dataset) specification can already r
         },
         {
             "@type": "PropertyValue",
-            "propertyID": "Ultimate Tensile Strength",
+            "name": "Ultimate Tensile Strength",
             "value": {
                 "@type": "QuantitativeValue",
                 "value": 855,
@@ -187,7 +187,7 @@ Therefore, the [Dataset](https://schema.org/Dataset) specification can already r
         },
         {
             "@type": "PropertyValue",
-            "propertyID": "Yield Strength",
+            "name": "Yield Strength",
             "value": {
                 "@type": "QuantitativeValue",
                 "value": 494,
