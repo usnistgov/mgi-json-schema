@@ -43,19 +43,19 @@ A simple example of **decoupled** syntactic and semantic representation is shown
     "quantity": [
         {
             "name": "Young's Modulus",
-            "identifier": "doi:abc/123",
+            "identifier": "https://www.nist.gov/example/ontology/matsci.owl#123",
             "value": 179,
             "unit": "GPa"
         },
         {
             "name": "Ultimate Tensile Strength",
-            "identifier": "doi:abc/234",
+            "identifier": "https://www.nist.gov/example/ontology/matsci.owl#234",
             "value": 855,
             "unit": "MPa"
         },
         {
             "name": "Yield Strength",
-            "identifier": "doi:abc/345",
+            "identifier": "https://www.nist.gov/example/ontology/matsci.owl#345",
             "value": 494,
             "unit": "MPa"
         }
@@ -170,35 +170,29 @@ Therefore, the [Dataset](https://schema.org/Dataset) specification can already r
         {
             "@type": "PropertyValue",
             "name": "Young's Modulus",
-            "value": {
-                "@type": "QuantitativeValue",
-                "value": 179,
-                "unitText": "GPa"
-            }
+            "propertyID": "https://www.nist.gov/example/ontology/matsci.owl#123",
+            "value": 179,
+            "unitText": "GPa"
         },
         {
             "@type": "PropertyValue",
             "name": "Ultimate Tensile Strength",
-            "value": {
-                "@type": "QuantitativeValue",
-                "value": 855,
-                "unitText": "MPa"
-            }
+            "propertyID": "https://www.nist.gov/example/ontology/matsci.owl#234",
+            "value": 855,
+            "unitText": "MPa"
         },
         {
             "@type": "PropertyValue",
             "name": "Yield Strength",
-            "value": {
-                "@type": "QuantitativeValue",
-                "value": 494,
-                "unitText": "MPa"
-            }
+            "propertyID": "https://www.nist.gov/example/ontology/matsci.owl#345",
+            "value": 494,
+            "unitText": "MPa"
         }
     ]
 }
 ```
 
-In the example above, the values of `"Uniaxial Tensile Test"`, `"Young's Modulus"`, `"Ultimate Tensile Strength"`, and `"Yield Strength"` are free-form text. In later sections, we will discuss replacing thise free-form text fields with direct links to ontologies, taxonomies, vocabularies, and other semantic assets. Try pasting the above JSON code snippet into the [Google Structured Data Testing Tool](https://search.google.com/structured-data/testing-tool) to see how a major search engine will parse this data and metadata.
+In the example above, the values of `"Uniaxial Tensile Test"`, `"Young's Modulus"`, `"Ultimate Tensile Strength"`, and `"Yield Strength"` are free-form text. These concepts can be linked to an ontology, vocabulary, or other semantic asset by use of the `"propertyID"` field. In later sections, we will discuss how the use of ontologies and other semantic assets can be made easy and programatic in Cordra. Try pasting the above JSON code snippet into the [Google Structured Data Testing Tool](https://search.google.com/structured-data/testing-tool) to see how a major search engine will parse this data and metadata.
 
 As mentioned previously, the [Dataset](https://schema.org/Dataset) is at the core of our approach. However, there are many other types of information that support a richly-described dataset. We describe our object relational model in the next section.
 
