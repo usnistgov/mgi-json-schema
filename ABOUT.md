@@ -204,6 +204,8 @@ As mentioned previously, the [Dataset](https://schema.org/Dataset) is at the cor
 
 ## Simplified Object Relational Model
 
+At the database level (and using [Cordra](https://www.cordra.org/) as a model system), we represent information as a graph of linked objects. We begin to show this in Figure 2, which intended to illustrate all the records surrounding the experimental measurement or theoretical prediction of a material. In Figure 2, every box with curved bottom is meant to illustrate a unique record and every line is meant to illustrate a link or relationship between records. The “crows feet” shapes shown in the dataset region of the figure is meant to represent many links to any of the records within the region. For example, a [Person](https://schema.org/Person) can be a responsible for maintaining an instrument and another [Person](https://schema.org/Person) can be the creator of a [Dataset](https://schema.org/Dataset).
+
 ![A generalized Object Relational Model](img/Material-Dataset-Object-Relation-Simple.svg)
 **Figure 2:** A simplified Object Relational Model.
 
