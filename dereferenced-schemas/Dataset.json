@@ -369,6 +369,10 @@
                             "type": "string",
                             "default": "QuantitativeValue"
                         },
+                        "name": {
+                            "type": "string",
+                            "title": "Name"
+                        },
                         "value": {
                             "title": "Value",
                             "type": "number"

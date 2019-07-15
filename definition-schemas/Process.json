@@ -111,7 +111,7 @@
                                             "measurementTechnique": {"$ref": "measurementTechnique.json#/definitions/measurementTechnique"},
                                             "variableMeasured": {
                                                 "type": "array",
-                                                "items": {"$ref": "QuantitativePropertyValue.json#/definitions/QuantitativePropertyValue"}
+                                                "items": {"$ref": "variableMeasured.json#/definitions/variableMeasured"}
                                             }
                                         },
                                         "required": ["@type"]

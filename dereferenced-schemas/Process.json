@@ -465,6 +465,10 @@
                                                             "type": "string",
                                                             "default": "QuantitativeValue"
                                                         },
+                                                        "name": {
+                                                            "type": "string",
+                                                            "title": "Name"
+                                                        },
                                                         "value": {
                                                             "title": "Value",
                                                             "type": "number"
@@ -526,6 +530,10 @@
                                                                 "type": "string",
                                                                 "default": "PropertyValue"
                                                             },
+                                                            "name": {
+                                                                "type": "string",
+                                                                "title": "Name"
+                                                            },
                                                             "propertyID": {
                                                                 "title": "Property ID/Name",
                                                                 "type": "string",
@@ -540,25 +548,16 @@
                                                                 }
                                                             },
                                                             "value": {
-                                                                "type": "object",
-                                                                "properties": {
-                                                                    "@type": {
-                                                                        "type": "string",
-                                                                        "default": "QuantitativeValue"
-                                                                    },
-                                                                    "value": {
-                                                                        "title": "Value",
-                                                                        "type": "number"
-                                                                    },
-                                                                    "unitText": {
-                                                                        "title": "Unit Text",
-                                                                        "type": "string"
-                                                                    },
-                                                                    "unitCode": {
-                                                                        "title": "Unit Code",
-                                                                        "type": "string"
-                                                                    }
-                                                                }
+                                                                "title": "Value",
+                                                                "type": "number"
+                                                            },
+                                                            "unitText": {
+                                                                "title": "Unit Text",
+                                                                "type": "string"
+                                                            },
+                                                            "unitCode": {
+                                                                "title": "Unit Code",
+                                                                "type": "string"
                                                             },
                                                             "valueReference": {
                                                                 "type": "array",
@@ -571,6 +570,10 @@
                                                                         "@type": {
                                                                             "type": "string",
                                                                             "default": "PropertyValue"
+                                                                        },
+                                                                        "name": {
+                                                                            "type": "string",
+                                                                            "title": "Name"
                                                                         },
                                                                         "propertyID": {
                                                                             "title": "Property ID/Name",
@@ -586,25 +589,16 @@
                                                                             }
                                                                         },
                                                                         "value": {
-                                                                            "type": "object",
-                                                                            "properties": {
-                                                                                "@type": {
-                                                                                    "type": "string",
-                                                                                    "default": "QuantitativeValue"
-                                                                                },
-                                                                                "value": {
-                                                                                    "title": "Value",
-                                                                                    "type": "number"
-                                                                                },
-                                                                                "unitText": {
-                                                                                    "title": "Unit Text",
-                                                                                    "type": "string"
-                                                                                },
-                                                                                "unitCode": {
-                                                                                    "title": "Unit Code",
-                                                                                    "type": "string"
-                                                                                }
-                                                                            }
+                                                                            "title": "Value",
+                                                                            "type": "number"
+                                                                        },
+                                                                        "unitText": {
+                                                                            "title": "Unit Text",
+                                                                            "type": "string"
+                                                                        },
+                                                                        "unitCode": {
+                                                                            "title": "Unit Code",
+                                                                            "type": "string"
                                                                         }
                                                                     }
                                                                 }
@@ -641,6 +635,10 @@
                         "@type": {
                             "type": "string",
                             "default": "QuantitativeValue"
+                        },
+                        "name": {
+                            "type": "string",
+                            "title": "Name"
                         },
                         "value": {
                             "title": "Value",

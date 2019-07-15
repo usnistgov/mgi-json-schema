@@ -19,7 +19,7 @@
             "materialExtent": {"$ref": "QuantitativeValue.json#/definitions/QuantitativeValue"},
             "instrument": {"$ref": "instrumentLinked.json#/definitions/instrumentLinked"},
             "measurementTechnique": {"$ref": "measurementTechnique.json#/definitions/measurementTechnique"},
-            "variableMeasured": {"$ref": "QuantitativePropertyValue.json#/definitions/QuantitativePropertyValue"}
+            "variableMeasured": {"$ref": "variableMeasured.json#/definitions/variableMeasured"}
         },
         "required": ["@type"]
     }}
