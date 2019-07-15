@@ -18,6 +18,8 @@ We have observed that these couplings have limited the pace and comprehensivenes
 ### Comparison of Coupled and Decoupled Syntactic and Semantic Representations
 
 A simple example of **coupled** syntactic and semantic representation is shown below:
+
+###### code-coupled-interoperability
 ```
 {
     "youngsModulus": {
@@ -38,6 +40,7 @@ In this example, a semantic concept is explicitly invoked in the underlying data
 
 A simple example of **decoupled** syntactic and semantic representation is shown below:
 
+###### code-uncoupled-interoperability
 ```
 {
     "quantity": [
@@ -80,6 +83,7 @@ The use of decoupled web application architectures has experienced growing adopt
 
 Within materials science and engineering, a common way to divide the problem space is data producers vs. data consumers. When applied to web applications, data producers and data consumers have different requirements. We have observed that these differences are the largest at the human interface layer and smaller at the other layers. For this use case, in the coupled paradigm (Figure 1.a), a data producer would be required to replicate their data in the system designed for data consumers. This places undue burden on the data producer as they are now required to maintain multiple copies of the data on multiple systems. For this use case in the decoupled paradigm (Figure 1.b), views optimized for different classes of data producers and data consumers can be rapidly developed. For example, a data producer may want to leverage a resource registered in a resource registry, thus a data producer may benefit from a view of resource registry records that is integrated with the data management interface. Likewise, a data producer would benefit from an integrated view of published and unpublished data and would further benefit from a programmatic ability to publish data.
 
+###### Figure-web-service
 ![A simplified comparison of coupled and decoupled web application architecture.](img/monolithic-vs-microservice.svg)
 **Figure 1:** A simplified comparison of (a) coupled and (b) decoupled web application architectures.
 
@@ -154,6 +158,7 @@ The core of our approach centers around the use of the [Dataset](https://schema.
 
 Therefore, the [Dataset](https://schema.org/Dataset) specification can already represent raw and derived data relevant to materials science and engineering:
 
+###### code-dataset-example
 ```
 {
     "@context": "http://schema.org/",
@@ -200,6 +205,7 @@ As mentioned previously, the [Dataset](https://schema.org/Dataset) is at the cor
 
 At the database level (and using [Cordra](https://www.cordra.org/) as a model system), we represent information as a graph of linked objects. We begin to show this in Figure 2, which intended to illustrate all the records surrounding the experimental measurement or theoretical prediction of a material. In Figure 2, every box with curved bottom is meant to illustrate a unique record and every line is meant to illustrate a link or relationship between records. The “crows feet” shapes shown in the dataset region of the figure is meant to represent many links to any of the records within the region. For example, a [Person](https://schema.org/Person) can be a responsible for maintaining an instrument and another [Person](https://schema.org/Person) can be the creator of a [Dataset](https://schema.org/Dataset).
 
+###### Figure-orm-simple
 ![A generalized Object Relational Model](img/Material-Dataset-Object-Relation-Simple.svg)
 **Figure 2:** A simplified Object Relational Model.
 
