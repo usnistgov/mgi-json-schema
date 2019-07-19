@@ -417,7 +417,7 @@
                                 "title": "Name"
                             },
                             "propertyID": {
-                                "title": "Property ID/Name",
+                                "title": "Property ID",
                                 "type": "string",
                                 "cordra": {
                                     "type": {
