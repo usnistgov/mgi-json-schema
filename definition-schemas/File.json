@@ -15,7 +15,15 @@
             },
             "subjectOf": {"$ref": "subjectOfProject.json#/definitions/subjectOfProject"},
             "measurementTechnique": {"$ref": "measurementTechnique.json#/definitions/measurementTechnique"},
-            "variableMeasured": {"$ref": "variableMeasuredDefinedTerm.json#/definitions/variableMeasuredDefinedTerm"},
+            "variableMeasured": {
+                "type": "array",
+                "title": "Variables Measured",
+                "uniqueItems": true,
+                "items": {
+                    "title": "Variable Measured",
+                    "$ref": "variableMeasured.json#/definitions/variableMeasured"
+                }
+            },
             "material": {"$ref": "materialLinked.json#/definitions/materialLinked"},
             "materialExtent": {"$ref": "QuantitativeValue.json#/definitions/QuantitativeValue"},
             "instrument": {"$ref": "instrumentLinked.json#/definitions/instrumentLinked"},
