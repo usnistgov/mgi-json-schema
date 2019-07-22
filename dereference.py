@@ -17,5 +17,16 @@ for file_name_in in args['file']:
     with open(file_name_in) as f:
         json_data_in = json.load(f)
     json_data_out = jsonref.JsonRef.replace_refs(json_data_in, base_uri=base_uri)
+    
+    json_data_out["properties"] = dict()
+    
+    if "allOf" in json_data_out.keys():
+        for schema in json_data_out["allOf"]:
+            for property_name,property_content in schema["properties"].items():
+                json_data_out["properties"][property_name] = property_content
+        
+        json_data_out.pop("allOf")
+        
     with open(file_name_out, mode='w+') as f:
         f.write(u'%s' % json.dumps(json_data_out,indent=4,separators=(',', ': ')))
+    
