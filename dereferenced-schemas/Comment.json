@@ -352,5 +352,9 @@
             "title": "Text of the Comment",
             "format": "textarea"
         }
-    }
+    },
+    "required": [
+        "@type",
+        "text"
+    ]
 }
