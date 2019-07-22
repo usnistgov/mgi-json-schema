@@ -84,7 +84,8 @@
                     "type": {
                         "handleReference": {
                             "types": [
-                                "Person"
+                                "Person",
+                                "User"
                             ]
                         }
                     }
