@@ -33,7 +33,8 @@
                         "Dataset"
                     ]}}}
                 }
-            }
+            },
+            "isPartOf": {"$ref": "datasetLinked.json#/definitions/datasetLinked"}
         },
         "required": ["@type"]
     }}

@@ -32,7 +32,8 @@
                 "title": "Upload Date",
                 "type": "string"
             },
-            "distribution": {"$ref": "DataDownload.json#/definitions/DataDownload"}
+            "distribution": {"$ref": "DataDownload.json#/definitions/DataDownload"},
+            "isPartOf": {"$ref": "datasetLinked.json#/definitions/datasetLinked"}
         },
         "required": ["@type"]
     }}

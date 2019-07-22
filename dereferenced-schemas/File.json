@@ -583,6 +583,24 @@
             "required": [
                 "@type"
             ]
+        },
+        "isPartOf": {
+            "type": "array",
+            "title": "Is Part Of",
+            "uniqueItems": true,
+            "items": {
+                "type": "string",
+                "title": "Is Part Of",
+                "cordra": {
+                    "type": {
+                        "handleReference": {
+                            "types": [
+                                "Dataset"
+                            ]
+                        }
+                    }
+                }
+            }
         }
     }
 }
