@@ -166,9 +166,10 @@ Therefore, the [Dataset](https://schema.org/Dataset) specification can already r
     "name": "Demonstration Dataset",
     "measurementTechnique": "Uniaxial Tensile Test",
     "material": "https://www.nist.gov/example/sample/123.json",
+    "description": "A demonstration dataset of a mechanical test with extracted values for Young's Modulus, Ultimate Tensile Strength, and Yield Strength.",
     "distribution": {
         "@type": "DataDownload",
-        "url": "https://www.nist.gov/example/data/download/tensile-test-123.csv",
+        "contentUrl": "https://www.nist.gov/example/data/download/tensile-test-123.csv",
         "encodingFormat": "text/csv"
     },
     "variableMeasured": [

@@ -147,8 +147,8 @@
     },
     "required": [
         "@id",
-        "password",
         "@type",
+        "password",
         "username"
     ]
 }

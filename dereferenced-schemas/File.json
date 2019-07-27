@@ -564,8 +564,9 @@
                     "type": "string",
                     "default": "DataDownload"
                 },
-                "url": {
-                    "type": "string"
+                "contentUrl": {
+                    "type": "string",
+                    "title": "Content URL"
                 },
                 "encodingFormat": {
                     "type": "string",
