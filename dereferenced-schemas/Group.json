@@ -35,6 +35,54 @@
                 "auth": "usersList"
             }
         },
+        "identifier": {
+            "type": "array",
+            "title": "Identifers",
+            "items": {
+                "type": "object",
+                "title": "Identifer",
+                "properties": {
+                    "@type": {
+                        "type": "string",
+                        "default": "PropertyValue"
+                    },
+                    "propertyID": {
+                        "title": "Identifier Type",
+                        "type": "string"
+                    },
+                    "value": {
+                        "title": "Identifier Value",
+                        "type": "string"
+                    }
+                },
+                "required": [
+                    "@type"
+                ]
+            }
+        },
+        "name": {
+            "type": "string",
+            "title": "Name",
+            "cordra": {
+                "preview": {
+                    "showInPreview": true,
+                    "isPrimary": true
+                }
+            }
+        },
+        "alternateName": {
+            "type": "string",
+            "title": "Alternate Name"
+        },
+        "description": {
+            "type": "string",
+            "title": "Description",
+            "format": "textarea"
+        },
+        "url": {
+            "type": "string",
+            "title": "URL"
+        },
         "@context": {
             "type": "string",
             "default": "http://schema.org/"
