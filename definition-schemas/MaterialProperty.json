@@ -17,7 +17,6 @@
             "includedInDataCatalog": {"$ref": "includedInDataCatalog.json#/definitions/includedInDataCatalog"},
             "material": {"$ref": "materialLinked.json#/definitions/materialLinked"},
             "materialExtent": {"$ref": "QuantitativeValue.json#/definitions/QuantitativeValue"},
-            "instrument": {"$ref": "instrumentLinked.json#/definitions/instrumentLinked"},
             "measurementTechnique": {"$ref": "measurementTechnique.json#/definitions/measurementTechnique"},
             "variableMeasured": {"$ref": "variableMeasured.json#/definitions/variableMeasured"},
             "isPartOf": {"$ref": "datasetLinked.json#/definitions/datasetLinked"}

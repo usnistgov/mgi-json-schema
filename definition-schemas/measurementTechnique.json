@@ -9,7 +9,12 @@
         "items": {
             "type": "string",
             "title": "Measurement Technique",
-            "cordra": {"type": {"handleReference": {"types": ["DefinedTerm"]}}}
+            "cordra": {"type": {"handleReference": {"types": [
+                "DefinedTerm",
+                "Instrument",
+                "SoftwareApplication",
+                "SoftwareSourceCode"
+            ]}}}
         }
     }}
 }

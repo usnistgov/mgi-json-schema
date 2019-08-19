@@ -427,26 +427,6 @@
                 }
             }
         },
-        "instrument": {
-            "type": "array",
-            "title": "Measurement Instruments and Modelling/Simulation/Prediction Software",
-            "uniqueItems": true,
-            "items": {
-                "type": "string",
-                "title": "Measurement Instrument and Modelling/Simulation/Prediction Software",
-                "cordra": {
-                    "type": {
-                        "handleReference": {
-                            "types": [
-                                "Instrument",
-                                "SoftwareApplication",
-                                "SoftwareSourceCode"
-                            ]
-                        }
-                    }
-                }
-            }
-        },
         "measurementTechnique": {
             "type": "array",
             "title": "Measurement Techniques",
@@ -458,7 +438,10 @@
                     "type": {
                         "handleReference": {
                             "types": [
-                                "DefinedTerm"
+                                "DefinedTerm",
+                                "Instrument",
+                                "SoftwareApplication",
+                                "SoftwareSourceCode"
                             ]
                         }
                     }

@@ -26,7 +26,6 @@
             },
             "material": {"$ref": "materialLinked.json#/definitions/materialLinked"},
             "materialExtent": {"$ref": "QuantitativeValue.json#/definitions/QuantitativeValue"},
-            "instrument": {"$ref": "instrumentLinked.json#/definitions/instrumentLinked"},
             "includedInDataCatalog": {"$ref": "includedInDataCatalog.json#/definitions/includedInDataCatalog"},
             "uploadDate": {
                 "title": "Upload Date",
