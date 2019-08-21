@@ -16,6 +16,7 @@
             },
             "encodingFormat": {
                 "type": "string",
+                "title": "Data Type",
                 "cordra": {"type": {"handleReference": {"types": ["DataType"]}}}
             }
         },
