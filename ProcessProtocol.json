@@ -1,8 +1,8 @@
 {
     "$schema": "http://json-schema.org/draft-04/schema#",
     "type": "object",
-    "title": "Process",
-    "description": "This schema is for describing an experimental process for synthesizing a material.",
+    "title": "ProcessProtocol",
+    "description": "This schema is for describing an experimental protocol for creating and processing a material.",
     "allOf": [
         {"$ref": "definition-schemas/CordraObjectID.json#/definitions/CordraObjectID"},
         {"$ref": "definition-schemas/Thing.json#/definitions/Thing"},

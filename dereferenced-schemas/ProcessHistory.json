@@ -1,8 +1,8 @@
 {
     "$schema": "http://json-schema.org/draft-04/schema#",
     "type": "object",
-    "title": "Process",
-    "description": "This schema is for describing an experimental process for synthesizing a material.",
+    "title": "ProcessHistory",
+    "description": "This schema is for describing the processing history of a material.",
     "properties": {
         "@id": {
             "type": "string",

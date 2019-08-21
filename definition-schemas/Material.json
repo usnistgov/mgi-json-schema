@@ -15,13 +15,14 @@
             },
             "exampleOfWork": {
                 "type": "array",
-                "title": "Processing History",
+                "title": "Processing History/Protocol",
                 "uniqueItems": true,
                 "items": {
                     "type": "string",
-                    "title": "Processing History",
+                    "title": "Processing History/Protocol",
                     "cordra": {"type": {"handleReference": {"types": [
-                        "Process"
+                        "ProcessHistory",
+                        "ProcessProtocol"
                     ]}}}
                 }
             },
