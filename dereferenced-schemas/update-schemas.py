@@ -18,7 +18,8 @@ def check_response(r,quiet=False):
     else:
         return r_content
 
-user = "admin"
+base_url = input("Enter cordra base url: ").strip("/")
+user = input("Enter admin username: ")
 pswd = getpass.getpass()
 
 schemas = glob.glob("*.json")
@@ -28,7 +29,7 @@ for schema_file_name in schemas:
     with open(schema_file_name) as f:
         schema_data = json.load(f)
 
-    url = "http://cordradev.nist.gov/schemas/" + schema_name
+    url = base_url + "/schemas/" + schema_name
     print(url)
     try:
         r = requests.put(url, data=json.dumps(schema_data), auth=(user, pswd), verify=False)
