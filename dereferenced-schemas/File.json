@@ -367,11 +367,11 @@
         },
         "measurementTechnique": {
             "type": "array",
-            "title": "Measurement Techniques",
+            "title": "Synthesis/Measurement Techniques",
             "uniqueItems": true,
             "items": {
                 "type": "string",
-                "title": "Measurement Technique",
+                "title": "Synthesis/Measurement Technique",
                 "cordra": {
                     "type": {
                         "handleReference": {
