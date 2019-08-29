@@ -32,7 +32,8 @@
                 "type": "string"
             },
             "distribution": {"$ref": "DataDownload.json#/definitions/DataDownload"},
-            "isPartOf": {"$ref": "datasetLinked.json#/definitions/datasetLinked"}
+            "hasPart": {"$ref": "datasetLinked.json#/definitions/hasPart"},
+            "isPartOf": {"$ref": "datasetLinked.json#/definitions/isPartOf"}
         },
         "required": ["@type"]
     }}

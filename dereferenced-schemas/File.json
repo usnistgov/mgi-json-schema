@@ -569,6 +569,27 @@
                 "@type"
             ]
         },
+        "hasPart": {
+            "type": "array",
+            "title": "Dataset Parts",
+            "uniqueItems": true,
+            "items": {
+                "type": "string",
+                "title": "Dataset Part",
+                "cordra": {
+                    "type": {
+                        "handleReference": {
+                            "types": [
+                                "Dataset",
+                                "File",
+                                "MaterialProperty",
+                                "TabularDataPackage"
+                            ]
+                        }
+                    }
+                }
+            }
+        },
         "isPartOf": {
             "type": "array",
             "title": "Is Part Of",
@@ -580,7 +601,10 @@
                     "type": {
                         "handleReference": {
                             "types": [
-                                "Dataset"
+                                "Dataset",
+                                "File",
+                                "MaterialProperty",
+                                "TabularDataPackage"
                             ]
                         }
                     }
