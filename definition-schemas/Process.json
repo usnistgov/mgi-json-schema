@@ -20,9 +20,7 @@
                 "items": {
                     "type": "string",
                     "title": "Resulting Material",
-                    "cordra": {"type": {"handleReference": {"types": [
-                        "Material"
-                    ]}}}
+                    "cordra": {"type": {"handleReference": {"types": ["Material"]}}}
                 }
             },
             "estimatedCost": {
@@ -107,11 +105,15 @@
                                             },
                                             "material": {"$ref": "materialLinked.json#/definitions/materialLinked"},
                                             "materialExtent": {"$ref": "QuantitativeValue.json#/definitions/QuantitativeValue"},
-                                            "instrument": {"$ref": "instrumentLinked.json#/definitions/instrumentLinked"},
                                             "measurementTechnique": {"$ref": "measurementTechnique.json#/definitions/measurementTechnique"},
                                             "variableMeasured": {
                                                 "type": "array",
-                                                "items": {"$ref": "QuantitativePropertyValue.json#/definitions/QuantitativePropertyValue"}
+                                                "title": "Variables Measured",
+                                                "uniqueItems": true,
+                                                "items": {
+                                                    "title": "Variable Measured",
+                                                    "$ref": "variableMeasured.json#/definitions/variableMeasured"
+                                                }
                                             }
                                         },
                                         "required": ["@type"]

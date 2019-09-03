@@ -29,6 +29,10 @@
                 "cordra": {"auth": "requirePasswordChange"}
             }
         },
-        "required": ["@type"]
+        "required": [
+            "@id",
+            "username",
+            "password"
+        ]
     }}
 }

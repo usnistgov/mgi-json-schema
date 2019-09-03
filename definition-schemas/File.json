@@ -15,16 +15,25 @@
             },
             "subjectOf": {"$ref": "subjectOfProject.json#/definitions/subjectOfProject"},
             "measurementTechnique": {"$ref": "measurementTechnique.json#/definitions/measurementTechnique"},
-            "variableMeasured": {"$ref": "variableMeasuredDefinedTerm.json#/definitions/variableMeasuredDefinedTerm"},
+            "variableMeasured": {
+                "type": "array",
+                "title": "Variables Measured",
+                "uniqueItems": true,
+                "items": {
+                    "title": "Variable Measured",
+                    "$ref": "variableMeasured.json#/definitions/variableMeasured"
+                }
+            },
             "material": {"$ref": "materialLinked.json#/definitions/materialLinked"},
             "materialExtent": {"$ref": "QuantitativeValue.json#/definitions/QuantitativeValue"},
-            "instrument": {"$ref": "instrumentLinked.json#/definitions/instrumentLinked"},
             "includedInDataCatalog": {"$ref": "includedInDataCatalog.json#/definitions/includedInDataCatalog"},
             "uploadDate": {
                 "title": "Upload Date",
                 "type": "string"
             },
-            "distribution": {"$ref": "DataDownload.json#/definitions/DataDownload"}
+            "distribution": {"$ref": "DataDownload.json#/definitions/DataDownload"},
+            "hasPart": {"$ref": "datasetLinked.json#/definitions/hasPart"},
+            "isPartOf": {"$ref": "datasetLinked.json#/definitions/isPartOf"}
         },
         "required": ["@type"]
     }}

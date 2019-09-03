@@ -4,12 +4,17 @@
     "title": "measurementTechnique",
     "definitions": {"measurementTechnique": {
         "type": "array",
-        "title": "Measurement Techniques",
+        "title": "Synthesis/Measurement Techniques",
         "uniqueItems": true,
         "items": {
             "type": "string",
-            "title": "Measurement Technique",
-            "cordra": {"type": {"handleReference": {"types": ["DefinedTerm"]}}}
+            "title": "Synthesis/Measurement Technique",
+            "cordra": {"type": {"handleReference": {"types": [
+                "DefinedTerm",
+                "Instrument",
+                "SoftwareApplication",
+                "SoftwareSourceCode"
+            ]}}}
         }
     }}
 }

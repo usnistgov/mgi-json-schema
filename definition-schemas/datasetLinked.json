@@ -1,0 +1,37 @@
+{
+    "$schema": "http://json-schema.org/draft-04/schema#",
+    "type": "object",
+    "title": "datasetLinked",
+    "definitions": {
+        "isPartOf": {
+            "type": "array",
+            "title": "Is Part Of",
+            "uniqueItems": true,
+            "items": {
+                "type": "string",
+                "title": "Is Part Of",
+                "cordra": {"type": {"handleReference": {"types": [
+                    "Dataset",
+                    "File",
+                    "MaterialProperty",
+                    "TabularDataPackage"
+                ]}}}
+            }
+        },
+        "hasPart": {
+            "type": "array",
+            "title": "Dataset Parts",
+            "uniqueItems": true,
+            "items": {
+                "type": "string",
+                "title": "Dataset Part",
+                "cordra": {"type": {"handleReference": {"types": [
+                    "Dataset",
+                    "File",
+                    "MaterialProperty",
+                    "TabularDataPackage"
+                ]}}}
+            }
+        }
+    }
+}

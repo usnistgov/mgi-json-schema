@@ -10,9 +10,13 @@
                 "type": "string",
                 "default": "DataDownload"
             },
-            "url": {"type": "string"},
+            "contentUrl": {
+                "type": "string",
+                "title": "Content URL"
+            },
             "encodingFormat": {
                 "type": "string",
+                "title": "Data Type",
                 "cordra": {"type": {"handleReference": {"types": ["DataType"]}}}
             }
         },

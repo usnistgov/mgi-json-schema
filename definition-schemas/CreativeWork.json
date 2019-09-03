@@ -26,6 +26,16 @@
                     "title": "Keyword"
                 }
             },
+            "citation": {
+                "type": "array",
+                "title": "Citations",
+                "uniqueItems": true,
+                "items": {
+                    "type": "string",
+                    "title": "Citation",
+                    "cordra": {"type": {"handleReference": {"types": ["Citation"]}}}
+                }
+            },
             "funder": {
                 "type": "array",
                 "title": "Funders",
@@ -101,6 +111,34 @@
                 "items": {
                     "type": "string",
                     "title": "Contributor",
+                    "cordra": {"type": {"handleReference": {"types": [
+                        "User",
+                        "Person",
+                        "Organization"
+                    ]}}}
+                }
+            },
+            "producer": {
+                "type": "array",
+                "title": "Producers",
+                "uniqueItems": true,
+                "items": {
+                    "type": "string",
+                    "title": "Producer",
+                    "cordra": {"type": {"handleReference": {"types": [
+                        "User",
+                        "Person",
+                        "Organization"
+                    ]}}}
+                }
+            },
+            "provider": {
+                "type": "array",
+                "title": "Providers",
+                "uniqueItems": true,
+                "items": {
+                    "type": "string",
+                    "title": "Provider",
                     "cordra": {"type": {"handleReference": {"types": [
                         "User",
                         "Person",
