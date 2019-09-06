@@ -489,6 +489,27 @@
                     }
                 }
             }
+        },
+        "isBasedOn": {
+            "type": "array",
+            "title": "Dataset is derived from",
+            "uniqueItems": true,
+            "items": {
+                "type": "string",
+                "title": "Dataset",
+                "cordra": {
+                    "type": {
+                        "handleReference": {
+                            "types": [
+                                "Dataset",
+                                "File",
+                                "MaterialProperty",
+                                "TabularDataPackage"
+                            ]
+                        }
+                    }
+                }
+            }
         }
     },
     "required": [
