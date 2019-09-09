@@ -473,6 +473,93 @@
                 }
             }
         },
+        "parameterControlled": {
+            "type": "array",
+            "title": "Parameters Controlled",
+            "uniqueItems": true,
+            "items": {
+                "type": "object",
+                "properties": {
+                    "@type": {
+                        "type": "string",
+                        "default": "PropertyValue"
+                    },
+                    "name": {
+                        "type": "string",
+                        "title": "Name"
+                    },
+                    "propertyID": {
+                        "title": "Property ID",
+                        "type": "string",
+                        "cordra": {
+                            "type": {
+                                "handleReference": {
+                                    "types": [
+                                        "DefinedTerm"
+                                    ]
+                                }
+                            }
+                        }
+                    },
+                    "value": {
+                        "title": "Value",
+                        "type": "number"
+                    },
+                    "unitText": {
+                        "title": "Unit Text",
+                        "type": "string"
+                    },
+                    "unitCode": {
+                        "title": "Unit Code",
+                        "type": "string"
+                    },
+                    "valueReference": {
+                        "type": "array",
+                        "title": "Reference Values",
+                        "uniqueItems": true,
+                        "items": {
+                            "type": "object",
+                            "title": "Reference Value",
+                            "properties": {
+                                "@type": {
+                                    "type": "string",
+                                    "default": "PropertyValue"
+                                },
+                                "name": {
+                                    "type": "string",
+                                    "title": "Name"
+                                },
+                                "propertyID": {
+                                    "title": "Property ID/Name",
+                                    "type": "string",
+                                    "cordra": {
+                                        "type": {
+                                            "handleReference": {
+                                                "types": [
+                                                    "DefinedTerm"
+                                                ]
+                                            }
+                                        }
+                                    }
+                                },
+                                "value": {
+                                    "title": "Value",
+                                    "type": "number"
+                                },
+                                "unitText": {
+                                    "title": "Unit Text",
+                                    "type": "string"
+                                },
+                                "unitCode": {
+                                    "title": "Unit Code",
+                                    "type": "string"
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
         "material": {
             "type": "array",
             "title": "Materials",

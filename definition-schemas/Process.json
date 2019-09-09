@@ -114,6 +114,15 @@
                                                     "title": "Variable Measured",
                                                     "$ref": "variableMeasured.json#/definitions/variableMeasured"
                                                 }
+                                            },
+                                            "parameterControlled": {
+                                                "type": "array",
+                                                "title": "Parameters Controlled",
+                                                "uniqueItems": true,
+                                                "items": {
+                                                    "title": "Parameter Controlled",
+                                                    "$ref": "variableMeasured.json#/definitions/variableMeasured"
+                                                }
                                             }
                                         },
                                         "required": ["@type"]
