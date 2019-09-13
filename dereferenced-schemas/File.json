@@ -181,10 +181,10 @@
                 },
                 "variableMeasured": {
                     "type": "array",
-                    "title": "Complex/Multidimensional Variables Measured",
+                    "title": "Complex/Multidimensional Quantity",
                     "uniqueItems": true,
                     "items": {
-                        "title": "Complex/Multidimensional Variable Measured",
+                        "title": "Complex/Multidimensional Quantity",
                         "$ref": "#/definitions/variableMeasured"
                     }
                 }
