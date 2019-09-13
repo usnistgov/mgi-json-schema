@@ -144,11 +144,5 @@
                 }
             }
         }
-    },
-    "required": [
-        "@id",
-        "@type",
-        "password",
-        "username"
-    ]
+    }
 }

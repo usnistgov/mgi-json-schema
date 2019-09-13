@@ -2,7 +2,7 @@
     "$schema": "http://json-schema.org/draft-04/schema#",
     "type": "object",
     "title": "MaterialProperty",
-    "description": "This schema is for depositing and describing a scalar MaterialProperty in Cordra.",
+    "description": "This schema is for depositing and describing a MaterialProperty in Cordra.",
     "allOf": [
         {"$ref": "definition-schemas/CordraObjectID.json#/definitions/CordraObjectID"},
         {"$ref": "definition-schemas/Thing.json#/definitions/Thing"},

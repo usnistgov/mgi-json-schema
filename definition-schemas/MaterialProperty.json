@@ -18,9 +18,22 @@
             "material": {"$ref": "materialLinked.json#/definitions/materialLinked"},
             "materialExtent": {"$ref": "QuantitativeValue.json#/definitions/QuantitativeValue"},
             "measurementTechnique": {"$ref": "measurementTechnique.json#/definitions/measurementTechnique"},
-            "variableMeasured": {"$ref": "variableMeasured.json#/definitions/variableMeasured"},
+            "variableMeasured": {
+                "title": "Material Property",
+                "$ref": "variableMeasured.json#/definitions/variableMeasured"
+            },
+            "parameterControlled": {
+                "type": "array",
+                "title": "Parameters Controlled",
+                "uniqueItems": true,
+                "items": {
+                    "title": "Parameter Controlled",
+                    "$ref": "variableMeasured.json#/definitions/variableMeasured"
+                }
+            },
             "hasPart": {"$ref": "datasetLinked.json#/definitions/hasPart"},
-            "isPartOf": {"$ref": "datasetLinked.json#/definitions/isPartOf"}
+            "isPartOf": {"$ref": "datasetLinked.json#/definitions/isPartOf"},
+            "isBasedOn": {"$ref": "datasetLinked.json#/definitions/isBasedOn"}
         },
         "required": ["@type"]
     }}
