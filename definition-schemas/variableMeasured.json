@@ -65,6 +65,15 @@
                         }
                     }
                 }
+            },
+            "variableMeasured": {
+                "type": "array",
+                "title": "Complex/Multidimensional Variables Measured",
+                "uniqueItems": true,
+                "items": {
+                    "title": "Complex/Multidimensional Variable Measured",
+                    "$ref": "#/definitions/variableMeasured"
+                }
             }
         }
     }}

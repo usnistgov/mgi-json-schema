@@ -3,6 +3,26 @@
     "type": "object",
     "title": "Collection",
     "description": "This schema is for creating a collection (i.e., a folder), which can contain of files, datasets, collections, samples, instruments, etc.",
+    "definitions": {
+        "subjectOfProject": {
+            "type": "array",
+            "title": "Parent Projects",
+            "uniqueItems": true,
+            "items": {
+                "type": "string",
+                "title": "Parent Project",
+                "cordra": {
+                    "type": {
+                        "handleReference": {
+                            "types": [
+                                "Project"
+                            ]
+                        }
+                    }
+                }
+            }
+        }
+    },
     "properties": {
         "@id": {
             "type": "string",
@@ -348,22 +368,7 @@
             "default": "Collection"
         },
         "subjectOf": {
-            "type": "array",
-            "title": "Parent Projects",
-            "uniqueItems": true,
-            "items": {
-                "type": "string",
-                "title": "Parent Project",
-                "cordra": {
-                    "type": {
-                        "handleReference": {
-                            "types": [
-                                "Project"
-                            ]
-                        }
-                    }
-                }
-            }
+            "$ref": "#/definitions/subjectOfProject"
         },
         "hasPart": {
             "type": "array",
@@ -408,8 +413,5 @@
                 }
             }
         }
-    },
-    "required": [
-        "@type"
-    ]
+    }
 }

@@ -3,6 +3,164 @@
     "type": "object",
     "title": "ProcessProtocol",
     "description": "This schema is for describing an experimental protocol for creating and processing a material.",
+    "definitions": {
+        "materialLinked": {
+            "type": "array",
+            "title": "Materials",
+            "description": "This field is for linking to any substance (e.g., sample, specimen, material, chemical, etc.), or a specific sup-sample (e.g., location on a larger artifact, sub-portion of a larger artifact, item within a collection of specimens, etc.).",
+            "uniqueItems": true,
+            "items": {
+                "type": "string",
+                "title": "Material",
+                "cordra": {
+                    "type": {
+                        "handleReference": {
+                            "types": [
+                                "Material"
+                            ]
+                        }
+                    }
+                }
+            }
+        },
+        "QuantitativeValue": {
+            "type": "object",
+            "properties": {
+                "@type": {
+                    "type": "string",
+                    "default": "QuantitativeValue"
+                },
+                "name": {
+                    "type": "string",
+                    "title": "Name"
+                },
+                "value": {
+                    "title": "Value",
+                    "type": "number"
+                },
+                "unitText": {
+                    "title": "Unit Text",
+                    "type": "string"
+                },
+                "unitCode": {
+                    "title": "Unit Code",
+                    "type": "string"
+                }
+            }
+        },
+        "measurementTechnique": {
+            "type": "array",
+            "title": "Synthesis/Measurement Techniques",
+            "uniqueItems": true,
+            "items": {
+                "type": "string",
+                "title": "Synthesis/Measurement Technique",
+                "cordra": {
+                    "type": {
+                        "handleReference": {
+                            "types": [
+                                "DefinedTerm",
+                                "Instrument",
+                                "SoftwareApplication",
+                                "SoftwareSourceCode"
+                            ]
+                        }
+                    }
+                }
+            }
+        },
+        "variableMeasured": {
+            "type": "object",
+            "properties": {
+                "@type": {
+                    "type": "string",
+                    "default": "PropertyValue"
+                },
+                "name": {
+                    "type": "string",
+                    "title": "Name"
+                },
+                "propertyID": {
+                    "title": "Property ID",
+                    "type": "string",
+                    "cordra": {
+                        "type": {
+                            "handleReference": {
+                                "types": [
+                                    "DefinedTerm"
+                                ]
+                            }
+                        }
+                    }
+                },
+                "value": {
+                    "title": "Value",
+                    "type": "number"
+                },
+                "unitText": {
+                    "title": "Unit Text",
+                    "type": "string"
+                },
+                "unitCode": {
+                    "title": "Unit Code",
+                    "type": "string"
+                },
+                "valueReference": {
+                    "type": "array",
+                    "title": "Reference Values",
+                    "uniqueItems": true,
+                    "items": {
+                        "type": "object",
+                        "title": "Reference Value",
+                        "properties": {
+                            "@type": {
+                                "type": "string",
+                                "default": "PropertyValue"
+                            },
+                            "name": {
+                                "type": "string",
+                                "title": "Name"
+                            },
+                            "propertyID": {
+                                "title": "Property ID/Name",
+                                "type": "string",
+                                "cordra": {
+                                    "type": {
+                                        "handleReference": {
+                                            "types": [
+                                                "DefinedTerm"
+                                            ]
+                                        }
+                                    }
+                                }
+                            },
+                            "value": {
+                                "title": "Value",
+                                "type": "number"
+                            },
+                            "unitText": {
+                                "title": "Unit Text",
+                                "type": "string"
+                            },
+                            "unitCode": {
+                                "title": "Unit Code",
+                                "type": "string"
+                            }
+                        }
+                    }
+                },
+                "variableMeasured": {
+                    "type": "array",
+                    "title": "Complex/Multidimensional Variables Measured",
+                    "uniqueItems": true,
+                    "items": {
+                        "title": "Complex/Multidimensional Variable Measured",
+                        "$ref": "#/definitions/variableMeasured"
+                    }
+                }
+            }
+        }
+    },
     "properties": {
         "@id": {
             "type": "string",
@@ -480,155 +638,21 @@
                                             "default": "Dataset"
                                         },
                                         "material": {
-                                            "type": "array",
-                                            "title": "Materials",
-                                            "description": "This field is for linking to any substance (e.g., sample, specimen, material, chemical, etc.), or a specific sup-sample (e.g., location on a larger artifact, sub-portion of a larger artifact, item within a collection of specimens, etc.).",
-                                            "uniqueItems": true,
-                                            "items": {
-                                                "type": "string",
-                                                "title": "Material",
-                                                "cordra": {
-                                                    "type": {
-                                                        "handleReference": {
-                                                            "types": [
-                                                                "Material"
-                                                            ]
-                                                        }
-                                                    }
-                                                }
-                                            }
+                                            "$ref": "#/definitions/materialLinked"
                                         },
                                         "materialExtent": {
-                                            "type": "object",
-                                            "properties": {
-                                                "@type": {
-                                                    "type": "string",
-                                                    "default": "QuantitativeValue"
-                                                },
-                                                "name": {
-                                                    "type": "string",
-                                                    "title": "Name"
-                                                },
-                                                "value": {
-                                                    "title": "Value",
-                                                    "type": "number"
-                                                },
-                                                "unitText": {
-                                                    "title": "Unit Text",
-                                                    "type": "string"
-                                                },
-                                                "unitCode": {
-                                                    "title": "Unit Code",
-                                                    "type": "string"
-                                                }
-                                            }
+                                            "$ref": "#/definitions/QuantitativeValue"
                                         },
                                         "measurementTechnique": {
-                                            "type": "array",
-                                            "title": "Synthesis/Measurement Techniques",
-                                            "uniqueItems": true,
-                                            "items": {
-                                                "type": "string",
-                                                "title": "Synthesis/Measurement Technique",
-                                                "cordra": {
-                                                    "type": {
-                                                        "handleReference": {
-                                                            "types": [
-                                                                "DefinedTerm",
-                                                                "Instrument",
-                                                                "SoftwareApplication",
-                                                                "SoftwareSourceCode"
-                                                            ]
-                                                        }
-                                                    }
-                                                }
-                                            }
+                                            "$ref": "#/definitions/measurementTechnique"
                                         },
                                         "variableMeasured": {
                                             "type": "array",
                                             "title": "Variables Measured",
                                             "uniqueItems": true,
                                             "items": {
-                                                "type": "object",
-                                                "properties": {
-                                                    "@type": {
-                                                        "type": "string",
-                                                        "default": "PropertyValue"
-                                                    },
-                                                    "name": {
-                                                        "type": "string",
-                                                        "title": "Name"
-                                                    },
-                                                    "propertyID": {
-                                                        "title": "Property ID",
-                                                        "type": "string",
-                                                        "cordra": {
-                                                            "type": {
-                                                                "handleReference": {
-                                                                    "types": [
-                                                                        "DefinedTerm"
-                                                                    ]
-                                                                }
-                                                            }
-                                                        }
-                                                    },
-                                                    "value": {
-                                                        "title": "Value",
-                                                        "type": "number"
-                                                    },
-                                                    "unitText": {
-                                                        "title": "Unit Text",
-                                                        "type": "string"
-                                                    },
-                                                    "unitCode": {
-                                                        "title": "Unit Code",
-                                                        "type": "string"
-                                                    },
-                                                    "valueReference": {
-                                                        "type": "array",
-                                                        "title": "Reference Values",
-                                                        "uniqueItems": true,
-                                                        "items": {
-                                                            "type": "object",
-                                                            "title": "Reference Value",
-                                                            "properties": {
-                                                                "@type": {
-                                                                    "type": "string",
-                                                                    "default": "PropertyValue"
-                                                                },
-                                                                "name": {
-                                                                    "type": "string",
-                                                                    "title": "Name"
-                                                                },
-                                                                "propertyID": {
-                                                                    "title": "Property ID/Name",
-                                                                    "type": "string",
-                                                                    "cordra": {
-                                                                        "type": {
-                                                                            "handleReference": {
-                                                                                "types": [
-                                                                                    "DefinedTerm"
-                                                                                ]
-                                                                            }
-                                                                        }
-                                                                    }
-                                                                },
-                                                                "value": {
-                                                                    "title": "Value",
-                                                                    "type": "number"
-                                                                },
-                                                                "unitText": {
-                                                                    "title": "Unit Text",
-                                                                    "type": "string"
-                                                                },
-                                                                "unitCode": {
-                                                                    "title": "Unit Code",
-                                                                    "type": "string"
-                                                                }
-                                                            }
-                                                        }
-                                                    }
-                                                }
+                                                "title": "Variable Measured",
+                                                "$ref": "#/definitions/variableMeasured"
                                             }
                                         },
                                         "parameterControlled": {
@@ -636,86 +660,8 @@
                                             "title": "Parameters Controlled",
                                             "uniqueItems": true,
                                             "items": {
-                                                "type": "object",
-                                                "properties": {
-                                                    "@type": {
-                                                        "type": "string",
-                                                        "default": "PropertyValue"
-                                                    },
-                                                    "name": {
-                                                        "type": "string",
-                                                        "title": "Name"
-                                                    },
-                                                    "propertyID": {
-                                                        "title": "Property ID",
-                                                        "type": "string",
-                                                        "cordra": {
-                                                            "type": {
-                                                                "handleReference": {
-                                                                    "types": [
-                                                                        "DefinedTerm"
-                                                                    ]
-                                                                }
-                                                            }
-                                                        }
-                                                    },
-                                                    "value": {
-                                                        "title": "Value",
-                                                        "type": "number"
-                                                    },
-                                                    "unitText": {
-                                                        "title": "Unit Text",
-                                                        "type": "string"
-                                                    },
-                                                    "unitCode": {
-                                                        "title": "Unit Code",
-                                                        "type": "string"
-                                                    },
-                                                    "valueReference": {
-                                                        "type": "array",
-                                                        "title": "Reference Values",
-                                                        "uniqueItems": true,
-                                                        "items": {
-                                                            "type": "object",
-                                                            "title": "Reference Value",
-                                                            "properties": {
-                                                                "@type": {
-                                                                    "type": "string",
-                                                                    "default": "PropertyValue"
-                                                                },
-                                                                "name": {
-                                                                    "type": "string",
-                                                                    "title": "Name"
-                                                                },
-                                                                "propertyID": {
-                                                                    "title": "Property ID/Name",
-                                                                    "type": "string",
-                                                                    "cordra": {
-                                                                        "type": {
-                                                                            "handleReference": {
-                                                                                "types": [
-                                                                                    "DefinedTerm"
-                                                                                ]
-                                                                            }
-                                                                        }
-                                                                    }
-                                                                },
-                                                                "value": {
-                                                                    "title": "Value",
-                                                                    "type": "number"
-                                                                },
-                                                                "unitText": {
-                                                                    "title": "Unit Text",
-                                                                    "type": "string"
-                                                                },
-                                                                "unitCode": {
-                                                                    "title": "Unit Code",
-                                                                    "type": "string"
-                                                                }
-                                                            }
-                                                        }
-                                                    }
-                                                }
+                                                "title": "Parameter Controlled",
+                                                "$ref": "#/definitions/variableMeasured"
                                             }
                                         }
                                     },
@@ -742,32 +688,7 @@
             "type": "string"
         },
         "yield": {
-            "type": "object",
-            "properties": {
-                "@type": {
-                    "type": "string",
-                    "default": "QuantitativeValue"
-                },
-                "name": {
-                    "type": "string",
-                    "title": "Name"
-                },
-                "value": {
-                    "title": "Value",
-                    "type": "number"
-                },
-                "unitText": {
-                    "title": "Unit Text",
-                    "type": "string"
-                },
-                "unitCode": {
-                    "title": "Unit Code",
-                    "type": "string"
-                }
-            }
+            "$ref": "#/definitions/QuantitativeValue"
         }
-    },
-    "required": [
-        "@type"
-    ]
+    }
 }

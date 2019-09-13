@@ -18,7 +18,10 @@
             "material": {"$ref": "materialLinked.json#/definitions/materialLinked"},
             "materialExtent": {"$ref": "QuantitativeValue.json#/definitions/QuantitativeValue"},
             "measurementTechnique": {"$ref": "measurementTechnique.json#/definitions/measurementTechnique"},
-            "variableMeasured": {"$ref": "variableMeasured.json#/definitions/variableMeasured"},
+            "variableMeasured": {
+                "title": "Material Property",
+                "$ref": "variableMeasured.json#/definitions/variableMeasured"
+            },
             "parameterControlled": {
                 "type": "array",
                 "title": "Parameters Controlled",
