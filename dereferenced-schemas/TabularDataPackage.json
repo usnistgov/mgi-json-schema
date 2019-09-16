@@ -125,7 +125,14 @@
                 },
                 "value": {
                     "title": "Value",
-                    "type": "number"
+                    "oneOf": [
+                        {
+                            "type": "string"
+                        },
+                        {
+                            "type": "number"
+                        }
+                    ]
                 },
                 "unitText": {
                     "title": "Unit Text",
@@ -185,6 +192,15 @@
                     "uniqueItems": true,
                     "items": {
                         "title": "Complex/Multidimensional Quantity",
+                        "$ref": "#/definitions/variableMeasured"
+                    }
+                },
+                "parameterControlled": {
+                    "type": "array",
+                    "title": "Parameters Controlled",
+                    "uniqueItems": true,
+                    "items": {
+                        "title": "Parameter Controlled",
                         "$ref": "#/definitions/variableMeasured"
                     }
                 }
