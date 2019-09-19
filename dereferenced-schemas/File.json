@@ -111,14 +111,19 @@
                     "title": "Name"
                 },
                 "propertyID": {
-                    "title": "Property ID",
-                    "type": "string",
-                    "cordra": {
-                        "type": {
-                            "handleReference": {
-                                "types": [
-                                    "DefinedTerm"
-                                ]
+                    "title": "Property IDs",
+                    "type": "array",
+                    "uniqueItems": true,
+                    "items": {
+                        "title": "Property ID",
+                        "type": "string",
+                        "cordra": {
+                            "type": {
+                                "handleReference": {
+                                    "types": [
+                                        "DefinedTerm"
+                                    ]
+                                }
                             }
                         }
                     }
