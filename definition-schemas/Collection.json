@@ -13,7 +13,7 @@
                 "type": "string",
                 "default": "Collection"
             },
-            "subjectOf": {"$ref": "subjectOfProject.json#/definitions/subjectOfProject"},
+            "subjectOf": {"$ref": "subjectOf.json#/definitions/subjectOf"},
             "hasPart": {
                 "type": "array",
                 "title": "Has Collection Items",

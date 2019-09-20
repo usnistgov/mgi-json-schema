@@ -3,6 +3,30 @@
     "type": "object",
     "title": "Material",
     "description": "This form is for describing any measurable substance (e.g., sample, specimen, material, chemical, etc.), or a specific sup-sample (e.g., location on a larger artifact, sub-portion of a larger artifact, item within a collection of specimens, etc.).",
+    "definitions": {
+        "subjectOf": {
+            "type": "array",
+            "title": "Linked Datasets, etc.",
+            "uniqueItems": true,
+            "items": {
+                "type": "string",
+                "title": "Linked Datasets, etc.",
+                "cordra": {
+                    "type": {
+                        "handleReference": {
+                            "types": [
+                                "File",
+                                "TabularDataPackage",
+                                "MaterialProperty",
+                                "Dataset",
+                                "Collection"
+                            ]
+                        }
+                    }
+                }
+            }
+        }
+    },
     "properties": {
         "@id": {
             "type": "string",
@@ -62,17 +86,18 @@
         },
         "about": {
             "type": "array",
-            "title": "Subjects",
-            "description": "This is for controlled vocabulary terms.",
+            "title": "About",
+            "description": "This is for linking controlled vocabulary terms and parent projects.",
             "uniqueItems": true,
             "items": {
                 "type": "string",
-                "title": "Subject",
+                "title": "Subject/Project",
                 "cordra": {
                     "type": {
                         "handleReference": {
                             "types": [
-                                "DefinedTerm"
+                                "DefinedTerm",
+                                "Project"
                             ]
                         }
                     }
@@ -367,26 +392,7 @@
             }
         },
         "subjectOf": {
-            "type": "array",
-            "title": "Linked Datasets/Project",
-            "uniqueItems": true,
-            "items": {
-                "type": "string",
-                "title": "Linked Dataset/Project",
-                "cordra": {
-                    "type": {
-                        "handleReference": {
-                            "types": [
-                                "Project",
-                                "File",
-                                "TabularDataPackage",
-                                "MaterialProperty",
-                                "Dataset"
-                            ]
-                        }
-                    }
-                }
-            }
+            "$ref": "#/definitions/subjectOf"
         },
         "isPartOf": {
             "title": "Has Parent Materials",
