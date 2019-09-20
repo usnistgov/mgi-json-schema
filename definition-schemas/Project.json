@@ -49,7 +49,10 @@
                 "items": {
                     "type": "string",
                     "title": "Contact Point",
-                    "cordra": {"type": {"handleReference": {"types": ["Person", "User"]}}}
+                    "cordra": {"type": {"handleReference": {"types": [
+                        "Person",
+                        "User"
+                    ]}}}
                 }
             },
             "email": {
@@ -100,24 +103,7 @@
                     "cordra": {"type": {"handleReference": {"types": ["Organization"]}}}
                 }
             },
-            "subjectOf": {
-                "type": "array",
-                "title": "Project Assets",
-                "uniqueItems": true,
-                "items": {
-                    "type": "string",
-                    "title": "Project Asset",
-                    "cordra": {"type": {"handleReference": {"types": [
-                        "Collection",
-                        "File",
-                        "TabularDataPackage",
-                        "MaterialProperty",
-                        "Material",
-                        "Instrument",
-                        "Dataset"
-                    ]}}}
-                }
-            }
+            "subjectOf": {"$ref": "subjectOf.json#/definitions/subjectOf"}
         },
         "required": ["@type"]
     }}

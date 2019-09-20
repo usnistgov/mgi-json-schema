@@ -7,13 +7,16 @@
         "properties": {
             "about": {
                 "type": "array",
-                "title": "Subjects",
-                "description": "This is for controlled vocabulary terms.",
+                "title": "About",
+                "description": "This is for linking controlled vocabulary terms and parent projects.",
                 "uniqueItems": true,
                 "items": {
                     "type": "string",
-                    "title": "Subject",
-                    "cordra": {"type": {"handleReference": {"types": ["DefinedTerm"]}}}
+                    "title": "Subject/Project",
+                    "cordra": {"type": {"handleReference": {"types": [
+                        "DefinedTerm",
+                        "Project"
+                    ]}}}
                 }
             },
             "keywords": {

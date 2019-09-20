@@ -26,22 +26,7 @@
                     ]}}}
                 }
             },
-            "subjectOf": {
-                "type": "array",
-                "title": "Linked Datasets/Project",
-                "uniqueItems": true,
-                "items": {
-                    "type": "string",
-                    "title": "Linked Dataset/Project",
-                    "cordra": {"type": {"handleReference": {"types": [
-                        "Project",
-                        "File",
-                        "TabularDataPackage",
-                        "MaterialProperty",
-                        "Dataset"
-                    ]}}}
-                }
-            },
+            "subjectOf": {"$ref": "subjectOf.json#/definitions/subjectOf"},
             "isPartOf": {
                 "title": "Has Parent Materials",
                 "type": "array",

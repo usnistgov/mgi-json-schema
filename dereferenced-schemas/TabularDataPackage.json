@@ -229,24 +229,6 @@
                 }
             }
         },
-        "subjectOfProject": {
-            "type": "array",
-            "title": "Parent Projects",
-            "uniqueItems": true,
-            "items": {
-                "type": "string",
-                "title": "Parent Project",
-                "cordra": {
-                    "type": {
-                        "handleReference": {
-                            "types": [
-                                "Project"
-                            ]
-                        }
-                    }
-                }
-            }
-        },
         "isPartOf": {
             "type": "array",
             "title": "Is Part Of",
@@ -304,6 +286,28 @@
                                 "File",
                                 "MaterialProperty",
                                 "TabularDataPackage"
+                            ]
+                        }
+                    }
+                }
+            }
+        },
+        "subjectOf": {
+            "type": "array",
+            "title": "Linked Datasets, etc.",
+            "uniqueItems": true,
+            "items": {
+                "type": "string",
+                "title": "Linked Datasets, etc.",
+                "cordra": {
+                    "type": {
+                        "handleReference": {
+                            "types": [
+                                "File",
+                                "TabularDataPackage",
+                                "MaterialProperty",
+                                "Dataset",
+                                "Collection"
                             ]
                         }
                     }
@@ -376,17 +380,18 @@
         },
         "about": {
             "type": "array",
-            "title": "Subjects",
-            "description": "This is for controlled vocabulary terms.",
+            "title": "About",
+            "description": "This is for linking controlled vocabulary terms and parent projects.",
             "uniqueItems": true,
             "items": {
                 "type": "string",
-                "title": "Subject",
+                "title": "Subject/Project",
                 "cordra": {
                     "type": {
                         "handleReference": {
                             "types": [
-                                "DefinedTerm"
+                                "DefinedTerm",
+                                "Project"
                             ]
                         }
                     }
@@ -665,7 +670,7 @@
             "default": "Dataset"
         },
         "subjectOf": {
-            "$ref": "#/definitions/subjectOfProject"
+            "$ref": "#/definitions/subjectOf"
         },
         "measurementTechnique": {
             "$ref": "#/definitions/measurementTechnique"

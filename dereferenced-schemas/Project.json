@@ -3,6 +3,30 @@
     "type": "object",
     "title": "Project",
     "description": "This schema is for describing a Project in Cordra.",
+    "definitions": {
+        "subjectOf": {
+            "type": "array",
+            "title": "Linked Datasets, etc.",
+            "uniqueItems": true,
+            "items": {
+                "type": "string",
+                "title": "Linked Datasets, etc.",
+                "cordra": {
+                    "type": {
+                        "handleReference": {
+                            "types": [
+                                "File",
+                                "TabularDataPackage",
+                                "MaterialProperty",
+                                "Dataset",
+                                "Collection"
+                            ]
+                        }
+                    }
+                }
+            }
+        }
+    },
     "properties": {
         "@id": {
             "type": "string",
@@ -203,28 +227,7 @@
             }
         },
         "subjectOf": {
-            "type": "array",
-            "title": "Project Assets",
-            "uniqueItems": true,
-            "items": {
-                "type": "string",
-                "title": "Project Asset",
-                "cordra": {
-                    "type": {
-                        "handleReference": {
-                            "types": [
-                                "Collection",
-                                "File",
-                                "TabularDataPackage",
-                                "MaterialProperty",
-                                "Material",
-                                "Instrument",
-                                "Dataset"
-                            ]
-                        }
-                    }
-                }
-            }
+            "$ref": "#/definitions/subjectOf"
         }
     }
 }
