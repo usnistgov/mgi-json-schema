@@ -71,6 +71,22 @@
                     "type": "string",
                     "default": "http://www.w3.org/2004/02/skos/core#"
                 },
+                "name": {
+                    "type": "string",
+                    "default": "schema:name"
+                },
+                "alternateName": {
+                    "type": "string",
+                    "default": "schema:alternateName"
+                },
+                "description": {
+                    "type": "string",
+                    "default": "schema:description"
+                },
+                "url": {
+                    "type": "string",
+                    "default": "schema:url"
+                },
                 "broader": {
                     "type": "string",
                     "default": "skos:broader"
@@ -95,7 +111,7 @@
         },
         "@type": {
             "type": "string",
-            "default": "DefinedTerm"
+            "default": "schema:DefinedTerm"
         },
         "termCode": {
             "type": "string",
