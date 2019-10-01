@@ -250,26 +250,6 @@
                 }
             }
         },
-        "producer": {
-            "type": "array",
-            "title": "Producers",
-            "uniqueItems": true,
-            "items": {
-                "type": "string",
-                "title": "Producer",
-                "cordra": {
-                    "type": {
-                        "handleReference": {
-                            "types": [
-                                "User",
-                                "Person",
-                                "Organization"
-                            ]
-                        }
-                    }
-                }
-            }
-        },
         "provider": {
             "type": "array",
             "title": "Providers",
