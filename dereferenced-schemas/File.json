@@ -291,28 +291,6 @@
                     }
                 }
             }
-        },
-        "subjectOf": {
-            "type": "array",
-            "title": "Linked Datasets, etc.",
-            "uniqueItems": true,
-            "items": {
-                "type": "string",
-                "title": "Linked Datasets, etc.",
-                "cordra": {
-                    "type": {
-                        "handleReference": {
-                            "types": [
-                                "File",
-                                "TabularDataPackage",
-                                "MaterialProperty",
-                                "Dataset",
-                                "Collection"
-                            ]
-                        }
-                    }
-                }
-            }
         }
     },
     "properties": {
@@ -639,9 +617,6 @@
         "@type": {
             "type": "string",
             "default": "Dataset"
-        },
-        "subjectOf": {
-            "$ref": "#/definitions/subjectOf"
         },
         "measurementTechnique": {
             "$ref": "#/definitions/measurementTechnique"

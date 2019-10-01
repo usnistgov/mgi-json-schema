@@ -13,7 +13,6 @@
                 "type": "string",
                 "default": "Dataset"
             },
-            "subjectOf": {"$ref": "subjectOf.json#/definitions/subjectOf"},
             "measurementTechnique": {"$ref": "measurementTechnique.json#/definitions/measurementTechnique"},
             "variableMeasured": {
                 "type": "array",
