@@ -6,89 +6,20 @@
         "type": "object",
         "properties": {
             "@context": {
-                "type": "object",
-                "properties": {
-                    "schema": {
-                        "type": "string",
-                        "default": "http://schema.org/"
-                    },
-                    "skos": {
-                        "type": "string",
-                        "default": "http://www.w3.org/2004/02/skos/core#"
-                    },
-                    "broader": {
-                        "type": "string",
-                        "default": "skos:broader"
-                    },
-                    "narrower": {
-                        "type": "string",
-                        "default": "skos:narrower"
-                    },
-                    "related": {
-                        "type": "string",
-                        "default": "skos:related"
-                    },
-                    "exactMatch": {
-                        "type": "string",
-                        "default": "skos:exactMatch"
-                    },
-                    "closeMatch": {
-                        "type": "string",
-                        "default": "skos:closeMatch"
-                    }
-                }
+                "type": "string",
+                "default": "http://schema.org/"
             },
             "@type": {
                 "type": "string",
                 "default": "CreativeWork"
             },
-            "broader": {
+            "isBasedOn": {
                 "type": "array",
-                "title": "Broader DataTypes (e.g., is-a)",
+                "title": "Is Based On",
                 "uniqueItems": true,
                 "items": {
                     "type": "string",
-                    "title": "Broader DataType",
-                    "cordra": {"type": {"handleReference": {"types": ["DataType"]}}}
-                }
-            },
-            "narrower": {
-                "type": "array",
-                "title": "Narrower DataTypes (e.g., has-a)",
-                "uniqueItems": true,
-                "items": {
-                    "type": "string",
-                    "title": "Narrower DataType",
-                    "cordra": {"type": {"handleReference": {"types": ["DataType"]}}}
-                }
-            },
-            "related": {
-                "type": "array",
-                "title": "Related DataTypes",
-                "uniqueItems": true,
-                "items": {
-                    "type": "string",
-                    "title": "Related DataType",
-                    "cordra": {"type": {"handleReference": {"types": ["DataType"]}}}
-                }
-            },
-            "exactMatch": {
-                "type": "array",
-                "title": "Exactly Matching DataTypes",
-                "uniqueItems": true,
-                "items": {
-                    "type": "string",
-                    "title": "Exactly Matching DataType",
-                    "cordra": {"type": {"handleReference": {"types": ["DataType"]}}}
-                }
-            },
-            "closeMatch": {
-                "type": "array",
-                "title": "Closely Matching DataTypes",
-                "uniqueItems": true,
-                "items": {
-                    "type": "string",
-                    "title": "Closely Matching DataType",
+                    "title": "DataType",
                     "cordra": {"type": {"handleReference": {"types": ["DataType"]}}}
                 }
             }
