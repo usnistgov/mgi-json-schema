@@ -4,11 +4,11 @@
     "title": "subjectOf",
     "definitions": {"subjectOf": {
         "type": "array",
-        "title": "Linked Datasets, etc.",
+        "title": "Linked Materials, Datasets, etc.",
         "uniqueItems": true,
         "items": {
             "type": "string",
-            "title": "Linked Datasets, etc.",
+            "title": "Linked Material, Dataset, etc.",
             "cordra": {"type": {"handleReference": {"types": [
                 "File",
                 "TabularDataPackage",

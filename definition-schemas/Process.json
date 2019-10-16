@@ -2,149 +2,51 @@
     "$schema": "http://json-schema.org/draft-04/schema#",
     "type": "object",
     "title": "Process",
-    "definitions": {"Process": {
-        "type": "object",
-        "properties": {
-            "@context": {
-                "type": "string",
-                "default": "http://schema.org/"
-            },
-            "@type": {
-                "type": "string",
-                "default": "HowTo"
-            },
-            "workExample": {
-                "type": "array",
-                "title": "Resulting Materials",
-                "uniqueItems": true,
-                "items": {
+    "definitions": {
+        "Process": {
+            "type": "object",
+            "properties": {
+                "@context": {
                     "type": "string",
-                    "title": "Resulting Material",
-                    "cordra": {"type": {"handleReference": {"types": ["Material"]}}}
-                }
-            },
-            "estimatedCost": {
-                "type": "object",
-                "title": "MonetaryAmount",
-                "properties": {
-                    "@type": {
-                        "type": "string",
-                        "default": "MonetaryAmount"
-                    },
-                    "currency": {"type": "string"},
-                    "value": {"type": "number"}
+                    "default": "http://schema.org/"
                 },
-                "required": ["@type"]
-            },
-            "performTime": {"type": "string"},
-            "prepTime": {"type": "string"},
-            "step": {
-                "type": "array",
-                "title": "HowToSections",
-                "items": {
+                "@type": {
+                    "type": "string",
+                    "default": "HowTo"
+                },
+                "workExample": {
+                    "type": "array",
+                    "title": "Resulting Materials",
+                    "uniqueItems": true,
+                    "items": {
+                        "type": "string",
+                        "title": "Resulting Material",
+                        "cordra": {"type": {"handleReference": {"types": ["Material"]}}}
+                    }
+                },
+                "estimatedCost": {
                     "type": "object",
-                    "title": "HowToSection",
+                    "title": "MonetaryAmount",
                     "properties": {
                         "@type": {
                             "type": "string",
-                            "default": "HowToSection"
+                            "default": "MonetaryAmount"
                         },
-                        "name": {"type": "string"},
-                        "position": {"type": "number"},
-                        "description": {
-                            "type": "string",
-                            "title": "Description",
-                            "format": "textarea"
-                        },
-                        "about": {
-                            "type": "array",
-                            "title": "Subjects",
-                            "description": "This is for controlled vocabulary terms.",
-                            "uniqueItems": true,
-                            "items": {
-                                "type": "string",
-                                "title": "Subject",
-                                "cordra": {"type": {"handleReference": {"types": ["DefinedTerm"]}}}
-                            }
-                        },
-                        "itemListElement": {
-                            "type": "array",
-                            "title": "HowToSteps",
-                            "items": {
-                                "type": "object",
-                                "title": "HowToStep",
-                                "properties": {
-                                    "@type": {
-                                        "type": "string",
-                                        "default": "HowToStep"
-                                    },
-                                    "name": {"type": "string"},
-                                    "position": {"type": "number"},
-                                    "text": {
-                                        "type": "string",
-                                        "format": "textarea"
-                                    },
-                                    "about": {
-                                        "type": "array",
-                                        "title": "Subjects",
-                                        "description": "This is for controlled vocabulary terms.",
-                                        "uniqueItems": true,
-                                        "items": {
-                                            "type": "string",
-                                            "title": "Subject",
-                                            "cordra": {"type": {"handleReference": {"types": ["DefinedTerm"]}}}
-                                        }
-                                    },
-                                    "hasPart": {
-                                        "type": "object",
-                                        "title": "Detailed Processing Information",
-                                        "properties": {
-                                            "@type": {
-                                                "type": "string",
-                                                "default": "Dataset"
-                                            },
-                                            "material": {"$ref": "materialLinked.json#/definitions/materialLinked"},
-                                            "materialExtent": {"$ref": "QuantitativeValue.json#/definitions/QuantitativeValue"},
-                                            "measurementTechnique": {"$ref": "measurementTechnique.json#/definitions/measurementTechnique"},
-                                            "variableMeasured": {
-                                                "type": "array",
-                                                "title": "Variables Measured",
-                                                "uniqueItems": true,
-                                                "items": {
-                                                    "title": "Variable Measured",
-                                                    "$ref": "variableMeasured.json#/definitions/variableMeasured"
-                                                }
-                                            },
-                                            "parameterControlled": {
-                                                "type": "array",
-                                                "title": "Parameters Controlled",
-                                                "uniqueItems": true,
-                                                "items": {
-                                                    "title": "Parameter Controlled",
-                                                    "$ref": "variableMeasured.json#/definitions/variableMeasured"
-                                                }
-                                            }
-                                        },
-                                        "required": ["@type"]
-                                    }
-                                },
-                                "required": [
-                                    "@type",
-                                    "position"
-                                ]
-                            }
-                        }
+                        "currency": {"type": "string"},
+                        "value": {"type": "number"}
                     },
-                    "required": [
-                        "@type",
-                        "position",
-                        "itemListElement"
-                    ]
+                    "required": ["@type"]
+                },
+                "performTime": {"type": "string"},
+                "prepTime": {"type": "string"},
+                "step": {
+                    "type": "array",
+                    "items": {}
                 }
             },
             "totalTime": {"type": "string"},
             "yield": {"$ref": "QuantitativeValue.json#/definitions/QuantitativeValue"}
         },
         "required": ["@type"]
-    }}
+    }
 }
