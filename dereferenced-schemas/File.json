@@ -136,12 +136,22 @@
                         },
                         {
                             "type": "number"
+                        },
+                        {
+                            "type": "null"
                         }
                     ]
                 },
                 "unitText": {
                     "title": "Unit Text",
-                    "type": "string"
+                    "oneOf": [
+                        {
+                            "type": "string"
+                        },
+                        {
+                            "type": "null"
+                        }
+                    ]
                 },
                 "unitCode": {
                     "title": "Unit Code",
