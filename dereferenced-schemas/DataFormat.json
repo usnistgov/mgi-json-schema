@@ -1,8 +1,8 @@
 {
     "$schema": "http://json-schema.org/draft-04/schema#",
     "type": "object",
-    "title": "DataType",
-    "description": "This schema is for describing a Data Type in Cordra.",
+    "title": "DataFormat",
+    "description": "This schema is for describing a Data Format in Cordra.",
     "properties": {
         "@id": {
             "type": "string",
@@ -334,12 +334,12 @@
             "uniqueItems": true,
             "items": {
                 "type": "string",
-                "title": "DataType",
+                "title": "DataFormat",
                 "cordra": {
                     "type": {
                         "handleReference": {
                             "types": [
-                                "DataType"
+                                "DataFormat"
                             ]
                         }
                     }

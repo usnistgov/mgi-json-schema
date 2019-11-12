@@ -1,12 +1,12 @@
 {
     "$schema": "http://json-schema.org/draft-04/schema#",
     "type": "object",
-    "title": "DataType",
-    "description": "This schema is for describing a Data Type in Cordra.",
+    "title": "DataFormat",
+    "description": "This schema is for describing a Data Format in Cordra.",
     "allOf": [
         {"$ref": "definition-schemas/CordraObjectID.json#/definitions/CordraObjectID"},
         {"$ref": "definition-schemas/Thing.json#/definitions/Thing"},
         {"$ref": "definition-schemas/CreativeWork.json#/definitions/CreativeWork"},
-        {"$ref": "definition-schemas/DataType.json#/definitions/DataType"}
+        {"$ref": "definition-schemas/DataFormat.json#/definitions/DataFormat"}
     ]
 }

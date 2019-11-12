@@ -1,8 +1,8 @@
 {
     "$schema": "http://json-schema.org/draft-04/schema#",
     "type": "object",
-    "title": "DataType",
-    "definitions": {"DataType": {
+    "title": "DataFormat",
+    "definitions": {"DataFormat": {
         "type": "object",
         "properties": {
             "@context": {
@@ -19,8 +19,8 @@
                 "uniqueItems": true,
                 "items": {
                     "type": "string",
-                    "title": "DataType",
-                    "cordra": {"type": {"handleReference": {"types": ["DataType"]}}}
+                    "title": "DataFormat",
+                    "cordra": {"type": {"handleReference": {"types": ["DataFormat"]}}}
                 }
             }
         },

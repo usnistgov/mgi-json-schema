@@ -42,7 +42,7 @@
                         "type": {
                             "handleReference": {
                                 "types": [
-                                    "DataType"
+                                    "DataFormat"
                                 ]
                             }
                         }
