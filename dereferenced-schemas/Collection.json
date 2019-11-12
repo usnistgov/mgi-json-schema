@@ -19,7 +19,8 @@
                                 "TabularDataPackage",
                                 "MaterialProperty",
                                 "Dataset",
-                                "Collection"
+                                "Collection",
+                                "Material"
                             ]
                         }
                     }
