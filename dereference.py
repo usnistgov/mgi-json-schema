@@ -41,6 +41,8 @@ for file_name_in in main_schemas:
         full_path = ref_item["$ref"]
         full_path_split = full_path.split("#")
         dep_file_path = full_path_split[0]
+        if "Process.json" in dep_file_path:
+            continue
         try:
             definition_schemas.remove(dep_file_path)
         except:
