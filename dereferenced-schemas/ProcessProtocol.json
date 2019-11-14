@@ -192,6 +192,25 @@
                     "type": "string",
                     "format": "textarea"
                 },
+                "isBasedOn": {
+                    "type": "array",
+                    "title": "Process is based on",
+                    "uniqueItems": true,
+                    "items": {
+                        "type": "string",
+                        "title": "Process",
+                        "cordra": {
+                            "type": {
+                                "handleReference": {
+                                    "types": [
+                                        "ProcessProtocol",
+                                        "ProcessHistory"
+                                    ]
+                                }
+                            }
+                        }
+                    }
+                },
                 "supply": {
                     "type": "array",
                     "title": "Supply/Starting Materials",
@@ -666,6 +685,25 @@
             "title": "Process/Step Text",
             "type": "string",
             "format": "textarea"
+        },
+        "isBasedOn": {
+            "type": "array",
+            "title": "Process is based on",
+            "uniqueItems": true,
+            "items": {
+                "type": "string",
+                "title": "Process",
+                "cordra": {
+                    "type": {
+                        "handleReference": {
+                            "types": [
+                                "ProcessProtocol",
+                                "ProcessHistory"
+                            ]
+                        }
+                    }
+                }
+            }
         },
         "supply": {
             "type": "array",
