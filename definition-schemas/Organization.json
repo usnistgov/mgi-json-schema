@@ -5,14 +5,6 @@
     "definitions": {"Organization": {
         "type": "object",
         "properties": {
-            "@context": {
-                "type": "string",
-                "default": "http://schema.org/"
-            },
-            "@type": {
-                "type": "string",
-                "default": "Organization"
-            },
             "address": {
                 "type": "string",
                 "title": "Physical Address",
@@ -25,7 +17,10 @@
                 "items": {
                     "type": "string",
                     "title": "Contact Point",
-                    "cordra": {"type": {"handleReference": {"types": ["Person", "User"]}}}
+                    "cordra": {"type": {"handleReference": {"types": [
+                        "Person",
+                        "User"
+                    ]}}}
                 }
             },
             "email": {
@@ -80,7 +75,6 @@
                     "cordra": {"type": {"handleReference": {"types": ["Organization"]}}}
                 }
             }
-        },
-        "required": ["@type"]
+        }
     }}
 }

@@ -3,7 +3,20 @@
     "type": "object",
     "title": "Group",
     "description": "This schema is for creating a group of authenticated users in Cordra for the purpose of access control.",
+    "required": [
+        "@id",
+        "@context",
+        "@type"
+    ],
     "properties": {
+        "@context": {
+            "type": "string",
+            "default": "http://schema.org/"
+        },
+        "@type": {
+            "type": "string",
+            "default": "Organization"
+        },
         "@id": {
             "type": "string",
             "cordra": {
@@ -54,10 +67,7 @@
                         "title": "Identifier Value",
                         "type": "string"
                     }
-                },
-                "required": [
-                    "@type"
-                ]
+                }
             }
         },
         "name": {
@@ -82,14 +92,6 @@
         "url": {
             "type": "string",
             "title": "URL"
-        },
-        "@context": {
-            "type": "string",
-            "default": "http://schema.org/"
-        },
-        "@type": {
-            "type": "string",
-            "default": "Organization"
         },
         "address": {
             "type": "string",

@@ -28,11 +28,6 @@
                 "description": "If true a new password must be set on next authentication.",
                 "cordra": {"auth": "requirePasswordChange"}
             }
-        },
-        "required": [
-            "@id",
-            "username",
-            "password"
-        ]
+        }
     }}
 }

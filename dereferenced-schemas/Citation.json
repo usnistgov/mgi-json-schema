@@ -3,7 +3,28 @@
     "type": "object",
     "title": "Citation",
     "description": "This schema is for describing a Citation in Cordra",
+    "required": [
+        "@id",
+        "@context",
+        "@type"
+    ],
     "properties": {
+        "@context": {
+            "type": "array",
+            "default": [
+                "http://schema.org/",
+                {
+                    "mat": "https://pages.nist.gov/material-schema/"
+                }
+            ]
+        },
+        "@type": {
+            "type": "array",
+            "default": [
+                "CreativeWork",
+                "mat:Citation"
+            ]
+        },
         "@id": {
             "type": "string",
             "cordra": {
@@ -31,10 +52,7 @@
                         "title": "Identifier Value",
                         "type": "string"
                     }
-                },
-                "required": [
-                    "@type"
-                ]
+                }
             }
         },
         "name": {
@@ -213,26 +231,6 @@
             "items": {
                 "type": "string",
                 "title": "Contributor",
-                "cordra": {
-                    "type": {
-                        "handleReference": {
-                            "types": [
-                                "User",
-                                "Person",
-                                "Organization"
-                            ]
-                        }
-                    }
-                }
-            }
-        },
-        "producer": {
-            "type": "array",
-            "title": "Producers",
-            "uniqueItems": true,
-            "items": {
-                "type": "string",
-                "title": "Producer",
                 "cordra": {
                     "type": {
                         "handleReference": {

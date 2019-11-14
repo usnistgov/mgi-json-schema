@@ -3,7 +3,22 @@
     "type": "object",
     "title": "Comment",
     "description": "This schema is for representing a Comment in Cordra.",
+    "required": [
+        "@id",
+        "@context",
+        "@type"
+    ],
     "allOf": [
+        {
+            "@context": {
+                "type": "string",
+                "default": "http://schema.org/"
+            },
+            "@type": {
+                "type": "string",
+                "default": "Comment"
+            }
+        },
         {"$ref": "definition-schemas/CordraObjectID.json#/definitions/CordraObjectID"},
         {"$ref": "definition-schemas/Thing.json#/definitions/Thing"},
         {"$ref": "definition-schemas/CreativeWork.json#/definitions/CreativeWork"},

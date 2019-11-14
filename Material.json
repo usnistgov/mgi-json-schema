@@ -3,7 +3,28 @@
     "type": "object",
     "title": "Material",
     "description": "This form is for describing any measurable substance (e.g., sample, specimen, material, chemical, etc.), or a specific sup-sample (e.g., location on a larger artifact, sub-portion of a larger artifact, item within a collection of specimens, etc.).",
+    "required": [
+        "@id",
+        "@context",
+        "@type"
+    ],
     "allOf": [
+        {
+            "@context": {
+                "type": "array",
+                "default": [
+                    "http://schema.org/",
+                    {"mat": "https://pages.nist.gov/material-schema/"}
+                ]
+            },
+            "@type": {
+                "type": "array",
+                "default": [
+                    "CreativeWork",
+                    "mat:Material"
+                ]
+            }
+        },
         {"$ref": "definition-schemas/CordraObjectID.json#/definitions/CordraObjectID"},
         {"$ref": "definition-schemas/Thing.json#/definitions/Thing"},
         {"$ref": "definition-schemas/CreativeWork.json#/definitions/CreativeWork"},

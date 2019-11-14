@@ -5,14 +5,6 @@
     "definitions": {"SoftwareSourceCode": {
         "type": "object",
         "properties": {
-            "@context": {
-                "type": "string",
-                "default": "http://schema.org/"
-            },
-            "@type": {
-                "type": "string",
-                "default": "SoftwareSourceCode"
-            },
             "codeRepository": {
                 "type": "string",
                 "title": "Code Repository URL"
@@ -31,7 +23,6 @@
                     "cordra": {"type": {"handleReference": {"types": ["SoftwareApplication"]}}}
                 }
             }
-        },
-        "required": ["@type"]
+        }
     }}
 }

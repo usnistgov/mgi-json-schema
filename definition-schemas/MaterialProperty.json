@@ -5,15 +5,6 @@
     "definitions": {"MaterialProperty": {
         "type": "object",
         "properties": {
-            "@context": {
-                "type": "string",
-                "default": "http://schema.org/"
-            },
-            "@type": {
-                "type": "string",
-                "default": "Dataset"
-            },
-            "subjectOf": {"$ref": "subjectOf.json#/definitions/subjectOf"},
             "includedInDataCatalog": {"$ref": "includedInDataCatalog.json#/definitions/includedInDataCatalog"},
             "material": {"$ref": "materialLinked.json#/definitions/materialLinked"},
             "materialExtent": {"$ref": "QuantitativeValue.json#/definitions/QuantitativeValue"},
@@ -34,7 +25,6 @@
             "hasPart": {"$ref": "datasetLinked.json#/definitions/hasPart"},
             "isPartOf": {"$ref": "datasetLinked.json#/definitions/isPartOf"},
             "isBasedOn": {"$ref": "datasetLinked.json#/definitions/isBasedOn"}
-        },
-        "required": ["@type"]
+        }
     }}
 }

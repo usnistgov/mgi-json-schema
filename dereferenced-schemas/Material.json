@@ -3,14 +3,19 @@
     "type": "object",
     "title": "Material",
     "description": "This form is for describing any measurable substance (e.g., sample, specimen, material, chemical, etc.), or a specific sup-sample (e.g., location on a larger artifact, sub-portion of a larger artifact, item within a collection of specimens, etc.).",
+    "required": [
+        "@id",
+        "@context",
+        "@type"
+    ],
     "definitions": {
         "subjectOf": {
             "type": "array",
-            "title": "Linked Datasets, etc.",
+            "title": "Linked Materials, Datasets, etc.",
             "uniqueItems": true,
             "items": {
                 "type": "string",
-                "title": "Linked Datasets, etc.",
+                "title": "Linked Material, Dataset, etc.",
                 "cordra": {
                     "type": {
                         "handleReference": {
@@ -19,7 +24,8 @@
                                 "TabularDataPackage",
                                 "MaterialProperty",
                                 "Dataset",
-                                "Collection"
+                                "Collection",
+                                "Material"
                             ]
                         }
                     }
@@ -28,6 +34,22 @@
         }
     },
     "properties": {
+        "@context": {
+            "type": "array",
+            "default": [
+                "http://schema.org/",
+                {
+                    "mat": "https://pages.nist.gov/material-schema/"
+                }
+            ]
+        },
+        "@type": {
+            "type": "array",
+            "default": [
+                "CreativeWork",
+                "mat:Material"
+            ]
+        },
         "@id": {
             "type": "string",
             "cordra": {
@@ -55,10 +77,7 @@
                         "title": "Identifier Value",
                         "type": "string"
                     }
-                },
-                "required": [
-                    "@type"
-                ]
+                }
             }
         },
         "name": {
@@ -250,26 +269,6 @@
                 }
             }
         },
-        "producer": {
-            "type": "array",
-            "title": "Producers",
-            "uniqueItems": true,
-            "items": {
-                "type": "string",
-                "title": "Producer",
-                "cordra": {
-                    "type": {
-                        "handleReference": {
-                            "types": [
-                                "User",
-                                "Person",
-                                "Organization"
-                            ]
-                        }
-                    }
-                }
-            }
-        },
         "provider": {
             "type": "array",
             "title": "Providers",
@@ -363,14 +362,6 @@
                     }
                 }
             }
-        },
-        "@context": {
-            "type": "string",
-            "default": "http://schema.org/"
-        },
-        "@type": {
-            "type": "string",
-            "default": "CreativeWork"
         },
         "exampleOfWork": {
             "type": "array",

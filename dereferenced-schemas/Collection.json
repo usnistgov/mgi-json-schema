@@ -3,14 +3,19 @@
     "type": "object",
     "title": "Collection",
     "description": "This schema is for creating a collection (i.e., a folder), which can contain of files, datasets, collections, samples, instruments, etc.",
+    "required": [
+        "@id",
+        "@context",
+        "@type"
+    ],
     "definitions": {
         "subjectOf": {
             "type": "array",
-            "title": "Linked Datasets, etc.",
+            "title": "Linked Materials, Datasets, etc.",
             "uniqueItems": true,
             "items": {
                 "type": "string",
-                "title": "Linked Datasets, etc.",
+                "title": "Linked Material, Dataset, etc.",
                 "cordra": {
                     "type": {
                         "handleReference": {
@@ -19,7 +24,8 @@
                                 "TabularDataPackage",
                                 "MaterialProperty",
                                 "Dataset",
-                                "Collection"
+                                "Collection",
+                                "Material"
                             ]
                         }
                     }
@@ -28,6 +34,14 @@
         }
     },
     "properties": {
+        "@context": {
+            "type": "string",
+            "default": "http://schema.org/"
+        },
+        "@type": {
+            "type": "string",
+            "default": "Collection"
+        },
         "@id": {
             "type": "string",
             "cordra": {
@@ -55,10 +69,7 @@
                         "title": "Identifier Value",
                         "type": "string"
                     }
-                },
-                "required": [
-                    "@type"
-                ]
+                }
             }
         },
         "name": {
@@ -250,26 +261,6 @@
                 }
             }
         },
-        "producer": {
-            "type": "array",
-            "title": "Producers",
-            "uniqueItems": true,
-            "items": {
-                "type": "string",
-                "title": "Producer",
-                "cordra": {
-                    "type": {
-                        "handleReference": {
-                            "types": [
-                                "User",
-                                "Person",
-                                "Organization"
-                            ]
-                        }
-                    }
-                }
-            }
-        },
         "provider": {
             "type": "array",
             "title": "Providers",
@@ -363,14 +354,6 @@
                     }
                 }
             }
-        },
-        "@context": {
-            "type": "string",
-            "default": "http://schema.org/"
-        },
-        "@type": {
-            "type": "string",
-            "default": "Collection"
         },
         "subjectOf": {
             "$ref": "#/definitions/subjectOf"

@@ -4,24 +4,10 @@
     "title": "Comment",
     "definitions": {"Comment": {
         "type": "object",
-        "properties": {
-            "@context": {
-                "type": "string",
-                "default": "http://schema.org/"
-            },
-            "@type": {
-                "type": "string",
-                "default": "Comment"
-            },
-            "text": {
-                "type": "string",
-                "title": "Text of the Comment",
-                "format": "textarea"
-            }
-        },
-        "required": [
-            "@type",
-            "text"
-        ]
+        "properties": {"text": {
+            "type": "string",
+            "title": "Text of the Comment",
+            "format": "textarea"
+        }}
     }}
 }

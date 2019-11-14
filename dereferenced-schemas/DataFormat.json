@@ -1,9 +1,30 @@
 {
     "$schema": "http://json-schema.org/draft-04/schema#",
     "type": "object",
-    "title": "DataType",
-    "description": "This schema is for describing a Data Type in Cordra.",
+    "title": "DataFormat",
+    "description": "This schema is for describing a Data Format in Cordra.",
+    "required": [
+        "@id",
+        "@context",
+        "@type"
+    ],
     "properties": {
+        "@context": {
+            "type": "array",
+            "default": [
+                "http://schema.org/",
+                {
+                    "mat": "https://pages.nist.gov/material-schema/"
+                }
+            ]
+        },
+        "@type": {
+            "type": "array",
+            "default": [
+                "CreativeWork",
+                "mat:DataFormat"
+            ]
+        },
         "@id": {
             "type": "string",
             "cordra": {
@@ -31,10 +52,7 @@
                         "title": "Identifier Value",
                         "type": "string"
                     }
-                },
-                "required": [
-                    "@type"
-                ]
+                }
             }
         },
         "name": {
@@ -226,26 +244,6 @@
                 }
             }
         },
-        "producer": {
-            "type": "array",
-            "title": "Producers",
-            "uniqueItems": true,
-            "items": {
-                "type": "string",
-                "title": "Producer",
-                "cordra": {
-                    "type": {
-                        "handleReference": {
-                            "types": [
-                                "User",
-                                "Person",
-                                "Organization"
-                            ]
-                        }
-                    }
-                }
-            }
-        },
         "provider": {
             "type": "array",
             "title": "Providers",
@@ -340,127 +338,18 @@
                 }
             }
         },
-        "@context": {
-            "type": "object",
-            "properties": {
-                "schema": {
-                    "type": "string",
-                    "default": "http://schema.org/"
-                },
-                "skos": {
-                    "type": "string",
-                    "default": "http://www.w3.org/2004/02/skos/core#"
-                },
-                "broader": {
-                    "type": "string",
-                    "default": "skos:broader"
-                },
-                "narrower": {
-                    "type": "string",
-                    "default": "skos:narrower"
-                },
-                "related": {
-                    "type": "string",
-                    "default": "skos:related"
-                },
-                "exactMatch": {
-                    "type": "string",
-                    "default": "skos:exactMatch"
-                },
-                "closeMatch": {
-                    "type": "string",
-                    "default": "skos:closeMatch"
-                }
-            }
-        },
-        "@type": {
-            "type": "string",
-            "default": "CreativeWork"
-        },
-        "broader": {
+        "isBasedOn": {
             "type": "array",
-            "title": "Broader DataTypes (e.g., is-a)",
+            "title": "Is Based On",
             "uniqueItems": true,
             "items": {
                 "type": "string",
-                "title": "Broader DataType",
+                "title": "DataFormat",
                 "cordra": {
                     "type": {
                         "handleReference": {
                             "types": [
-                                "DataType"
-                            ]
-                        }
-                    }
-                }
-            }
-        },
-        "narrower": {
-            "type": "array",
-            "title": "Narrower DataTypes (e.g., has-a)",
-            "uniqueItems": true,
-            "items": {
-                "type": "string",
-                "title": "Narrower DataType",
-                "cordra": {
-                    "type": {
-                        "handleReference": {
-                            "types": [
-                                "DataType"
-                            ]
-                        }
-                    }
-                }
-            }
-        },
-        "related": {
-            "type": "array",
-            "title": "Related DataTypes",
-            "uniqueItems": true,
-            "items": {
-                "type": "string",
-                "title": "Related DataType",
-                "cordra": {
-                    "type": {
-                        "handleReference": {
-                            "types": [
-                                "DataType"
-                            ]
-                        }
-                    }
-                }
-            }
-        },
-        "exactMatch": {
-            "type": "array",
-            "title": "Exactly Matching DataTypes",
-            "uniqueItems": true,
-            "items": {
-                "type": "string",
-                "title": "Exactly Matching DataType",
-                "cordra": {
-                    "type": {
-                        "handleReference": {
-                            "types": [
-                                "DataType"
-                            ]
-                        }
-                    }
-                }
-            }
-        },
-        "closeMatch": {
-            "type": "array",
-            "title": "Closely Matching DataTypes",
-            "uniqueItems": true,
-            "items": {
-                "type": "string",
-                "title": "Closely Matching DataType",
-                "cordra": {
-                    "type": {
-                        "handleReference": {
-                            "types": [
-                                "DataType"
+                                "DataFormat"
                             ]
                         }
                     }

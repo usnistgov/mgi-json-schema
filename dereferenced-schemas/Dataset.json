@@ -3,6 +3,11 @@
     "type": "object",
     "title": "Dataset",
     "description": "This schema is for describing a Dataset in Cordra.",
+    "required": [
+        "@id",
+        "@context",
+        "@type"
+    ],
     "definitions": {
         "materialLinked": {
             "type": "array",
@@ -106,12 +111,22 @@
                         },
                         {
                             "type": "number"
+                        },
+                        {
+                            "type": "null"
                         }
                     ]
                 },
                 "unitText": {
                     "title": "Unit Text",
-                    "type": "string"
+                    "oneOf": [
+                        {
+                            "type": "string"
+                        },
+                        {
+                            "type": "null"
+                        }
+                    ]
                 },
                 "unitCode": {
                     "title": "Unit Code",
@@ -261,31 +276,26 @@
                     }
                 }
             }
-        },
-        "subjectOf": {
-            "type": "array",
-            "title": "Linked Datasets, etc.",
-            "uniqueItems": true,
-            "items": {
-                "type": "string",
-                "title": "Linked Datasets, etc.",
-                "cordra": {
-                    "type": {
-                        "handleReference": {
-                            "types": [
-                                "File",
-                                "TabularDataPackage",
-                                "MaterialProperty",
-                                "Dataset",
-                                "Collection"
-                            ]
-                        }
-                    }
-                }
-            }
         }
     },
     "properties": {
+        "@context": {
+            "type": "array",
+            "default": [
+                "http://schema.org/",
+                {
+                    "mat": "https://pages.nist.gov/material-schema/",
+                    "parameterControlled": "mat:parameterControlled"
+                }
+            ]
+        },
+        "@type": {
+            "type": "array",
+            "default": [
+                "Dataset",
+                "mat:Dataset"
+            ]
+        },
         "@id": {
             "type": "string",
             "cordra": {
@@ -313,10 +323,7 @@
                         "title": "Identifier Value",
                         "type": "string"
                     }
-                },
-                "required": [
-                    "@type"
-                ]
+                }
             }
         },
         "name": {
@@ -508,26 +515,6 @@
                 }
             }
         },
-        "producer": {
-            "type": "array",
-            "title": "Producers",
-            "uniqueItems": true,
-            "items": {
-                "type": "string",
-                "title": "Producer",
-                "cordra": {
-                    "type": {
-                        "handleReference": {
-                            "types": [
-                                "User",
-                                "Person",
-                                "Organization"
-                            ]
-                        }
-                    }
-                }
-            }
-        },
         "provider": {
             "type": "array",
             "title": "Providers",
@@ -621,17 +608,6 @@
                     }
                 }
             }
-        },
-        "@context": {
-            "type": "string",
-            "default": "http://schema.org/"
-        },
-        "@type": {
-            "type": "string",
-            "default": "Dataset"
-        },
-        "subjectOf": {
-            "$ref": "#/definitions/subjectOf"
         },
         "includedInDataCatalog": {
             "$ref": "#/definitions/includedInDataCatalog"

@@ -3,7 +3,22 @@
     "type": "object",
     "title": "Person",
     "description": "This schema is for describing a registered User in Cordra.",
+    "required": [
+        "@id",
+        "@context",
+        "@type",
+        "username",
+        "password"
+    ],
     "properties": {
+        "@context": {
+            "type": "string",
+            "default": "http://schema.org/"
+        },
+        "@type": {
+            "type": "string",
+            "default": "Person"
+        },
         "@id": {
             "type": "string",
             "cordra": {
@@ -58,10 +73,7 @@
                         "title": "Identifier Value",
                         "type": "string"
                     }
-                },
-                "required": [
-                    "@type"
-                ]
+                }
             }
         },
         "name": {
@@ -86,14 +98,6 @@
         "url": {
             "type": "string",
             "title": "URL"
-        },
-        "@context": {
-            "type": "string",
-            "default": "http://schema.org/"
-        },
-        "@type": {
-            "type": "string",
-            "default": "Person"
         },
         "familyName": {
             "type": "string",

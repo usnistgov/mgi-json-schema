@@ -3,7 +3,22 @@
     "type": "object",
     "title": "Project",
     "description": "This schema is for describing a Project in Cordra.",
+    "required": [
+        "@id",
+        "@context",
+        "@type"
+    ],
     "allOf": [
+        {
+            "@context": {
+                "type": "string",
+                "default": "http://schema.org/"
+            },
+            "@type": {
+                "type": "string",
+                "default": "Project"
+            }
+        },
         {"$ref": "definition-schemas/CordraObjectID.json#/definitions/CordraObjectID"},
         {"$ref": "definition-schemas/Thing.json#/definitions/Thing"},
         {"$ref": "definition-schemas/Project.json#/definitions/Project"}

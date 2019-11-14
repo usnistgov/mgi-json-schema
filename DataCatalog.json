@@ -3,7 +3,22 @@
     "type": "object",
     "title": "DataCatalog",
     "description": "This schema is for creating and describing a Data Catalog in Cordra.",
+    "required": [
+        "@id",
+        "@context",
+        "@type"
+    ],
     "allOf": [
+        {
+            "@context": {
+                "type": "string",
+                "default": "http://schema.org/"
+            },
+            "@type": {
+                "type": "string",
+                "default": "DataCatalog"
+            }
+        },
         {"$ref": "definition-schemas/CordraObjectID.json#/definitions/CordraObjectID"},
         {"$ref": "definition-schemas/Thing.json#/definitions/Thing"},
         {"$ref": "definition-schemas/CreativeWork.json#/definitions/CreativeWork"},
