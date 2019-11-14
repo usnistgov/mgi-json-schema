@@ -5,10 +5,6 @@
     "definitions": {"Process": {
         "type": "object",
         "properties": {
-            "@type": {
-                "type": "string",
-                "default": "HowTo"
-            },
             "text": {
                 "title": "Process/Step Text",
                 "type": "string",

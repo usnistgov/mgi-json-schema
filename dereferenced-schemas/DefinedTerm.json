@@ -9,6 +9,28 @@
         "@type"
     ],
     "properties": {
+        "@context": {
+            "type": "array",
+            "default": [
+                "http://schema.org/",
+                {
+                    "mat": "https://pages.nist.gov/material-schema/",
+                    "skos": "http://www.w3.org/2004/02/skos/core#",
+                    "broader": "skos:broader",
+                    "narrower": "skos:narrower",
+                    "related": "skos:related",
+                    "exactMatch": "skos:exactMatch",
+                    "closeMatch": "skos:closeMatch"
+                }
+            ]
+        },
+        "@type": {
+            "type": "array",
+            "default": [
+                "DefinedTerm",
+                "mat:DefinedTerm"
+            ]
+        },
         "@id": {
             "type": "string",
             "cordra": {
@@ -61,59 +83,6 @@
         "url": {
             "type": "string",
             "title": "URL"
-        },
-        "@context": {
-            "type": "object",
-            "properties": {
-                "schema": {
-                    "type": "string",
-                    "default": "http://schema.org/"
-                },
-                "skos": {
-                    "type": "string",
-                    "default": "http://www.w3.org/2004/02/skos/core#"
-                },
-                "name": {
-                    "type": "string",
-                    "default": "schema:name"
-                },
-                "alternateName": {
-                    "type": "string",
-                    "default": "schema:alternateName"
-                },
-                "description": {
-                    "type": "string",
-                    "default": "schema:description"
-                },
-                "url": {
-                    "type": "string",
-                    "default": "schema:url"
-                },
-                "broader": {
-                    "type": "string",
-                    "default": "skos:broader"
-                },
-                "narrower": {
-                    "type": "string",
-                    "default": "skos:narrower"
-                },
-                "related": {
-                    "type": "string",
-                    "default": "skos:related"
-                },
-                "exactMatch": {
-                    "type": "string",
-                    "default": "skos:exactMatch"
-                },
-                "closeMatch": {
-                    "type": "string",
-                    "default": "skos:closeMatch"
-                }
-            }
-        },
-        "@type": {
-            "type": "string",
-            "default": "schema:DefinedTerm"
         },
         "termCode": {
             "type": "string",

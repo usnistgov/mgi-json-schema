@@ -34,6 +34,14 @@
         }
     },
     "properties": {
+        "@context": {
+            "type": "string",
+            "default": "http://schema.org/"
+        },
+        "@type": {
+            "type": "string",
+            "default": "Collection"
+        },
         "@id": {
             "type": "string",
             "cordra": {
@@ -346,14 +354,6 @@
                     }
                 }
             }
-        },
-        "@context": {
-            "type": "string",
-            "default": "http://schema.org/"
-        },
-        "@type": {
-            "type": "string",
-            "default": "Collection"
         },
         "subjectOf": {
             "$ref": "#/definitions/subjectOf"

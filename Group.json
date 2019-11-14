@@ -9,6 +9,16 @@
         "@type"
     ],
     "allOf": [
+        {
+            "@context": {
+                "type": "string",
+                "default": "http://schema.org/"
+            },
+            "@type": {
+                "type": "string",
+                "default": "Organization"
+            }
+        },
         {"$ref": "definition-schemas/CordraObjectID.json#/definitions/CordraObjectID"},
         {"$ref": "definition-schemas/CordraGroup.json#/definitions/CordraGroup"},
         {"$ref": "definition-schemas/Thing.json#/definitions/Thing"},

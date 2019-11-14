@@ -34,6 +34,22 @@
         }
     },
     "properties": {
+        "@context": {
+            "type": "array",
+            "default": [
+                "http://schema.org/",
+                {
+                    "mat": "https://pages.nist.gov/material-schema/"
+                }
+            ]
+        },
+        "@type": {
+            "type": "array",
+            "default": [
+                "CreativeWork",
+                "mat:Material"
+            ]
+        },
         "@id": {
             "type": "string",
             "cordra": {
@@ -346,14 +362,6 @@
                     }
                 }
             }
-        },
-        "@context": {
-            "type": "string",
-            "default": "http://schema.org/"
-        },
-        "@type": {
-            "type": "string",
-            "default": "CreativeWork"
         },
         "exampleOfWork": {
             "type": "array",

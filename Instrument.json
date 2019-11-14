@@ -9,6 +9,22 @@
         "@type"
     ],
     "allOf": [
+        {
+            "@context": {
+                "type": "array",
+                "default": [
+                    "http://schema.org/",
+                    {"mat": "https://pages.nist.gov/material-schema/"}
+                ]
+            },
+            "@type": {
+                "type": "array",
+                "default": [
+                    "CreativeWork",
+                    "mat:Instrument"
+                ]
+            }
+        },
         {"$ref": "definition-schemas/CordraObjectID.json#/definitions/CordraObjectID"},
         {"$ref": "definition-schemas/Thing.json#/definitions/Thing"},
         {"$ref": "definition-schemas/CreativeWork.json#/definitions/CreativeWork"},

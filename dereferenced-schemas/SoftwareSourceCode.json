@@ -9,6 +9,14 @@
         "@type"
     ],
     "properties": {
+        "@context": {
+            "type": "string",
+            "default": "http://schema.org/"
+        },
+        "@type": {
+            "type": "string",
+            "default": "SoftwareSourceCode"
+        },
         "@id": {
             "type": "string",
             "cordra": {
@@ -321,14 +329,6 @@
                     }
                 }
             }
-        },
-        "@context": {
-            "type": "string",
-            "default": "http://schema.org/"
-        },
-        "@type": {
-            "type": "string",
-            "default": "SoftwareSourceCode"
         },
         "codeRepository": {
             "type": "string",

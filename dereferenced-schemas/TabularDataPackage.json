@@ -306,6 +306,22 @@
         }
     },
     "properties": {
+        "@context": {
+            "type": "array",
+            "default": [
+                "http://schema.org/",
+                {
+                    "mat": "https://pages.nist.gov/material-schema/"
+                }
+            ]
+        },
+        "@type": {
+            "type": "array",
+            "default": [
+                "Dataset",
+                "mat:TabularDataPackage"
+            ]
+        },
         "@id": {
             "type": "string",
             "cordra": {
@@ -2810,14 +2826,6 @@
                     }
                 }
             }
-        },
-        "@context": {
-            "type": "string",
-            "default": "http://schema.org/"
-        },
-        "@type": {
-            "type": "string",
-            "default": "Dataset"
         },
         "measurementTechnique": {
             "$ref": "#/definitions/measurementTechnique"

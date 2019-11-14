@@ -180,10 +180,6 @@
         "Process": {
             "type": "object",
             "properties": {
-                "@type": {
-                    "type": "string",
-                    "default": "HowTo"
-                },
                 "text": {
                     "title": "Process/Step Text",
                     "type": "string",
@@ -312,6 +308,25 @@
         }
     },
     "properties": {
+        "@context": {
+            "type": "array",
+            "default": [
+                "http://schema.org/",
+                {
+                    "mat": "https://pages.nist.gov/material-schema/",
+                    "measurementTechnique": "mat:measurementTechnique",
+                    "parameterControlled": "mat:parameterControlled",
+                    "variableMeasured": "mat:variableMeasured"
+                }
+            ]
+        },
+        "@type": {
+            "type": "array",
+            "default": [
+                "HowTo",
+                "mat:ProcessHistory"
+            ]
+        },
         "@id": {
             "type": "string",
             "cordra": {
@@ -625,10 +640,6 @@
                 }
             }
         },
-        "@type": {
-            "type": "string",
-            "default": "HowTo"
-        },
         "text": {
             "title": "Process/Step Text",
             "type": "string",
@@ -752,10 +763,6 @@
                 "title": "Process Step",
                 "$ref": "#/definitions/Process"
             }
-        },
-        "@context": {
-            "type": "string",
-            "default": "http://schema.org/"
         }
     }
 }

@@ -9,6 +9,22 @@
         "@type"
     ],
     "properties": {
+        "@context": {
+            "type": "array",
+            "default": [
+                "http://schema.org/",
+                {
+                    "mat": "https://pages.nist.gov/material-schema/"
+                }
+            ]
+        },
+        "@type": {
+            "type": "array",
+            "default": [
+                "CreativeWork",
+                "mat:Citation"
+            ]
+        },
         "@id": {
             "type": "string",
             "cordra": {

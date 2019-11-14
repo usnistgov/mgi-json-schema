@@ -11,6 +11,14 @@
         "password"
     ],
     "properties": {
+        "@context": {
+            "type": "string",
+            "default": "http://schema.org/"
+        },
+        "@type": {
+            "type": "string",
+            "default": "Person"
+        },
         "@id": {
             "type": "string",
             "cordra": {
@@ -90,14 +98,6 @@
         "url": {
             "type": "string",
             "title": "URL"
-        },
-        "@context": {
-            "type": "string",
-            "default": "http://schema.org/"
-        },
-        "@type": {
-            "type": "string",
-            "default": "Person"
         },
         "familyName": {
             "type": "string",

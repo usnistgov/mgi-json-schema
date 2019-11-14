@@ -9,6 +9,14 @@
         "@type"
     ],
     "properties": {
+        "@context": {
+            "type": "string",
+            "default": "http://schema.org/"
+        },
+        "@type": {
+            "type": "string",
+            "default": "Organization"
+        },
         "@id": {
             "type": "string",
             "cordra": {
@@ -84,14 +92,6 @@
         "url": {
             "type": "string",
             "title": "URL"
-        },
-        "@context": {
-            "type": "string",
-            "default": "http://schema.org/"
-        },
-        "@type": {
-            "type": "string",
-            "default": "Organization"
         },
         "address": {
             "type": "string",

@@ -5,14 +5,6 @@
     "definitions": {"Material": {
         "type": "object",
         "properties": {
-            "@context": {
-                "type": "string",
-                "default": "http://schema.org/"
-            },
-            "@type": {
-                "type": "string",
-                "default": "CreativeWork"
-            },
             "exampleOfWork": {
                 "type": "array",
                 "title": "Processing History/Protocol",

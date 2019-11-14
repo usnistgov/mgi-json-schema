@@ -279,6 +279,23 @@
         }
     },
     "properties": {
+        "@context": {
+            "type": "array",
+            "default": [
+                "http://schema.org/",
+                {
+                    "mat": "https://pages.nist.gov/material-schema/",
+                    "parameterControlled": "mat:parameterControlled"
+                }
+            ]
+        },
+        "@type": {
+            "type": "array",
+            "default": [
+                "Dataset",
+                "mat:Dataset"
+            ]
+        },
         "@id": {
             "type": "string",
             "cordra": {
@@ -591,14 +608,6 @@
                     }
                 }
             }
-        },
-        "@context": {
-            "type": "string",
-            "default": "http://schema.org/"
-        },
-        "@type": {
-            "type": "string",
-            "default": "Dataset"
         },
         "includedInDataCatalog": {
             "$ref": "#/definitions/includedInDataCatalog"
