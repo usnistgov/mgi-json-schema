@@ -14,7 +14,11 @@
                 "type": "array",
                 "default": [
                     "http://schema.org/",
-                    {"mat": "https://pages.nist.gov/material-schema/"}
+                    {
+                        "mat": "https://pages.nist.gov/material-schema/",
+                        "parameterControlled": "mat:parameterControlled",
+                        "variableMeasured": "mat:variableMeasured"
+                    }
                 ]
             },
             "@type": {
