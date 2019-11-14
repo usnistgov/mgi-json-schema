@@ -22,9 +22,22 @@
                 "title": "Supply/Starting Materials",
                 "uniqueItems": true,
                 "items": {
-                    "type": "string",
+                    "type": "object",
                     "title": "Supply/Starting Material",
-                    "cordra": {"type": {"handleReference": {"types": ["Material"]}}}
+                    "properties": {
+                        "@type": {
+                            "type": "array",
+                            "default": [
+                                "CreativeWork",
+                                "mat:Material"
+                            ]
+                        },
+                        "@id": {
+                            "type": "string",
+                            "cordra": {"type": {"handleReference": {"types": ["Material"]}}}
+                        },
+                        "materialExtent": {"$ref": "QuantitativeValue.json#/definitions/QuantitativeValue"}
+                    }
                 }
             },
             "variableMeasured": {
