@@ -82,6 +82,8 @@ for file_name_in in main_schemas:
                     dep_obj = json.load(f,object_pairs_hook=OrderedDict)
                 dep_properties = dpath.util.get(dep_obj, dep_obj_path)["properties"]
                 for k,v in dep_properties.items():
+                    if k == "@type":
+                        continue
                     json_data_out["properties"][k] = v
             else:
                 json_data_out["properties"][prop] = definition

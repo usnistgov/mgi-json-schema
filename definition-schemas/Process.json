@@ -5,6 +5,13 @@
     "definitions": {"Process": {
         "type": "object",
         "properties": {
+            "@type": {
+                "type": "array",
+                "default": [
+                    "HowTo",
+                    "mat:Process"
+                ]
+            },
             "text": {
                 "title": "Process/Step Text",
                 "type": "string",
