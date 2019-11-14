@@ -3,6 +3,11 @@
     "type": "object",
     "title": "MaterialProperty",
     "description": "This schema is for depositing and describing a MaterialProperty in Cordra.",
+    "required": [
+        "@id",
+        "@context",
+        "@type"
+    ],
     "definitions": {
         "materialLinked": {
             "type": "array",
@@ -301,10 +306,7 @@
                         "title": "Identifier Value",
                         "type": "string"
                     }
-                },
-                "required": [
-                    "@type"
-                ]
+                }
             }
         },
         "name": {

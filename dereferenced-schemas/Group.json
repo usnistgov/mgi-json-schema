@@ -3,6 +3,11 @@
     "type": "object",
     "title": "Group",
     "description": "This schema is for creating a group of authenticated users in Cordra for the purpose of access control.",
+    "required": [
+        "@id",
+        "@context",
+        "@type"
+    ],
     "properties": {
         "@id": {
             "type": "string",
@@ -54,10 +59,7 @@
                         "title": "Identifier Value",
                         "type": "string"
                     }
-                },
-                "required": [
-                    "@type"
-                ]
+                }
             }
         },
         "name": {

@@ -3,6 +3,11 @@
     "type": "object",
     "title": "DefinedTerm",
     "description": "This schema is for describing a Defined Term in Cordra.",
+    "required": [
+        "@id",
+        "@context",
+        "@type"
+    ],
     "allOf": [
         {"$ref": "definition-schemas/CordraObjectID.json#/definitions/CordraObjectID"},
         {"$ref": "definition-schemas/Thing.json#/definitions/Thing"},

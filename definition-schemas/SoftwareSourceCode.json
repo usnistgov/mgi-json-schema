@@ -31,7 +31,6 @@
                     "cordra": {"type": {"handleReference": {"types": ["SoftwareApplication"]}}}
                 }
             }
-        },
-        "required": ["@type"]
+        }
     }}
 }

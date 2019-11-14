@@ -3,6 +3,11 @@
     "type": "object",
     "title": "Instrument",
     "description": "This form is for describing an instrument and components/parts of an instrument. Instruments and parts are linked by their identifier.",
+    "required": [
+        "@id",
+        "@context",
+        "@type"
+    ],
     "allOf": [
         {"$ref": "definition-schemas/CordraObjectID.json#/definitions/CordraObjectID"},
         {"$ref": "definition-schemas/Thing.json#/definitions/Thing"},

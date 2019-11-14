@@ -3,6 +3,13 @@
     "type": "object",
     "title": "Person",
     "description": "This schema is for describing a registered User in Cordra.",
+    "required": [
+        "@id",
+        "@context",
+        "@type",
+        "username",
+        "password"
+    ],
     "allOf": [
         {"$ref": "definition-schemas/CordraObjectID.json#/definitions/CordraObjectID"},
         {"$ref": "definition-schemas/CordraUser.json#/definitions/CordraUser"},

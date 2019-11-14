@@ -43,7 +43,6 @@
                     "cordra": {"type": {"handleReference": {"types": ["Collection"]}}}
                 }
             }
-        },
-        "required": ["@type"]
+        }
     }}
 }

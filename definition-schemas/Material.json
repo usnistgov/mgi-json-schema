@@ -45,7 +45,6 @@
                     "cordra": {"type": {"handleReference": {"types": ["Material"]}}}
                 }
             }
-        },
-        "required": ["@type"]
+        }
     }}
 }

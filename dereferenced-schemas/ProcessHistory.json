@@ -3,6 +3,11 @@
     "type": "object",
     "title": "ProcessHistory",
     "description": "This schema is for describing the processing history of a material.",
+    "required": [
+        "@id",
+        "@context",
+        "@type"
+    ],
     "definitions": {
         "QuantitativeValue": {
             "type": "object",
@@ -276,10 +281,7 @@
                         "value": {
                             "type": "number"
                         }
-                    },
-                    "required": [
-                        "@type"
-                    ]
+                    }
                 },
                 "performTime": {
                     "type": "string"
@@ -337,10 +339,7 @@
                         "title": "Identifier Value",
                         "type": "string"
                     }
-                },
-                "required": [
-                    "@type"
-                ]
+                }
             }
         },
         "name": {
@@ -727,10 +726,7 @@
                 "value": {
                     "type": "number"
                 }
-            },
-            "required": [
-                "@type"
-            ]
+            }
         },
         "performTime": {
             "type": "string"

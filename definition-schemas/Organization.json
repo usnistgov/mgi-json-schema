@@ -25,7 +25,10 @@
                 "items": {
                     "type": "string",
                     "title": "Contact Point",
-                    "cordra": {"type": {"handleReference": {"types": ["Person", "User"]}}}
+                    "cordra": {"type": {"handleReference": {"types": [
+                        "Person",
+                        "User"
+                    ]}}}
                 }
             },
             "email": {
@@ -80,7 +83,6 @@
                     "cordra": {"type": {"handleReference": {"types": ["Organization"]}}}
                 }
             }
-        },
-        "required": ["@type"]
+        }
     }}
 }

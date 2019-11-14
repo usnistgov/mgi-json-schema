@@ -3,6 +3,11 @@
     "type": "object",
     "title": "SoftwareSourceCode",
     "description": "This schema is for describing a Software Source Code in Cordra.",
+    "required": [
+        "@id",
+        "@context",
+        "@type"
+    ],
     "properties": {
         "@id": {
             "type": "string",
@@ -31,10 +36,7 @@
                         "title": "Identifier Value",
                         "type": "string"
                     }
-                },
-                "required": [
-                    "@type"
-                ]
+                }
             }
         },
         "name": {

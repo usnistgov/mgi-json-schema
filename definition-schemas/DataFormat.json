@@ -23,7 +23,6 @@
                     "cordra": {"type": {"handleReference": {"types": ["DataFormat"]}}}
                 }
             }
-        },
-        "required": ["@type"]
+        }
     }}
 }

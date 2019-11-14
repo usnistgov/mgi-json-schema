@@ -104,7 +104,6 @@
                 }
             },
             "subjectOf": {"$ref": "subjectOf.json#/definitions/subjectOf"}
-        },
-        "required": ["@type"]
+        }
     }}
 }

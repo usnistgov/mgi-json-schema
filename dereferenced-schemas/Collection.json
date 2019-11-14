@@ -3,6 +3,11 @@
     "type": "object",
     "title": "Collection",
     "description": "This schema is for creating a collection (i.e., a folder), which can contain of files, datasets, collections, samples, instruments, etc.",
+    "required": [
+        "@id",
+        "@context",
+        "@type"
+    ],
     "definitions": {
         "subjectOf": {
             "type": "array",
@@ -56,10 +61,7 @@
                         "title": "Identifier Value",
                         "type": "string"
                     }
-                },
-                "required": [
-                    "@type"
-                ]
+                }
             }
         },
         "name": {

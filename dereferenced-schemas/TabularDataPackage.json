@@ -3,6 +3,11 @@
     "type": "object",
     "title": "TabularDataPackage",
     "description": "This schema is for describing a TabularDataPackage in Cordra.",
+    "required": [
+        "@id",
+        "@context",
+        "@type"
+    ],
     "definitions": {
         "materialLinked": {
             "type": "array",
@@ -48,10 +53,7 @@
                         }
                     }
                 }
-            },
-            "required": [
-                "@type"
-            ]
+            }
         },
         "QuantitativeValue": {
             "type": "object",
@@ -331,10 +333,7 @@
                         "title": "Identifier Value",
                         "type": "string"
                     }
-                },
-                "required": [
-                    "@type"
-                ]
+                }
             }
         },
         "name": {

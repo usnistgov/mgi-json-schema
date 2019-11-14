@@ -52,7 +52,6 @@
                     "cordra": {"type": {"handleReference": {"types": ["Organization"]}}}
                 }
             }
-        },
-        "required": ["@type"]
+        }
     }}
 }

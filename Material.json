@@ -3,6 +3,11 @@
     "type": "object",
     "title": "Material",
     "description": "This form is for describing any measurable substance (e.g., sample, specimen, material, chemical, etc.), or a specific sup-sample (e.g., location on a larger artifact, sub-portion of a larger artifact, item within a collection of specimens, etc.).",
+    "required": [
+        "@id",
+        "@context",
+        "@type"
+    ],
     "allOf": [
         {"$ref": "definition-schemas/CordraObjectID.json#/definitions/CordraObjectID"},
         {"$ref": "definition-schemas/Thing.json#/definitions/Thing"},

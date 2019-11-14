@@ -72,7 +72,6 @@
                     "cordra": {"type": {"handleReference": {"types": ["SoftwareSourceCode"]}}}
                 }
             }
-        },
-        "required": ["@type"]
+        }
     }}
 }

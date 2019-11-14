@@ -3,6 +3,11 @@
     "type": "object",
     "title": "Project",
     "description": "This schema is for describing a Project in Cordra.",
+    "required": [
+        "@id",
+        "@context",
+        "@type"
+    ],
     "definitions": {
         "subjectOf": {
             "type": "array",
@@ -56,10 +61,7 @@
                         "title": "Identifier Value",
                         "type": "string"
                     }
-                },
-                "required": [
-                    "@type"
-                ]
+                }
             }
         },
         "name": {

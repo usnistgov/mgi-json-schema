@@ -27,7 +27,6 @@
                 "title": "Upload Date",
                 "type": "string"
             }
-        },
-        "required": ["@type"]
+        }
     }}
 }

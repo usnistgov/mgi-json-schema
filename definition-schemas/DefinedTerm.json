@@ -122,7 +122,6 @@
                     "cordra": {"type": {"handleReference": {"types": ["DefinedTerm"]}}}
                 }
             }
-        },
-        "required": ["@type"]
+        }
     }}
 }

@@ -3,6 +3,11 @@
     "type": "object",
     "title": "Group",
     "description": "This schema is for creating a group of authenticated users in Cordra for the purpose of access control.",
+    "required": [
+        "@id",
+        "@context",
+        "@type"
+    ],
     "allOf": [
         {"$ref": "definition-schemas/CordraObjectID.json#/definitions/CordraObjectID"},
         {"$ref": "definition-schemas/CordraGroup.json#/definitions/CordraGroup"},

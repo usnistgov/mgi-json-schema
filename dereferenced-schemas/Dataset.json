@@ -3,6 +3,11 @@
     "type": "object",
     "title": "Dataset",
     "description": "This schema is for describing a Dataset in Cordra.",
+    "required": [
+        "@id",
+        "@context",
+        "@type"
+    ],
     "definitions": {
         "materialLinked": {
             "type": "array",
@@ -301,10 +306,7 @@
                         "title": "Identifier Value",
                         "type": "string"
                     }
-                },
-                "required": [
-                    "@type"
-                ]
+                }
             }
         },
         "name": {

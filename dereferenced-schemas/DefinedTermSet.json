@@ -3,6 +3,11 @@
     "type": "object",
     "title": "DefinedTermSet",
     "description": "This schema is for describing a Defined Term Set in Cordra.",
+    "required": [
+        "@id",
+        "@context",
+        "@type"
+    ],
     "properties": {
         "@id": {
             "type": "string",
@@ -31,10 +36,7 @@
                         "title": "Identifier Value",
                         "type": "string"
                     }
-                },
-                "required": [
-                    "@type"
-                ]
+                }
             }
         },
         "name": {
