@@ -9,6 +9,31 @@
         "@type"
     ],
     "definitions": {
+        "QuantitativeValue": {
+            "type": "object",
+            "properties": {
+                "@type": {
+                    "type": "string",
+                    "default": "QuantitativeValue"
+                },
+                "name": {
+                    "type": "string",
+                    "title": "Name"
+                },
+                "value": {
+                    "title": "Value",
+                    "type": "number"
+                },
+                "unitText": {
+                    "title": "Unit Text",
+                    "type": "string"
+                },
+                "unitCode": {
+                    "title": "Unit Code",
+                    "type": "string"
+                }
+            }
+        },
         "variableMeasured": {
             "type": "object",
             "properties": {
@@ -560,6 +585,9 @@
                 "title": "Parameter Controlled",
                 "$ref": "#/definitions/variableMeasured"
             }
+        },
+        "materialExtent": {
+            "$ref": "#/definitions/QuantitativeValue"
         }
     }
 }
