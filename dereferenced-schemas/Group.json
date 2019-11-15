@@ -93,6 +93,10 @@
             "type": "string",
             "title": "URL"
         },
+        "image": {
+            "type": "string",
+            "title": "Image URL"
+        },
         "address": {
             "type": "string",
             "title": "Physical Address",

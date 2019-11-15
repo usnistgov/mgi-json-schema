@@ -476,14 +476,8 @@
             }
         },
         "image": {
-            "propertyOrder": 100,
-            "title": "Image",
-            "description": "A image to represent this package.",
             "type": "string",
-            "examples": [
-                "{\n \"image\": \"http://example.com/image.jpg\"\n}\n",
-                "{\n \"image\": \"relative/to/image.jpg\"\n}\n"
-            ]
+            "title": "Image URL"
         },
         "licenses": {
             "propertyOrder": 110,
@@ -2796,6 +2790,10 @@
         "license": {
             "type": "string",
             "title": "License"
+        },
+        "thumbnailUrl": {
+            "type": "string",
+            "title": "Thumbnail URL"
         },
         "dateCreated": {
             "title": "Date Created",

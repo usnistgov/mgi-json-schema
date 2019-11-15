@@ -70,6 +70,10 @@
             "type": "string",
             "title": "URL"
         },
+        "image": {
+            "type": "string",
+            "title": "Image URL"
+        },
         "familyName": {
             "type": "string",
             "title": "Family Name"
