@@ -476,8 +476,13 @@
             }
         },
         "image": {
-            "type": "string",
-            "title": "Image URL"
+            "type": "array",
+            "title": "Image URLs",
+            "uniqueItems": true,
+            "items": {
+                "type": "string",
+                "title": "Image URL"
+            }
         },
         "licenses": {
             "propertyOrder": 110,
@@ -2792,8 +2797,13 @@
             "title": "License"
         },
         "thumbnailUrl": {
-            "type": "string",
-            "title": "Thumbnail URL"
+            "type": "array",
+            "title": "Thumbnail URLs",
+            "uniqueItems": true,
+            "items": {
+                "type": "string",
+                "title": "Thumbnail URL"
+            }
         },
         "dateCreated": {
             "title": "Date Created",
