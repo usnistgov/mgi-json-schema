@@ -96,8 +96,13 @@
             "title": "URL"
         },
         "image": {
-            "type": "string",
-            "title": "Image URL"
+            "type": "array",
+            "title": "Image URLs",
+            "uniqueItems": true,
+            "items": {
+                "type": "string",
+                "title": "Image URL"
+            }
         },
         "about": {
             "type": "array",
@@ -330,8 +335,13 @@
             "title": "License"
         },
         "thumbnailUrl": {
-            "type": "string",
-            "title": "Thumbnail URL"
+            "type": "array",
+            "title": "Thumbnail URLs",
+            "uniqueItems": true,
+            "items": {
+                "type": "string",
+                "title": "Thumbnail URL"
+            }
         },
         "dateCreated": {
             "title": "Date Created",

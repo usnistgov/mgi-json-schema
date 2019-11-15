@@ -168,8 +168,13 @@
                 "title": "License"
             },
             "thumbnailUrl": {
-                "type": "string",
-                "title": "Thumbnail URL"
+                "type": "array",
+                "title": "Thumbnail URLs",
+                "uniqueItems": true,
+                "items": {
+                    "type": "string",
+                    "title": "Thumbnail URL"
+                }
             },
             "dateCreated": {
                 "title": "Date Created",

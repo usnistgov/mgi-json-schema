@@ -71,8 +71,13 @@
             "title": "URL"
         },
         "image": {
-            "type": "string",
-            "title": "Image URL"
+            "type": "array",
+            "title": "Image URLs",
+            "uniqueItems": true,
+            "items": {
+                "type": "string",
+                "title": "Image URL"
+            }
         },
         "address": {
             "type": "string",
