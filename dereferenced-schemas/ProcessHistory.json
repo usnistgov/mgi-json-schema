@@ -421,6 +421,10 @@
             "type": "string",
             "title": "URL"
         },
+        "image": {
+            "type": "string",
+            "title": "Image URL"
+        },
         "about": {
             "type": "array",
             "title": "About",
@@ -650,6 +654,10 @@
         "license": {
             "type": "string",
             "title": "License"
+        },
+        "thumbnailUrl": {
+            "type": "string",
+            "title": "Thumbnail URL"
         },
         "dateCreated": {
             "title": "Date Created",

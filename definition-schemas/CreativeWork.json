@@ -167,6 +167,10 @@
                 "type": "string",
                 "title": "License"
             },
+            "thumbnailUrl": {
+                "type": "string",
+                "title": "Thumbnail URL"
+            },
             "dateCreated": {
                 "title": "Date Created",
                 "type": "string"
