@@ -10,8 +10,7 @@
                 "title": "Username",
                 "cordra": {
                     "preview": {
-                        "showInPreview": true,
-                        "isPrimary": true
+                        "showInPreview": true
                     },
                     "auth": "username"
                 }
