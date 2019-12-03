@@ -21,8 +21,7 @@
                 "type": "string",
                 "title": "E-Mail Address",
                 "cordra": {"preview": {
-                    "showInPreview": true,
-                    "isPrimary": true
+                    "showInPreview": true
                 }}
             },
             "telephone": {

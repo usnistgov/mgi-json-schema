@@ -32,8 +32,7 @@
             "title": "Username",
             "cordra": {
                 "preview": {
-                    "showInPreview": true,
-                    "isPrimary": true
+                    "showInPreview": true
                 },
                 "auth": "username"
             }
@@ -125,8 +124,7 @@
             "title": "E-Mail Address",
             "cordra": {
                 "preview": {
-                    "showInPreview": true,
-                    "isPrimary": true
+                    "showInPreview": true
                 }
             }
         },
