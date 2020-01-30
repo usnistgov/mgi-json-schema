@@ -1,7 +1,7 @@
 #! /usr/bin/env python
 import json
 import os
-import dpath
+import dpath.util
 from collections import OrderedDict
 import glob
 
