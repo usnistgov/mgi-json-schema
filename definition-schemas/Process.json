@@ -30,6 +30,32 @@
                     ]}}}
                 }
             },
+            "hasPart": {
+                "type": "array",
+                "title": "Subprocess",
+                "uniqueItems": true,
+                "items": {
+                    "type": "string",
+                    "title": "Subprocess",
+                    "cordra": {"type": {"handleReference": {"types": [
+                        "ProcessProtocol",
+                        "ProcessHistory"
+                    ]}}}
+                }
+            },
+            "isPartOf": {
+                "type": "array",
+                "title": "Parent Process",
+                "uniqueItems": true,
+                "items": {
+                    "type": "string",
+                    "title": "Parent Process",
+                    "cordra": {"type": {"handleReference": {"types": [
+                        "ProcessProtocol",
+                        "ProcessHistory"
+                    ]}}}
+                }
+            },
             "supply": {
                 "type": "array",
                 "title": "Supply/Starting Materials",
@@ -97,6 +123,7 @@
                     ]}}}
                 }
             },
+            "subjectOf": {"$ref": "subjectOf.json#/definitions/subjectOf"},
             "estimatedCost": {
                 "type": "object",
                 "title": "MonetaryAmount",
