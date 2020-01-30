@@ -211,6 +211,44 @@
                         }
                     }
                 },
+                "hasPart": {
+                    "type": "array",
+                    "title": "Subprocess",
+                    "uniqueItems": true,
+                    "items": {
+                        "type": "string",
+                        "title": "Subprocess",
+                        "cordra": {
+                            "type": {
+                                "handleReference": {
+                                    "types": [
+                                        "ProcessProtocol",
+                                        "ProcessHistory"
+                                    ]
+                                }
+                            }
+                        }
+                    }
+                },
+                "isPartOf": {
+                    "type": "array",
+                    "title": "Parent Process",
+                    "uniqueItems": true,
+                    "items": {
+                        "type": "string",
+                        "title": "Parent Process",
+                        "cordra": {
+                            "type": {
+                                "handleReference": {
+                                    "types": [
+                                        "ProcessProtocol",
+                                        "ProcessHistory"
+                                    ]
+                                }
+                            }
+                        }
+                    }
+                },
                 "supply": {
                     "type": "array",
                     "title": "Supply/Starting Materials",
@@ -304,6 +342,9 @@
                         }
                     }
                 },
+                "subjectOf": {
+                    "$ref": "#/definitions/subjectOf"
+                },
                 "estimatedCost": {
                     "type": "object",
                     "title": "MonetaryAmount",
@@ -343,6 +384,29 @@
                     "items": {
                         "title": "Process Step",
                         "$ref": "#/definitions/Process"
+                    }
+                }
+            }
+        },
+        "subjectOf": {
+            "type": "array",
+            "title": "Linked Materials, Datasets, etc.",
+            "uniqueItems": true,
+            "items": {
+                "type": "string",
+                "title": "Linked Material, Dataset, etc.",
+                "cordra": {
+                    "type": {
+                        "handleReference": {
+                            "types": [
+                                "File",
+                                "TabularDataPackage",
+                                "MaterialProperty",
+                                "Dataset",
+                                "Collection",
+                                "Material"
+                            ]
+                        }
                     }
                 }
             }
@@ -723,6 +787,44 @@
                 }
             }
         },
+        "hasPart": {
+            "type": "array",
+            "title": "Subprocess",
+            "uniqueItems": true,
+            "items": {
+                "type": "string",
+                "title": "Subprocess",
+                "cordra": {
+                    "type": {
+                        "handleReference": {
+                            "types": [
+                                "ProcessProtocol",
+                                "ProcessHistory"
+                            ]
+                        }
+                    }
+                }
+            }
+        },
+        "isPartOf": {
+            "type": "array",
+            "title": "Parent Process",
+            "uniqueItems": true,
+            "items": {
+                "type": "string",
+                "title": "Parent Process",
+                "cordra": {
+                    "type": {
+                        "handleReference": {
+                            "types": [
+                                "ProcessProtocol",
+                                "ProcessHistory"
+                            ]
+                        }
+                    }
+                }
+            }
+        },
         "supply": {
             "type": "array",
             "title": "Supply/Starting Materials",
@@ -815,6 +917,9 @@
                     }
                 }
             }
+        },
+        "subjectOf": {
+            "$ref": "#/definitions/subjectOf"
         },
         "estimatedCost": {
             "type": "object",
