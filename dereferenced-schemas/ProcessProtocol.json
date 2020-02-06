@@ -183,7 +183,7 @@
                 "@type": {
                     "type": "array",
                     "default": [
-                        "HowTo",
+                        "HowToStep",
                         "mat:Process"
                     ]
                 },
