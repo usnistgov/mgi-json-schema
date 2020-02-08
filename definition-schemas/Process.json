@@ -75,6 +75,10 @@
                             "type": "string",
                             "cordra": {"type": {"handleReference": {"types": ["Material"]}}}
                         },
+                        "name": {
+                            "type": "string",
+                            "title": "Name"
+                        },
                         "materialExtent": {"$ref": "QuantitativeValue.json#/definitions/QuantitativeValue"}
                     }
                 }

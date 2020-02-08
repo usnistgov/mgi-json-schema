@@ -276,6 +276,10 @@
                                     }
                                 }
                             },
+                            "name": {
+                                "type": "string",
+                                "title": "Name"
+                            },
                             "materialExtent": {
                                 "$ref": "#/definitions/QuantitativeValue"
                             }
@@ -851,6 +855,10 @@
                                 }
                             }
                         }
+                    },
+                    "name": {
+                        "type": "string",
+                        "title": "Name"
                     },
                     "materialExtent": {
                         "$ref": "#/definitions/QuantitativeValue"
