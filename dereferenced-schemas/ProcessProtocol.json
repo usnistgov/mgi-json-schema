@@ -287,11 +287,11 @@
                             "@type": {
                                 "type": "array",
                                 "default": [
-                                    "CreativeWork",
+                                    "HowToSupply",
                                     "mat:Material"
                                 ]
                             },
-                            "@id": {
+                            "identifier": {
                                 "type": "string",
                                 "cordra": {
                                     "type": {
@@ -307,7 +307,7 @@
                                 "type": "string",
                                 "title": "Name"
                             },
-                            "materialExtent": {
+                            "requiredQuantity": {
                                 "$ref": "#/definitions/QuantitativeValue"
                             }
                         }
@@ -867,11 +867,11 @@
                     "@type": {
                         "type": "array",
                         "default": [
-                            "CreativeWork",
+                            "HowToSupply",
                             "mat:Material"
                         ]
                     },
-                    "@id": {
+                    "identifier": {
                         "type": "string",
                         "cordra": {
                             "type": {
@@ -887,7 +887,7 @@
                         "type": "string",
                         "title": "Name"
                     },
-                    "materialExtent": {
+                    "requiredQuantity": {
                         "$ref": "#/definitions/QuantitativeValue"
                     }
                 }

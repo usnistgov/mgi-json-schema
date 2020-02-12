@@ -67,11 +67,11 @@
                         "@type": {
                             "type": "array",
                             "default": [
-                                "CreativeWork",
+                                "HowToSupply",
                                 "mat:Material"
                             ]
                         },
-                        "@id": {
+                        "identifier": {
                             "type": "string",
                             "cordra": {"type": {"handleReference": {"types": ["Material"]}}}
                         },
@@ -79,7 +79,7 @@
                             "type": "string",
                             "title": "Name"
                         },
-                        "materialExtent": {"$ref": "QuantitativeValue.json#/definitions/QuantitativeValue"}
+                        "requiredQuantity": {"$ref": "QuantitativeValue.json#/definitions/QuantitativeValue"}
                     }
                 }
             },
