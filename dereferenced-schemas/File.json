@@ -76,7 +76,16 @@
                 },
                 "unitCode": {
                     "title": "Unit Code",
-                    "type": "string"
+                    "type": "string",
+                    "cordra": {
+                        "type": {
+                            "handleReference": {
+                                "types": [
+                                    "UnitOfMeasurement"
+                                ]
+                            }
+                        }
+                    }
                 }
             }
         },
@@ -157,7 +166,16 @@
                 },
                 "unitCode": {
                     "title": "Unit Code",
-                    "type": "string"
+                    "type": "string",
+                    "cordra": {
+                        "type": {
+                            "handleReference": {
+                                "types": [
+                                    "UnitOfMeasurement"
+                                ]
+                            }
+                        }
+                    }
                 },
                 "valueReference": {
                     "type": "array",
@@ -198,7 +216,16 @@
                             },
                             "unitCode": {
                                 "title": "Unit Code",
-                                "type": "string"
+                                "type": "string",
+                                "cordra": {
+                                    "type": {
+                                        "handleReference": {
+                                            "types": [
+                                                "UnitOfMeasurement"
+                                            ]
+                                        }
+                                    }
+                                }
                             }
                         }
                     }

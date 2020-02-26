@@ -23,7 +23,8 @@
             },
             "unitCode": {
                 "title": "Unit Code",
-                "type": "string"
+                "type": "string",
+                "cordra": {"type": {"handleReference": {"types": ["UnitOfMeasurement"]}}}
             }
         }
     }}

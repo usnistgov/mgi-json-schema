@@ -30,7 +30,16 @@
                 },
                 "unitCode": {
                     "title": "Unit Code",
-                    "type": "string"
+                    "type": "string",
+                    "cordra": {
+                        "type": {
+                            "handleReference": {
+                                "types": [
+                                    "UnitOfMeasurement"
+                                ]
+                            }
+                        }
+                    }
                 }
             }
         },
@@ -90,7 +99,16 @@
                 },
                 "unitCode": {
                     "title": "Unit Code",
-                    "type": "string"
+                    "type": "string",
+                    "cordra": {
+                        "type": {
+                            "handleReference": {
+                                "types": [
+                                    "UnitOfMeasurement"
+                                ]
+                            }
+                        }
+                    }
                 },
                 "valueReference": {
                     "type": "array",
@@ -131,7 +149,16 @@
                             },
                             "unitCode": {
                                 "title": "Unit Code",
-                                "type": "string"
+                                "type": "string",
+                                "cordra": {
+                                    "type": {
+                                        "handleReference": {
+                                            "types": [
+                                                "UnitOfMeasurement"
+                                            ]
+                                        }
+                                    }
+                                }
                             }
                         }
                     }
@@ -606,6 +633,24 @@
         },
         "materialExtent": {
             "$ref": "#/definitions/QuantitativeValue"
+        },
+        "isBasedOn": {
+            "type": "array",
+            "title": "Material is based on",
+            "uniqueItems": true,
+            "items": {
+                "type": "string",
+                "title": "Material",
+                "cordra": {
+                    "type": {
+                        "handleReference": {
+                            "types": [
+                                "Material"
+                            ]
+                        }
+                    }
+                }
+            }
         }
     }
 }
