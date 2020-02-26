@@ -633,6 +633,24 @@
         },
         "materialExtent": {
             "$ref": "#/definitions/QuantitativeValue"
+        },
+        "isBasedOn": {
+            "type": "array",
+            "title": "Material is based on",
+            "uniqueItems": true,
+            "items": {
+                "type": "string",
+                "title": "Material",
+                "cordra": {
+                    "type": {
+                        "handleReference": {
+                            "types": [
+                                "Material"
+                            ]
+                        }
+                    }
+                }
+            }
         }
     }
 }
