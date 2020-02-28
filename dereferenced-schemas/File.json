@@ -453,7 +453,15 @@
                     "type": {
                         "handleReference": {
                             "types": [
-                                "Citation"
+                                "Citation",
+                                "User",
+                                "Person",
+                                "Organization",
+                                "Comment",
+                                "Dataset",
+                                "File",
+                                "MaterialProperty",
+                                "TabularDataPackage"
                             ]
                         }
                     }
