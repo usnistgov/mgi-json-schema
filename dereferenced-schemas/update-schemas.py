@@ -34,5 +34,5 @@ for schema_file_name in schemas:
     try:
         r = requests.put(url, data=json.dumps(schema_data), auth=(user, pswd), verify=False)
         print(check_response(r))
-    except:
-        None
+    except Exception as e:
+        print(e)
