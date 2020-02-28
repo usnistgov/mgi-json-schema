@@ -4,10 +4,49 @@
     "title": "Comment",
     "definitions": {"Comment": {
         "type": "object",
-        "properties": {"text": {
-            "type": "string",
-            "title": "Text of the Comment",
-            "format": "textarea"
-        }}
+        "properties": {
+            "downvoteCount": {
+                "title": "Down Vote Count",
+                "type": "number"
+            },
+            "upvoteCount": {
+                "title": "Up Vote Count",
+                "type": "number"
+            },
+            "parentItem": {
+                "type": "string",
+                "title": "Parent Item",
+                "cordra": {"type": {"handleReference": {"types": [
+                    "Citation",
+                    "Collection",
+                    "Comment",
+                    "DataCatalog",
+                    "DataFormat",
+                    "Dataset",
+                    "DefinedTerm",
+                    "DefinedTermSet",
+                    "File",
+                    "Group",
+                    "Instrument",
+                    "Material",
+                    "MaterialProperty",
+                    "Organization",
+                    "Person",
+                    "ProcessHistory",
+                    "ProcessProtocol",
+                    "Project",
+                    "SoftwareApplication",
+                    "SoftwareSourceCode",
+                    "TabularDataPackage",
+                    "UnitOfMeasurement",
+                    "User"
+                ]}}}
+            },
+            "text": {
+                "type": "string",
+                "title": "Text of the Comment",
+                "format": "textarea"
+            }
+        }
     }}
 }
