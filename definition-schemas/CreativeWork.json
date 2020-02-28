@@ -36,7 +36,17 @@
                 "items": {
                     "type": "string",
                     "title": "Citation",
-                    "cordra": {"type": {"handleReference": {"types": ["Citation"]}}}
+                    "cordra": {"type": {"handleReference": {"types": [
+                        "Citation",
+                        "User",
+                        "Person",
+                        "Organization",
+                        "Comment",
+                        "Dataset",
+                        "File",
+                        "MaterialProperty",
+                        "TabularDataPackage"
+                    ]}}}
                 }
             },
             "funder": {
