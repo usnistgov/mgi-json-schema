@@ -4,20 +4,32 @@
     "title": "DataCatalog",
     "definitions": {"DataCatalog": {
         "type": "object",
-        "properties": {"dataset": {
-            "type": "array",
-            "title": "Datasets",
-            "uniqueItems": true,
-            "items": {
-                "type": "string",
-                "title": "Dataset",
-                "cordra": {"type": {"handleReference": {"types": [
-                    "File",
-                    "TabularDataPackage",
-                    "MaterialProperty",
-                    "Dataset"
-                ]}}}
+        "properties": {
+            "dataset": {
+                "type": "array",
+                "title": "Datasets",
+                "uniqueItems": true,
+                "items": {
+                    "type": "string",
+                    "title": "Dataset",
+                    "cordra": {"type": {"handleReference": {"types": [
+                        "File",
+                        "TabularDataPackage",
+                        "MaterialProperty",
+                        "Dataset"
+                    ]}}}
+                }
+            },
+            "isPartOf": {
+                "type": "array",
+                "title": "Is Part Of",
+                "uniqueItems": true,
+                "items": {
+                    "type": "string",
+                    "title": "Is Part Of",
+                    "cordra": {"type": {"handleReference": {"types": ["Collection"]}}}
+                }
             }
-        }}
+        }
     }}
 }

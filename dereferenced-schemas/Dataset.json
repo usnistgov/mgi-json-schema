@@ -252,6 +252,7 @@
                     "type": {
                         "handleReference": {
                             "types": [
+                                "Collection",
                                 "Dataset",
                                 "File",
                                 "MaterialProperty",
@@ -398,7 +399,8 @@
                         "handleReference": {
                             "types": [
                                 "DefinedTerm",
-                                "Project"
+                                "Project",
+                                "Collection"
                             ]
                         }
                     }

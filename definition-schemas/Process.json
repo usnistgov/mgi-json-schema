@@ -45,12 +45,13 @@
             },
             "isPartOf": {
                 "type": "array",
-                "title": "Parent Process",
+                "title": "Parent Process and Collections",
                 "uniqueItems": true,
                 "items": {
                     "type": "string",
-                    "title": "Parent Process",
+                    "title": "Parent Process or Collection",
                     "cordra": {"type": {"handleReference": {"types": [
+                        "Collection",
                         "ProcessProtocol",
                         "ProcessHistory"
                     ]}}}

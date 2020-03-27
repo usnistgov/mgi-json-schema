@@ -15,7 +15,8 @@
                     "title": "Subject/Project",
                     "cordra": {"type": {"handleReference": {"types": [
                         "DefinedTerm",
-                        "Project"
+                        "Project",
+                        "Collection"
                     ]}}}
                 }
             },

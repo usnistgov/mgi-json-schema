@@ -100,7 +100,8 @@
                         "handleReference": {
                             "types": [
                                 "DefinedTerm",
-                                "Project"
+                                "Project",
+                                "Collection"
                             ]
                         }
                     }
@@ -365,14 +366,15 @@
             }
         },
         "isPartOf": {
-            "title": "Has Parent Instruments",
+            "title": "Has Parent Instruments and Collections",
             "type": "array",
             "items": {
-                "title": "Has Parent Instrument",
+                "title": "Has Parent Instrument or Collection",
                 "cordra": {
                     "type": {
                         "handleReference": {
                             "types": [
+                                "Collection",
                                 "Instrument"
                             ]
                         }

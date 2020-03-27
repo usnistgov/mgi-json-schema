@@ -117,7 +117,8 @@
                         "handleReference": {
                             "types": [
                                 "DefinedTerm",
-                                "Project"
+                                "Project",
+                                "Collection"
                             ]
                         }
                     }
@@ -395,14 +396,25 @@
                     "type": {
                         "handleReference": {
                             "types": [
+                                "Citation",
                                 "Collection",
+                                "Comment",
+                                "DataCatalog",
+                                "DataFormat",
+                                "Dataset",
+                                "DefinedTerm",
+                                "DefinedTermSet",
                                 "File",
-                                "MaterialProperty",
-                                "Material",
-                                "Process",
                                 "Instrument",
+                                "Material",
+                                "MaterialProperty",
+                                "ProcessHistory",
+                                "ProcessProtocol",
+                                "Project",
+                                "SoftwareApplication",
+                                "SoftwareSourceCode",
                                 "TabularDataPackage",
-                                "Dataset"
+                                "UnitOfMeasurement"
                             ]
                         }
                     }
@@ -411,11 +423,11 @@
         },
         "isPartOf": {
             "type": "array",
-            "title": "Is part of Collections",
+            "title": "Is Part Of",
             "uniqueItems": true,
             "items": {
                 "type": "string",
-                "title": "Is part of Collection",
+                "title": "Is Part Of",
                 "cordra": {
                     "type": {
                         "handleReference": {

@@ -92,7 +92,8 @@
                         "handleReference": {
                             "types": [
                                 "DefinedTerm",
-                                "Project"
+                                "Project",
+                                "Collection"
                             ]
                         }
                     }

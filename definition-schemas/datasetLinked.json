@@ -11,6 +11,7 @@
                 "type": "string",
                 "title": "Is Part Of",
                 "cordra": {"type": {"handleReference": {"types": [
+                    "Collection",
                     "Dataset",
                     "File",
                     "MaterialProperty",

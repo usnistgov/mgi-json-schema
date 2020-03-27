@@ -301,7 +301,8 @@
                         "handleReference": {
                             "types": [
                                 "DefinedTerm",
-                                "Project"
+                                "Project",
+                                "Collection"
                             ]
                         }
                     }
@@ -588,15 +589,16 @@
             "$ref": "#/definitions/subjectOf"
         },
         "isPartOf": {
-            "title": "Has Parent Materials",
+            "title": "Has Parent Materials and Collections",
             "type": "array",
             "items": {
-                "title": "Has Parent Material",
+                "title": "Has Parent Materialor Collection",
                 "type": "string",
                 "cordra": {
                     "type": {
                         "handleReference": {
                             "types": [
+                                "Collection",
                                 "Material"
                             ]
                         }
