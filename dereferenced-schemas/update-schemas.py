@@ -6,6 +6,9 @@ import sys
 import json
 import glob
 
+from requests.packages.urllib3.exceptions import InsecureRequestWarning
+requests.packages.urllib3.disable_warnings(InsecureRequestWarning)
+
 def check_response(r,quiet=False):
     try:
         r_content = r.json()
