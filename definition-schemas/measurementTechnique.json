@@ -4,11 +4,11 @@
     "title": "measurementTechnique",
     "definitions": {"measurementTechnique": {
         "type": "array",
-        "title": "Synthesis/Measurement Techniques",
+        "title": "Synthesis/Measurement/Computational Technique or Instrument/Software Used",
         "uniqueItems": true,
         "items": {
             "type": "string",
-            "title": "Synthesis/Measurement Technique",
+            "title": "Referenced Item",
             "cordra": {"type": {"handleReference": {"types": [
                 "DefinedTerm",
                 "Instrument",

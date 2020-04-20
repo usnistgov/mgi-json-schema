@@ -22,6 +22,7 @@
             "type": "array",
             "default": [
                 "CreativeWork",
+                "IndividualProduct",
                 "mat:Instrument"
             ]
         },
@@ -45,7 +46,25 @@
                         "default": "PropertyValue"
                     },
                     "propertyID": {
-                        "title": "Identifier Type",
+                        "title": "Property IDs",
+                        "type": "array",
+                        "uniqueItems": true,
+                        "items": {
+                            "title": "Property ID",
+                            "type": "string",
+                            "cordra": {
+                                "type": {
+                                    "handleReference": {
+                                        "types": [
+                                            "DefinedTerm"
+                                        ]
+                                    }
+                                }
+                            }
+                        }
+                    },
+                    "name": {
+                        "title": "Identifier Type/Name",
                         "type": "string"
                     },
                     "value": {
@@ -398,6 +417,11 @@
                 }
             }
         },
+        "address": {
+            "type": "string",
+            "title": "Physical Address or Building Location",
+            "format": "textarea"
+        },
         "isBasedOn": {
             "title": "Is Based On",
             "type": "array",
@@ -443,6 +467,18 @@
                         "type": "string"
                     },
                     "model": {
+                        "type": "string"
+                    },
+                    "productID": {
+                        "type": "string"
+                    },
+                    "productionDate": {
+                        "type": "string"
+                    },
+                    "purchaseDate": {
+                        "type": "string"
+                    },
+                    "serialNumber": {
                         "type": "string"
                     }
                 }

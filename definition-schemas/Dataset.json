@@ -6,8 +6,22 @@
         "type": "object",
         "properties": {
             "includedInDataCatalog": {"$ref": "includedInDataCatalog.json#/definitions/includedInDataCatalog"},
-            "material": {"$ref": "materialLinked.json#/definitions/materialLinked"},
-            "materialExtent": {"$ref": "QuantitativeValue.json#/definitions/QuantitativeValue"},
+            "material": {
+                "title": "Material",
+                "$ref": "materialLinked.json#/definitions/materialLinked"
+            },
+            "materialExtent": {
+                "title": "Material Quantity",
+                "$ref": "QuantitativeValue.json#/definitions/QuantitativeValue"
+            },
+            "materialReference": {
+                "title": "Reference Material",
+                "$ref": "materialLinked.json#/definitions/materialLinked"
+            },
+            "materialReferenceExtent": {
+                "title": "Reference Material Quantity",
+                "$ref": "QuantitativeValue.json#/definitions/QuantitativeValue"
+            },
             "measurementTechnique": {"$ref": "measurementTechnique.json#/definitions/measurementTechnique"},
             "variableMeasured": {
                 "type": "array",

@@ -9,7 +9,7 @@
             "uniqueItems": true,
             "items": {
                 "type": "string",
-                "title": "Is Part Of",
+                "title": "Referenced Item",
                 "cordra": {"type": {"handleReference": {"types": [
                     "Collection",
                     "Dataset",
@@ -21,11 +21,11 @@
         },
         "hasPart": {
             "type": "array",
-            "title": "Dataset Parts",
+            "title": "Supporting Dataset Parts",
             "uniqueItems": true,
             "items": {
                 "type": "string",
-                "title": "Dataset Part",
+                "title": "Referenced Item",
                 "cordra": {"type": {"handleReference": {"types": [
                     "Dataset",
                     "File",
@@ -40,7 +40,7 @@
             "uniqueItems": true,
             "items": {
                 "type": "string",
-                "title": "Dataset",
+                "title": "Referenced Item",
                 "cordra": {"type": {"handleReference": {"types": [
                     "Dataset",
                     "File",

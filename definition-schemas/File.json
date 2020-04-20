@@ -24,8 +24,22 @@
                     "$ref": "variableMeasured.json#/definitions/variableMeasured"
                 }
             },
-            "material": {"$ref": "materialLinked.json#/definitions/materialLinked"},
-            "materialExtent": {"$ref": "QuantitativeValue.json#/definitions/QuantitativeValue"},
+            "material": {
+                "title": "Material",
+                "$ref": "materialLinked.json#/definitions/materialLinked"
+            },
+            "materialExtent": {
+                "title": "Material Quantity",
+                "$ref": "QuantitativeValue.json#/definitions/QuantitativeValue"
+            },
+            "materialReference": {
+                "title": "Reference Material",
+                "$ref": "materialLinked.json#/definitions/materialLinked"
+            },
+            "materialReferenceExtent": {
+                "title": "Reference Material Quantity",
+                "$ref": "QuantitativeValue.json#/definitions/QuantitativeValue"
+            },
             "includedInDataCatalog": {"$ref": "includedInDataCatalog.json#/definitions/includedInDataCatalog"},
             "uploadDate": {
                 "title": "Upload Date",

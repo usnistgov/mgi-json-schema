@@ -24,6 +24,11 @@
                     "cordra": {"type": {"handleReference": {"types": ["Instrument"]}}}
                 }
             },
+            "address": {
+                "type": "string",
+                "title": "Physical Address or Building Location",
+                "format": "textarea"
+            },
             "isBasedOn": {
                 "title": "Is Based On",
                 "type": "array",
@@ -64,7 +69,11 @@
                         },
                         "manufacturer": {"type": "string"},
                         "brand": {"type": "string"},
-                        "model": {"type": "string"}
+                        "model": {"type": "string"},
+                        "productID": {"type": "string"},
+                        "productionDate": {"type": "string"},
+                        "purchaseDate": {"type": "string"},
+                        "serialNumber": {"type": "string"}
                     }
                 }
             }

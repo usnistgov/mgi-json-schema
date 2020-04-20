@@ -1,8 +1,8 @@
 {
     "$schema": "http://json-schema.org/draft-04/schema#",
     "type": "object",
-    "title": "Instrument",
-    "description": "This form is for describing an instrument and components/parts of an instrument. Instruments and parts are linked by their identifier.",
+    "title": "InstrumentAction",
+    "description": "This schema is for describing an Instrument Action Entry in Cordra.",
     "required": [
         "@id",
         "@context",
@@ -14,21 +14,23 @@
                 "type": "array",
                 "default": [
                     "http://schema.org/",
-                    {"mat": "https://pages.nist.gov/material-schema/"}
+                    {
+                        "mat": "https://pages.nist.gov/material-schema/",
+                        "parameterControlled": "mat:parameterControlled"
+                    }
                 ]
             },
             "@type": {
                 "type": "array",
                 "default": [
-                    "CreativeWork",
-                    "IndividualProduct",
-                    "mat:Instrument"
+                    "Dataset",
+                    "Action",
+                    "mat:InstrumentActivity"
                 ]
             }
         },
         {"$ref": "definition-schemas/CordraObjectID.json#/definitions/CordraObjectID"},
         {"$ref": "definition-schemas/Thing.json#/definitions/Thing"},
-        {"$ref": "definition-schemas/CreativeWork.json#/definitions/CreativeWork"},
-        {"$ref": "definition-schemas/Instrument.json#/definitions/Instrument"}
+        {"$ref": "definition-schemas/InstrumentAction.json#/definitions/InstrumentAction"}
     ]
 }
