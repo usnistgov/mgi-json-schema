@@ -29,6 +29,7 @@
         {"$ref": "definition-schemas/CordraObjectID.json#/definitions/CordraObjectID"},
         {"$ref": "definition-schemas/Thing.json#/definitions/Thing"},
         {"$ref": "definition-schemas/CreativeWork.json#/definitions/CreativeWork"},
-        {"$ref": "definition-schemas/Instrument.json#/definitions/Instrument"}
+        {"$ref": "definition-schemas/Instrument.json#/definitions/Instrument"},
+        {"$ref": "definition-schemas/Product.json#/definitions/Product"}
     ]
 }

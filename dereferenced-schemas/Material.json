@@ -717,6 +717,44 @@
                     }
                 }
             }
+        },
+        "manufacturer": {
+            "type": "array",
+            "title": "Manufacturers",
+            "uniqueItems": true,
+            "items": {
+                "type": "string",
+                "title": "Manufacturer",
+                "cordra": {
+                    "type": {
+                        "handleReference": {
+                            "types": [
+                                "User",
+                                "Person",
+                                "Organization"
+                            ]
+                        }
+                    }
+                }
+            }
+        },
+        "brand": {
+            "type": "string"
+        },
+        "model": {
+            "type": "string"
+        },
+        "productID": {
+            "type": "string"
+        },
+        "productionDate": {
+            "type": "string"
+        },
+        "purchaseDate": {
+            "type": "string"
+        },
+        "serialNumber": {
+            "type": "string"
         }
     }
 }

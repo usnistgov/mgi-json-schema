@@ -35,46 +35,7 @@
                 "uniqueItems": true,
                 "items": {
                     "title": "Product",
-                    "type": "object",
-                    "properties": {
-                        "@type": {
-                            "type": "string",
-                            "default": "Product"
-                        },
-                        "additionalProperty": {
-                            "title": "Additional Properties",
-                            "type": "array",
-                            "items": {
-                                "title": "Additional Property",
-                                "type": "object",
-                                "properties": {
-                                    "@type": {
-                                        "type": "string",
-                                        "default": "PropertyValue"
-                                    },
-                                    "propertyID": {
-                                        "title": "Property Name",
-                                        "type": "string"
-                                    },
-                                    "value": {
-                                        "title": "Property Value",
-                                        "type": "string"
-                                    },
-                                    "unitText": {
-                                        "title": "Property Units",
-                                        "type": "string"
-                                    }
-                                }
-                            }
-                        },
-                        "manufacturer": {"type": "string"},
-                        "brand": {"type": "string"},
-                        "model": {"type": "string"},
-                        "productID": {"type": "string"},
-                        "productionDate": {"type": "string"},
-                        "purchaseDate": {"type": "string"},
-                        "serialNumber": {"type": "string"}
-                    }
+                    "$ref": "Product.json#/definitions/Product"
                 }
             }
         }
