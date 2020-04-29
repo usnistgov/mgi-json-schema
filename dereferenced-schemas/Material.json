@@ -358,7 +358,10 @@
                             "types": [
                                 "DefinedTerm",
                                 "Project",
-                                "Collection"
+                                "Collection",
+                                "ProcessHistory",
+                                "ProcessProtocol",
+                                "Material"
                             ]
                         }
                     }
