@@ -62,7 +62,25 @@
                         "default": "PropertyValue"
                     },
                     "propertyID": {
-                        "title": "Identifier Type",
+                        "title": "Property IDs",
+                        "type": "array",
+                        "uniqueItems": true,
+                        "items": {
+                            "title": "Property ID",
+                            "type": "string",
+                            "cordra": {
+                                "type": {
+                                    "handleReference": {
+                                        "types": [
+                                            "DefinedTerm"
+                                        ]
+                                    }
+                                }
+                            }
+                        }
+                    },
+                    "name": {
+                        "title": "Identifier Type/Name",
                         "type": "string"
                     },
                     "value": {
@@ -117,7 +135,11 @@
                         "handleReference": {
                             "types": [
                                 "DefinedTerm",
-                                "Project"
+                                "Project",
+                                "Collection",
+                                "ProcessHistory",
+                                "ProcessProtocol",
+                                "Material"
                             ]
                         }
                     }
@@ -395,14 +417,25 @@
                     "type": {
                         "handleReference": {
                             "types": [
+                                "Citation",
                                 "Collection",
+                                "Comment",
+                                "DataCatalog",
+                                "DataFormat",
+                                "Dataset",
+                                "DefinedTerm",
+                                "DefinedTermSet",
                                 "File",
-                                "MaterialProperty",
-                                "Material",
-                                "Process",
                                 "Instrument",
+                                "Material",
+                                "MaterialProperty",
+                                "ProcessHistory",
+                                "ProcessProtocol",
+                                "Project",
+                                "SoftwareApplication",
+                                "SoftwareSourceCode",
                                 "TabularDataPackage",
-                                "Dataset"
+                                "UnitOfMeasurement"
                             ]
                         }
                     }
@@ -411,11 +444,11 @@
         },
         "isPartOf": {
             "type": "array",
-            "title": "Is part of Collections",
+            "title": "Is Part Of",
             "uniqueItems": true,
             "items": {
                 "type": "string",
-                "title": "Is part of Collection",
+                "title": "Is Part Of",
                 "cordra": {
                     "type": {
                         "handleReference": {

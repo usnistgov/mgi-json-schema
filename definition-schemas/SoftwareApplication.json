@@ -63,6 +63,16 @@
                     "title": "Is based on Software Source Code",
                     "cordra": {"type": {"handleReference": {"types": ["SoftwareSourceCode"]}}}
                 }
+            },
+            "isPartOf": {
+                "type": "array",
+                "title": "Is Part Of",
+                "uniqueItems": true,
+                "items": {
+                    "type": "string",
+                    "title": "Is Part Of",
+                    "cordra": {"type": {"handleReference": {"types": ["Collection"]}}}
+                }
             }
         }
     }}

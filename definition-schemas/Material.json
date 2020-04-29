@@ -20,12 +20,15 @@
             },
             "subjectOf": {"$ref": "subjectOf.json#/definitions/subjectOf"},
             "isPartOf": {
-                "title": "Has Parent Materials",
+                "title": "Has Parent Materials and Collections",
                 "type": "array",
                 "items": {
-                    "title": "Has Parent Material",
+                    "title": "Has Parent Materialor Collection",
                     "type": "string",
-                    "cordra": {"type": {"handleReference": {"types": ["Material"]}}}
+                    "cordra": {"type": {"handleReference": {"types": [
+                        "Collection",
+                        "Material"
+                    ]}}}
                 }
             },
             "hasPart": {

@@ -64,11 +64,11 @@
         },
         "measurementTechnique": {
             "type": "array",
-            "title": "Synthesis/Measurement Techniques",
+            "title": "Synthesis/Measurement/Computational Technique or Instrument/Software Used",
             "uniqueItems": true,
             "items": {
                 "type": "string",
-                "title": "Synthesis/Measurement Technique",
+                "title": "Referenced Item",
                 "cordra": {
                     "type": {
                         "handleReference": {
@@ -126,6 +126,25 @@
                         }
                     ]
                 },
+                "valueID": {
+                    "title": "Value IDs",
+                    "type": "array",
+                    "description": "A commonly used identifier for the value represented by the property. This can be used when the value of the property is a DefinedTerm.",
+                    "uniqueItems": true,
+                    "items": {
+                        "title": "Value ID",
+                        "type": "string",
+                        "cordra": {
+                            "type": {
+                                "handleReference": {
+                                    "types": [
+                                        "DefinedTerm"
+                                    ]
+                                }
+                            }
+                        }
+                    }
+                },
                 "unitText": {
                     "title": "Unit Text",
                     "oneOf": [
@@ -182,6 +201,25 @@
                             "value": {
                                 "title": "Value",
                                 "type": "number"
+                            },
+                            "valueID": {
+                                "title": "Value IDs",
+                                "type": "array",
+                                "description": "A commonly used identifier for the value represented by the property. This can be used when the value of the property is a DefinedTerm.",
+                                "uniqueItems": true,
+                                "items": {
+                                    "title": "Value ID",
+                                    "type": "string",
+                                    "cordra": {
+                                        "type": {
+                                            "handleReference": {
+                                                "types": [
+                                                    "DefinedTerm"
+                                                ]
+                                            }
+                                        }
+                                    }
+                                }
                             },
                             "unitText": {
                                 "title": "Unit Text",
@@ -247,11 +285,12 @@
             "uniqueItems": true,
             "items": {
                 "type": "string",
-                "title": "Is Part Of",
+                "title": "Referenced Item",
                 "cordra": {
                     "type": {
                         "handleReference": {
                             "types": [
+                                "Collection",
                                 "Dataset",
                                 "File",
                                 "MaterialProperty",
@@ -264,11 +303,11 @@
         },
         "hasPart": {
             "type": "array",
-            "title": "Dataset Parts",
+            "title": "Supporting Dataset Parts",
             "uniqueItems": true,
             "items": {
                 "type": "string",
-                "title": "Dataset Part",
+                "title": "Referenced Item",
                 "cordra": {
                     "type": {
                         "handleReference": {
@@ -289,7 +328,7 @@
             "uniqueItems": true,
             "items": {
                 "type": "string",
-                "title": "Dataset",
+                "title": "Referenced Item",
                 "cordra": {
                     "type": {
                         "handleReference": {
@@ -343,7 +382,25 @@
                         "default": "PropertyValue"
                     },
                     "propertyID": {
-                        "title": "Identifier Type",
+                        "title": "Property IDs",
+                        "type": "array",
+                        "uniqueItems": true,
+                        "items": {
+                            "title": "Property ID",
+                            "type": "string",
+                            "cordra": {
+                                "type": {
+                                    "handleReference": {
+                                        "types": [
+                                            "DefinedTerm"
+                                        ]
+                                    }
+                                }
+                            }
+                        }
+                    },
+                    "name": {
+                        "title": "Identifier Type/Name",
                         "type": "string"
                     },
                     "value": {
@@ -398,7 +455,11 @@
                         "handleReference": {
                             "types": [
                                 "DefinedTerm",
-                                "Project"
+                                "Project",
+                                "Collection",
+                                "ProcessHistory",
+                                "ProcessProtocol",
+                                "Material"
                             ]
                         }
                     }
@@ -666,9 +727,19 @@
             "$ref": "#/definitions/includedInDataCatalog"
         },
         "material": {
+            "title": "Material",
             "$ref": "#/definitions/materialLinked"
         },
         "materialExtent": {
+            "title": "Material Quantity",
+            "$ref": "#/definitions/QuantitativeValue"
+        },
+        "materialReference": {
+            "title": "Reference Material",
+            "$ref": "#/definitions/materialLinked"
+        },
+        "materialReferenceExtent": {
+            "title": "Reference Material Quantity",
             "$ref": "#/definitions/QuantitativeValue"
         },
         "measurementTechnique": {

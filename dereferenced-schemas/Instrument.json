@@ -8,6 +8,51 @@
         "@context",
         "@type"
     ],
+    "definitions": {
+        "Product": {
+            "type": "object",
+            "properties": {
+                "manufacturer": {
+                    "type": "array",
+                    "title": "Manufacturers",
+                    "uniqueItems": true,
+                    "items": {
+                        "type": "string",
+                        "title": "Manufacturer",
+                        "cordra": {
+                            "type": {
+                                "handleReference": {
+                                    "types": [
+                                        "User",
+                                        "Person",
+                                        "Organization"
+                                    ]
+                                }
+                            }
+                        }
+                    }
+                },
+                "brand": {
+                    "type": "string"
+                },
+                "model": {
+                    "type": "string"
+                },
+                "productID": {
+                    "type": "string"
+                },
+                "productionDate": {
+                    "type": "string"
+                },
+                "purchaseDate": {
+                    "type": "string"
+                },
+                "serialNumber": {
+                    "type": "string"
+                }
+            }
+        }
+    },
     "properties": {
         "@context": {
             "type": "array",
@@ -22,6 +67,7 @@
             "type": "array",
             "default": [
                 "CreativeWork",
+                "IndividualProduct",
                 "mat:Instrument"
             ]
         },
@@ -45,7 +91,25 @@
                         "default": "PropertyValue"
                     },
                     "propertyID": {
-                        "title": "Identifier Type",
+                        "title": "Property IDs",
+                        "type": "array",
+                        "uniqueItems": true,
+                        "items": {
+                            "title": "Property ID",
+                            "type": "string",
+                            "cordra": {
+                                "type": {
+                                    "handleReference": {
+                                        "types": [
+                                            "DefinedTerm"
+                                        ]
+                                    }
+                                }
+                            }
+                        }
+                    },
+                    "name": {
+                        "title": "Identifier Type/Name",
                         "type": "string"
                     },
                     "value": {
@@ -100,7 +164,11 @@
                         "handleReference": {
                             "types": [
                                 "DefinedTerm",
-                                "Project"
+                                "Project",
+                                "Collection",
+                                "ProcessHistory",
+                                "ProcessProtocol",
+                                "Material"
                             ]
                         }
                     }
@@ -365,14 +433,15 @@
             }
         },
         "isPartOf": {
-            "title": "Has Parent Instruments",
+            "title": "Has Parent Instruments and Collections",
             "type": "array",
             "items": {
-                "title": "Has Parent Instrument",
+                "title": "Has Parent Instrument or Collection",
                 "cordra": {
                     "type": {
                         "handleReference": {
                             "types": [
+                                "Collection",
                                 "Instrument"
                             ]
                         }
@@ -396,55 +465,57 @@
                 }
             }
         },
+        "address": {
+            "type": "string",
+            "title": "Physical Address or Building Location",
+            "format": "textarea"
+        },
         "isBasedOn": {
             "title": "Is Based On",
             "type": "array",
             "uniqueItems": true,
             "items": {
                 "title": "Product",
-                "type": "object",
-                "properties": {
-                    "@type": {
-                        "type": "string",
-                        "default": "Product"
-                    },
-                    "additionalProperty": {
-                        "title": "Additional Properties",
-                        "type": "array",
-                        "items": {
-                            "title": "Additional Property",
-                            "type": "object",
-                            "properties": {
-                                "@type": {
-                                    "type": "string",
-                                    "default": "PropertyValue"
-                                },
-                                "propertyID": {
-                                    "title": "Property Name",
-                                    "type": "string"
-                                },
-                                "value": {
-                                    "title": "Property Value",
-                                    "type": "string"
-                                },
-                                "unitText": {
-                                    "title": "Property Units",
-                                    "type": "string"
-                                }
-                            }
+                "$ref": "#/definitions/Product"
+            }
+        },
+        "manufacturer": {
+            "type": "array",
+            "title": "Manufacturers",
+            "uniqueItems": true,
+            "items": {
+                "type": "string",
+                "title": "Manufacturer",
+                "cordra": {
+                    "type": {
+                        "handleReference": {
+                            "types": [
+                                "User",
+                                "Person",
+                                "Organization"
+                            ]
                         }
-                    },
-                    "manufacturer": {
-                        "type": "string"
-                    },
-                    "brand": {
-                        "type": "string"
-                    },
-                    "model": {
-                        "type": "string"
                     }
                 }
             }
+        },
+        "brand": {
+            "type": "string"
+        },
+        "model": {
+            "type": "string"
+        },
+        "productID": {
+            "type": "string"
+        },
+        "productionDate": {
+            "type": "string"
+        },
+        "purchaseDate": {
+            "type": "string"
+        },
+        "serialNumber": {
+            "type": "string"
         }
     }
 }

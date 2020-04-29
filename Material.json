@@ -32,6 +32,7 @@
         {"$ref": "definition-schemas/CordraObjectID.json#/definitions/CordraObjectID"},
         {"$ref": "definition-schemas/Thing.json#/definitions/Thing"},
         {"$ref": "definition-schemas/CreativeWork.json#/definitions/CreativeWork"},
-        {"$ref": "definition-schemas/Material.json#/definitions/Material"}
+        {"$ref": "definition-schemas/Material.json#/definitions/Material"},
+        {"$ref": "definition-schemas/Product.json#/definitions/Product"}
     ]
 }

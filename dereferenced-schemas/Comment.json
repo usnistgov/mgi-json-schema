@@ -37,7 +37,25 @@
                         "default": "PropertyValue"
                     },
                     "propertyID": {
-                        "title": "Identifier Type",
+                        "title": "Property IDs",
+                        "type": "array",
+                        "uniqueItems": true,
+                        "items": {
+                            "title": "Property ID",
+                            "type": "string",
+                            "cordra": {
+                                "type": {
+                                    "handleReference": {
+                                        "types": [
+                                            "DefinedTerm"
+                                        ]
+                                    }
+                                }
+                            }
+                        }
+                    },
+                    "name": {
+                        "title": "Identifier Type/Name",
                         "type": "string"
                     },
                     "value": {
@@ -92,7 +110,11 @@
                         "handleReference": {
                             "types": [
                                 "DefinedTerm",
-                                "Project"
+                                "Project",
+                                "Collection",
+                                "ProcessHistory",
+                                "ProcessProtocol",
+                                "Material"
                             ]
                         }
                     }

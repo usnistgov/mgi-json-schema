@@ -45,11 +45,11 @@
         },
         "measurementTechnique": {
             "type": "array",
-            "title": "Synthesis/Measurement Techniques",
+            "title": "Synthesis/Measurement/Computational Technique or Instrument/Software Used",
             "uniqueItems": true,
             "items": {
                 "type": "string",
-                "title": "Synthesis/Measurement Technique",
+                "title": "Referenced Item",
                 "cordra": {
                     "type": {
                         "handleReference": {
@@ -107,6 +107,25 @@
                         }
                     ]
                 },
+                "valueID": {
+                    "title": "Value IDs",
+                    "type": "array",
+                    "description": "A commonly used identifier for the value represented by the property. This can be used when the value of the property is a DefinedTerm.",
+                    "uniqueItems": true,
+                    "items": {
+                        "title": "Value ID",
+                        "type": "string",
+                        "cordra": {
+                            "type": {
+                                "handleReference": {
+                                    "types": [
+                                        "DefinedTerm"
+                                    ]
+                                }
+                            }
+                        }
+                    }
+                },
                 "unitText": {
                     "title": "Unit Text",
                     "oneOf": [
@@ -163,6 +182,25 @@
                             "value": {
                                 "title": "Value",
                                 "type": "number"
+                            },
+                            "valueID": {
+                                "title": "Value IDs",
+                                "type": "array",
+                                "description": "A commonly used identifier for the value represented by the property. This can be used when the value of the property is a DefinedTerm.",
+                                "uniqueItems": true,
+                                "items": {
+                                    "title": "Value ID",
+                                    "type": "string",
+                                    "cordra": {
+                                        "type": {
+                                            "handleReference": {
+                                                "types": [
+                                                    "DefinedTerm"
+                                                ]
+                                            }
+                                        }
+                                    }
+                                }
                             },
                             "unitText": {
                                 "title": "Unit Text",
@@ -259,15 +297,16 @@
                 },
                 "isPartOf": {
                     "type": "array",
-                    "title": "Parent Process",
+                    "title": "Parent Process and Collections",
                     "uniqueItems": true,
                     "items": {
                         "type": "string",
-                        "title": "Parent Process",
+                        "title": "Parent Process or Collection",
                         "cordra": {
                             "type": {
                                 "handleReference": {
                                     "types": [
+                                        "Collection",
                                         "ProcessProtocol",
                                         "ProcessHistory"
                                     ]
@@ -483,7 +522,25 @@
                         "default": "PropertyValue"
                     },
                     "propertyID": {
-                        "title": "Identifier Type",
+                        "title": "Property IDs",
+                        "type": "array",
+                        "uniqueItems": true,
+                        "items": {
+                            "title": "Property ID",
+                            "type": "string",
+                            "cordra": {
+                                "type": {
+                                    "handleReference": {
+                                        "types": [
+                                            "DefinedTerm"
+                                        ]
+                                    }
+                                }
+                            }
+                        }
+                    },
+                    "name": {
+                        "title": "Identifier Type/Name",
                         "type": "string"
                     },
                     "value": {
@@ -538,7 +595,11 @@
                         "handleReference": {
                             "types": [
                                 "DefinedTerm",
-                                "Project"
+                                "Project",
+                                "Collection",
+                                "ProcessHistory",
+                                "ProcessProtocol",
+                                "Material"
                             ]
                         }
                     }
@@ -847,15 +908,16 @@
         },
         "isPartOf": {
             "type": "array",
-            "title": "Parent Process",
+            "title": "Parent Process and Collections",
             "uniqueItems": true,
             "items": {
                 "type": "string",
-                "title": "Parent Process",
+                "title": "Parent Process or Collection",
                 "cordra": {
                     "type": {
                         "handleReference": {
                             "types": [
+                                "Collection",
                                 "ProcessProtocol",
                                 "ProcessHistory"
                             ]

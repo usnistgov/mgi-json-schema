@@ -95,7 +95,17 @@
                     "cordra": {"type": {"handleReference": {"types": ["Organization"]}}}
                 }
             },
-            "subjectOf": {"$ref": "subjectOf.json#/definitions/subjectOf"}
+            "subjectOf": {"$ref": "subjectOf.json#/definitions/subjectOf"},
+            "isPartOf": {
+                "type": "array",
+                "title": "Is Part Of",
+                "uniqueItems": true,
+                "items": {
+                    "type": "string",
+                    "title": "Is Part Of",
+                    "cordra": {"type": {"handleReference": {"types": ["Collection"]}}}
+                }
+            }
         }
     }}
 }

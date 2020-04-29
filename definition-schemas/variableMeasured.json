@@ -31,6 +31,17 @@
                     {"type": "null"}
                 ]
             },
+            "valueID": {
+                "title": "Value IDs",
+                "type": "array",
+                "description": "A commonly used identifier for the value represented by the property. This can be used when the value of the property is a DefinedTerm.",
+                "uniqueItems": true,
+                "items": {
+                    "title": "Value ID",
+                    "type": "string",
+                    "cordra": {"type": {"handleReference": {"types": ["DefinedTerm"]}}}
+                }
+            },
             "unitText": {
                 "title": "Unit Text",
                 "oneOf": [
@@ -67,6 +78,17 @@
                         "value": {
                             "title": "Value",
                             "type": "number"
+                        },
+                        "valueID": {
+                            "title": "Value IDs",
+                            "type": "array",
+                            "description": "A commonly used identifier for the value represented by the property. This can be used when the value of the property is a DefinedTerm.",
+                            "uniqueItems": true,
+                            "items": {
+                                "title": "Value ID",
+                                "type": "string",
+                                "cordra": {"type": {"handleReference": {"types": ["DefinedTerm"]}}}
+                            }
                         },
                         "unitText": {
                             "title": "Unit Text",
