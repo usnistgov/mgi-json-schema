@@ -443,7 +443,12 @@
         "description": {
             "type": "string",
             "title": "Description",
-            "format": "textarea"
+            "format": "textarea",
+            "cordra": {
+                "preview": {
+                    "showInPreview": true
+                }
+            }
         },
         "homepage": {
             "propertyOrder": 60,
@@ -2654,7 +2659,12 @@
         },
         "alternateName": {
             "type": "string",
-            "title": "Alternate Name"
+            "title": "Alternate Name",
+            "cordra": {
+                "preview": {
+                    "showInPreview": true
+                }
+            }
         },
         "url": {
             "type": "string",
