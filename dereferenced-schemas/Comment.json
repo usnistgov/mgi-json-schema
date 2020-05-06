@@ -77,12 +77,22 @@
         },
         "alternateName": {
             "type": "string",
-            "title": "Alternate Name"
+            "title": "Alternate Name",
+            "cordra": {
+                "preview": {
+                    "showInPreview": true
+                }
+            }
         },
         "description": {
             "type": "string",
             "title": "Description",
-            "format": "textarea"
+            "format": "textarea",
+            "cordra": {
+                "preview": {
+                    "showInPreview": true
+                }
+            }
         },
         "url": {
             "type": "string",
