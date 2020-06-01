@@ -1,8 +1,8 @@
 {
     "$schema": "http://json-schema.org/draft-04/schema#",
     "type": "object",
-    "title": "Person",
-    "description": "This schema is for describing a Person in Cordra.",
+    "title": "Place",
+    "description": "This schema is for describing a Place in Cordra.",
     "required": [
         "@id",
         "@context",
@@ -10,12 +10,20 @@
     ],
     "properties": {
         "@context": {
-            "type": "string",
-            "default": "http://schema.org/"
+            "type": "array",
+            "default": [
+                "http://schema.org/",
+                {
+                    "mat": "https://pages.nist.gov/material-schema/"
+                }
+            ]
         },
         "@type": {
-            "type": "string",
-            "default": "Person"
+            "type": "array",
+            "default": [
+                "Place",
+                "mat:Place"
+            ]
         },
         "@id": {
             "type": "string",
@@ -107,58 +115,48 @@
                 "title": "Image URL"
             }
         },
-        "familyName": {
-            "type": "string",
-            "title": "Family Name"
-        },
-        "givenName": {
-            "type": "string",
-            "title": "Given Name"
-        },
-        "additionalName": {
-            "type": "string",
-            "title": "Middle Name(s)"
-        },
-        "email": {
-            "type": "string",
-            "title": "E-Mail Address",
-            "cordra": {
-                "preview": {
-                    "showInPreview": true
-                }
-            }
-        },
-        "telephone": {
-            "type": "string",
-            "title": "Telephone"
-        },
-        "address": {
-            "type": "string",
-            "title": "Physical Address",
-            "format": "textarea"
-        },
-        "affiliation": {
+        "about": {
             "type": "array",
-            "title": "Affiliations",
+            "title": "About",
+            "description": "This is for linking controlled vocabulary terms and parent projects.",
             "uniqueItems": true,
             "items": {
                 "type": "string",
-                "title": "Affiliation",
+                "title": "Subject/Project",
                 "cordra": {
                     "type": {
                         "handleReference": {
                             "types": [
-                                "Organization"
+                                "DefinedTerm",
+                                "Project",
+                                "Collection",
+                                "ProcessHistory",
+                                "ProcessProtocol",
+                                "Material"
                             ]
                         }
                     }
                 }
             }
         },
-        "workLocation": {
+        "keywords": {
             "type": "array",
-            "title": "Work Location",
-            "description": "A location where a person performs work (e.g., office, laboratory).",
+            "title": "Keywords",
+            "description": "This is for user-defined terms.",
+            "uniqueItems": true,
+            "items": {
+                "type": "string",
+                "title": "Keyword"
+            }
+        },
+        "address": {
+            "title": "Address",
+            "type": "string"
+        },
+        "containedInPlace": {
+            "type": "array",
+            "title": "Contained In Place",
+            "description": "The basic containment relation between a place and one that contains it.",
             "uniqueItems": true,
             "items": {
                 "type": "string",
@@ -168,6 +166,48 @@
                         "handleReference": {
                             "types": [
                                 "Place"
+                            ]
+                        }
+                    }
+                }
+            }
+        },
+        "containsPlace": {
+            "type": "array",
+            "title": "Contains Place",
+            "description": "The basic containment relation between a place and another that it contains.",
+            "uniqueItems": true,
+            "items": {
+                "type": "string",
+                "title": "Place",
+                "cordra": {
+                    "type": {
+                        "handleReference": {
+                            "types": [
+                                "Place"
+                            ]
+                        }
+                    }
+                }
+            }
+        },
+        "telephone": {
+            "title": "Telephone",
+            "type": "string"
+        },
+        "accountablePerson": {
+            "type": "array",
+            "title": "Accountable Persons",
+            "uniqueItems": true,
+            "items": {
+                "type": "string",
+                "title": "Accountable Person",
+                "cordra": {
+                    "type": {
+                        "handleReference": {
+                            "types": [
+                                "User",
+                                "Person"
                             ]
                         }
                     }

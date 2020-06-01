@@ -395,6 +395,24 @@
                     }
                 }
             }
+        },
+        "spatial": {
+            "type": "array",
+            "title": "Specific Spatial Location",
+            "uniqueItems": true,
+            "items": {
+                "type": "string",
+                "title": "Place",
+                "cordra": {
+                    "type": {
+                        "handleReference": {
+                            "types": [
+                                "Place"
+                            ]
+                        }
+                    }
+                }
+            }
         }
     }
 }

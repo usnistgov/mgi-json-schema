@@ -299,7 +299,7 @@
             "default": [
                 "Dataset",
                 "Action",
-                "mat:InstrumentActivity"
+                "mat:InstrumentAction"
             ]
         },
         "@id": {

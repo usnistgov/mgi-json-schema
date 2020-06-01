@@ -1,8 +1,8 @@
 {
     "$schema": "http://json-schema.org/draft-04/schema#",
     "type": "object",
-    "title": "InstrumentAction",
-    "description": "This schema is for describing an Instrument Action Entry in Cordra.",
+    "title": "DutyAction",
+    "description": "This schema is for describing an Duty Action Entry in Cordra.",
     "required": [
         "@id",
         "@context",
@@ -25,12 +25,12 @@
                 "default": [
                     "Dataset",
                     "Action",
-                    "mat:InstrumentAction"
+                    "mat:DutyAction"
                 ]
             }
         },
         {"$ref": "definition-schemas/CordraObjectID.json#/definitions/CordraObjectID"},
         {"$ref": "definition-schemas/Thing.json#/definitions/Thing"},
-        {"$ref": "definition-schemas/InstrumentAction.json#/definitions/InstrumentAction"}
+        {"$ref": "definition-schemas/DutyAction.json#/definitions/DutyAction"}
     ]
 }

@@ -182,6 +182,25 @@
                     }
                 }
             }
+        },
+        "workLocation": {
+            "type": "array",
+            "title": "Work Location",
+            "description": "A location where a person performs work (e.g., office, laboratory).",
+            "uniqueItems": true,
+            "items": {
+                "type": "string",
+                "title": "Place",
+                "cordra": {
+                    "type": {
+                        "handleReference": {
+                            "types": [
+                                "Place"
+                            ]
+                        }
+                    }
+                }
+            }
         }
     }
 }
