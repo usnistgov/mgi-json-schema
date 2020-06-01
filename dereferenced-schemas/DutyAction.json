@@ -90,15 +90,13 @@
             "default": [
                 "http://schema.org/",
                 {
-                    "mat": "https://pages.nist.gov/material-schema/",
-                    "parameterControlled": "mat:parameterControlled"
+                    "mat": "https://pages.nist.gov/material-schema/"
                 }
             ]
         },
         "@type": {
             "type": "array",
             "default": [
-                "Dataset",
                 "Action",
                 "mat:DutyAction"
             ]
