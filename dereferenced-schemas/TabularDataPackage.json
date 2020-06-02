@@ -2653,6 +2653,10 @@
                     "value": {
                         "title": "Identifier Value",
                         "type": "string"
+                    },
+                    "url": {
+                        "title": "Identifier URL",
+                        "type": "string"
                     }
                 }
             }
