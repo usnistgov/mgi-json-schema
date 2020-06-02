@@ -318,13 +318,13 @@
             "$ref": "#/definitions/QuantitativeValue"
         },
         "instrument": {
-            "title": "Instrument",
+            "title": "Helping Instrument",
             "description": "The instrument or tool that helped the agent perform the action (e.g., instrument used to perform the measurement).",
             "$ref": "#/definitions/measurementTechnique"
         },
         "object": {
-            "title": "Object",
-            "description": "The non-material object upon which the action is carried out",
+            "title": "Object/Instrument",
+            "description": "The non-material object or object instrrument upon which the action is carried out",
             "$ref": "#/definitions/measurementTechnique"
         },
         "startTime": {
