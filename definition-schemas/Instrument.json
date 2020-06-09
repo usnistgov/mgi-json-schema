@@ -37,6 +37,24 @@
                     "title": "Product",
                     "$ref": "Product.json#/definitions/Product"
                 }
+            },
+            "variableMeasured": {
+                "type": "array",
+                "title": "Variables Measured",
+                "uniqueItems": true,
+                "items": {
+                    "title": "Variable Measured",
+                    "$ref": "variableMeasured.json#/definitions/variableMeasured"
+                }
+            },
+            "parameterControlled": {
+                "type": "array",
+                "title": "Parameters Controlled",
+                "uniqueItems": true,
+                "items": {
+                    "title": "Parameter Controlled",
+                    "$ref": "variableMeasured.json#/definitions/variableMeasured"
+                }
             }
         }
     }}
