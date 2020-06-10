@@ -1,21 +1,246 @@
 {
     "$schema": "http://json-schema.org/draft-04/schema#",
     "type": "object",
-    "title": "SoftwareApplication",
-    "description": "This schema is for describing a Software Application in Cordra.",
+    "title": "Study",
+    "description": "This schema is for describing a Study in Cordra.",
     "required": [
         "@id",
         "@context",
         "@type"
     ],
+    "definitions": {
+        "variableMeasured": {
+            "type": "object",
+            "properties": {
+                "@type": {
+                    "type": "string",
+                    "default": "PropertyValue"
+                },
+                "name": {
+                    "type": "string",
+                    "title": "Name"
+                },
+                "propertyID": {
+                    "title": "Property IDs",
+                    "type": "array",
+                    "uniqueItems": true,
+                    "items": {
+                        "title": "Property ID",
+                        "type": "string",
+                        "cordra": {
+                            "type": {
+                                "handleReference": {
+                                    "types": [
+                                        "DefinedTerm"
+                                    ]
+                                }
+                            }
+                        }
+                    }
+                },
+                "value": {
+                    "title": "Value",
+                    "oneOf": [
+                        {
+                            "type": "string"
+                        },
+                        {
+                            "type": "number"
+                        },
+                        {
+                            "type": "null"
+                        }
+                    ]
+                },
+                "valueID": {
+                    "title": "Value IDs",
+                    "type": "array",
+                    "description": "A commonly used identifier for the value represented by the property. This can be used when the value of the property is a DefinedTerm.",
+                    "uniqueItems": true,
+                    "items": {
+                        "title": "Value ID",
+                        "type": "string",
+                        "cordra": {
+                            "type": {
+                                "handleReference": {
+                                    "types": [
+                                        "DefinedTerm"
+                                    ]
+                                }
+                            }
+                        }
+                    }
+                },
+                "unitText": {
+                    "title": "Unit Text",
+                    "oneOf": [
+                        {
+                            "type": "string"
+                        },
+                        {
+                            "type": "null"
+                        }
+                    ]
+                },
+                "unitCode": {
+                    "title": "Unit Code",
+                    "type": "string",
+                    "cordra": {
+                        "type": {
+                            "handleReference": {
+                                "types": [
+                                    "UnitOfMeasurement"
+                                ]
+                            }
+                        }
+                    }
+                },
+                "valueReference": {
+                    "type": "array",
+                    "title": "Reference Values",
+                    "uniqueItems": true,
+                    "items": {
+                        "type": "object",
+                        "title": "Reference Value",
+                        "properties": {
+                            "@type": {
+                                "type": "string",
+                                "default": "PropertyValue"
+                            },
+                            "name": {
+                                "type": "string",
+                                "title": "Name"
+                            },
+                            "propertyID": {
+                                "title": "Property ID/Name",
+                                "type": "string",
+                                "cordra": {
+                                    "type": {
+                                        "handleReference": {
+                                            "types": [
+                                                "DefinedTerm"
+                                            ]
+                                        }
+                                    }
+                                }
+                            },
+                            "value": {
+                                "title": "Value",
+                                "type": "number"
+                            },
+                            "valueID": {
+                                "title": "Value IDs",
+                                "type": "array",
+                                "description": "A commonly used identifier for the value represented by the property. This can be used when the value of the property is a DefinedTerm.",
+                                "uniqueItems": true,
+                                "items": {
+                                    "title": "Value ID",
+                                    "type": "string",
+                                    "cordra": {
+                                        "type": {
+                                            "handleReference": {
+                                                "types": [
+                                                    "DefinedTerm"
+                                                ]
+                                            }
+                                        }
+                                    }
+                                }
+                            },
+                            "unitText": {
+                                "title": "Unit Text",
+                                "type": "string"
+                            },
+                            "unitCode": {
+                                "title": "Unit Code",
+                                "type": "string",
+                                "cordra": {
+                                    "type": {
+                                        "handleReference": {
+                                            "types": [
+                                                "UnitOfMeasurement"
+                                            ]
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                },
+                "variableMeasured": {
+                    "type": "array",
+                    "title": "Complex/Multidimensional Quantity",
+                    "uniqueItems": true,
+                    "items": {
+                        "title": "Complex/Multidimensional Quantity",
+                        "$ref": "#/definitions/variableMeasured"
+                    }
+                },
+                "parameterControlled": {
+                    "type": "array",
+                    "title": "Parameters Controlled",
+                    "uniqueItems": true,
+                    "items": {
+                        "title": "Parameter Controlled",
+                        "$ref": "#/definitions/variableMeasured"
+                    }
+                }
+            }
+        },
+        "subjectOf": {
+            "type": "array",
+            "title": "Subject Of",
+            "description": "A CreativeWork about this Thing (e.g., Linked Materials, Datasets, etc.)",
+            "uniqueItems": true,
+            "items": {
+                "type": "string",
+                "title": "Referenced Item",
+                "cordra": {
+                    "type": {
+                        "handleReference": {
+                            "types": [
+                                "Citation",
+                                "Collection",
+                                "Comment",
+                                "DataCatalog",
+                                "DataFormat",
+                                "Dataset",
+                                "DefinedTermSet",
+                                "File",
+                                "Instrument",
+                                "Material",
+                                "MaterialProperty",
+                                "ProcessHistory",
+                                "ProcessProtocol",
+                                "SoftwareApplication",
+                                "SoftwareSourceCode",
+                                "TabularDataPackage",
+                                "Experiment",
+                                "Study"
+                            ]
+                        }
+                    }
+                }
+            }
+        }
+    },
     "properties": {
         "@context": {
-            "type": "string",
-            "default": "http://schema.org/"
+            "type": "array",
+            "default": [
+                "http://schema.org/",
+                {
+                    "mat": "https://pages.nist.gov/material-schema/",
+                    "parameterControlled": "mat:parameterControlled"
+                }
+            ]
         },
         "@type": {
-            "type": "string",
-            "default": "SoftwareApplication"
+            "type": "array",
+            "default": [
+                "Dataset",
+                "mat:Study"
+            ]
         },
         "@id": {
             "type": "string",
@@ -412,109 +637,53 @@
                 }
             }
         },
-        "applicationCategory": {
+        "variableMeasured": {
             "type": "array",
-            "title": "Application Categories",
-            "description": "This is for controlled vocabulary terms.",
+            "title": "Variables Measured",
             "uniqueItems": true,
             "items": {
-                "type": "string",
-                "title": "Application Category",
-                "cordra": {
-                    "type": {
-                        "handleReference": {
-                            "types": [
-                                "DefinedTerm"
-                            ]
-                        }
-                    }
-                }
+                "title": "Variable Measured",
+                "$ref": "#/definitions/variableMeasured"
             }
         },
-        "applicationSuite": {
+        "parameterControlled": {
             "type": "array",
-            "title": "Application Suites",
+            "title": "Parameters Controlled",
             "uniqueItems": true,
             "items": {
-                "type": "string",
-                "title": "Application Suite",
-                "cordra": {
-                    "type": {
-                        "handleReference": {
-                            "types": [
-                                "SoftwareApplication"
-                            ]
-                        }
-                    }
-                }
+                "title": "Parameter Controlled",
+                "$ref": "#/definitions/variableMeasured"
             }
         },
-        "operatingSystem": {
-            "type": "array",
-            "title": "Operating Systems",
-            "uniqueItems": true,
-            "items": {
-                "type": "string",
-                "title": "Operating System"
-            }
-        },
-        "softwareAddOn": {
-            "type": "array",
-            "title": "Software Add Ons",
-            "uniqueItems": true,
-            "items": {
-                "type": "string",
-                "title": "Software Add On",
-                "cordra": {
-                    "type": {
-                        "handleReference": {
-                            "types": [
-                                "SoftwareApplication"
-                            ]
-                        }
-                    }
-                }
-            }
-        },
-        "softwareRequirements": {
-            "type": "string",
-            "title": "Software Requirements",
-            "format": "textarea"
-        },
-        "softwareVersion": {
-            "type": "string",
-            "title": "Software Version"
-        },
-        "isBasedOn": {
-            "type": "array",
-            "title": "Is based on Software Source Code",
-            "uniqueItems": true,
-            "items": {
-                "type": "string",
-                "title": "Is based on Software Source Code",
-                "cordra": {
-                    "type": {
-                        "handleReference": {
-                            "types": [
-                                "SoftwareSourceCode"
-                            ]
-                        }
-                    }
-                }
-            }
+        "subjectOf": {
+            "$ref": "#/definitions/subjectOf"
         },
         "isPartOf": {
+            "title": "Has Parent Study",
             "type": "array",
-            "title": "Is Part Of",
-            "uniqueItems": true,
             "items": {
-                "type": "string",
-                "title": "Is Part Of",
+                "title": "Referenced Item",
                 "cordra": {
                     "type": {
                         "handleReference": {
                             "types": [
-                                "Collection"
+                                "Study"
+                            ]
+                        }
+                    }
+                }
+            }
+        },
+        "hasPart": {
+            "title": "Has Parent Study",
+            "type": "array",
+            "items": {
+                "title": "Referenced Item",
+                "cordra": {
+                    "type": {
+                        "handleReference": {
+                            "types": [
+                                "Study"
                             ]
                         }
                     }

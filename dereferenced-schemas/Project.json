@@ -11,21 +11,34 @@
     "definitions": {
         "subjectOf": {
             "type": "array",
-            "title": "Linked Materials, Datasets, etc.",
+            "title": "Subject Of",
+            "description": "A CreativeWork about this Thing (e.g., Linked Materials, Datasets, etc.)",
             "uniqueItems": true,
             "items": {
                 "type": "string",
-                "title": "Linked Material, Dataset, etc.",
+                "title": "Referenced Item",
                 "cordra": {
                     "type": {
                         "handleReference": {
                             "types": [
-                                "File",
-                                "TabularDataPackage",
-                                "MaterialProperty",
-                                "Dataset",
+                                "Citation",
                                 "Collection",
-                                "Material"
+                                "Comment",
+                                "DataCatalog",
+                                "DataFormat",
+                                "Dataset",
+                                "DefinedTermSet",
+                                "File",
+                                "Instrument",
+                                "Material",
+                                "MaterialProperty",
+                                "ProcessHistory",
+                                "ProcessProtocol",
+                                "SoftwareApplication",
+                                "SoftwareSourceCode",
+                                "TabularDataPackage",
+                                "Experiment",
+                                "Study"
                             ]
                         }
                     }
