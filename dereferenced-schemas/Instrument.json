@@ -9,6 +9,184 @@
         "@type"
     ],
     "definitions": {
+        "variableMeasured": {
+            "type": "object",
+            "properties": {
+                "@type": {
+                    "type": "string",
+                    "default": "PropertyValue"
+                },
+                "name": {
+                    "type": "string",
+                    "title": "Name"
+                },
+                "propertyID": {
+                    "title": "Property IDs",
+                    "type": "array",
+                    "uniqueItems": true,
+                    "items": {
+                        "title": "Property ID",
+                        "type": "string",
+                        "cordra": {
+                            "type": {
+                                "handleReference": {
+                                    "types": [
+                                        "DefinedTerm"
+                                    ]
+                                }
+                            }
+                        }
+                    }
+                },
+                "value": {
+                    "title": "Value",
+                    "oneOf": [
+                        {
+                            "type": "string"
+                        },
+                        {
+                            "type": "number"
+                        },
+                        {
+                            "type": "null"
+                        }
+                    ]
+                },
+                "valueID": {
+                    "title": "Value IDs",
+                    "type": "array",
+                    "description": "A commonly used identifier for the value represented by the property. This can be used when the value of the property is a DefinedTerm.",
+                    "uniqueItems": true,
+                    "items": {
+                        "title": "Value ID",
+                        "type": "string",
+                        "cordra": {
+                            "type": {
+                                "handleReference": {
+                                    "types": [
+                                        "DefinedTerm"
+                                    ]
+                                }
+                            }
+                        }
+                    }
+                },
+                "unitText": {
+                    "title": "Unit Text",
+                    "oneOf": [
+                        {
+                            "type": "string"
+                        },
+                        {
+                            "type": "null"
+                        }
+                    ]
+                },
+                "unitCode": {
+                    "title": "Unit Code",
+                    "type": "string",
+                    "cordra": {
+                        "type": {
+                            "handleReference": {
+                                "types": [
+                                    "UnitOfMeasurement"
+                                ]
+                            }
+                        }
+                    }
+                },
+                "valueReference": {
+                    "type": "array",
+                    "title": "Reference Values",
+                    "uniqueItems": true,
+                    "items": {
+                        "type": "object",
+                        "title": "Reference Value",
+                        "properties": {
+                            "@type": {
+                                "type": "string",
+                                "default": "PropertyValue"
+                            },
+                            "name": {
+                                "type": "string",
+                                "title": "Name"
+                            },
+                            "propertyID": {
+                                "title": "Property ID/Name",
+                                "type": "string",
+                                "cordra": {
+                                    "type": {
+                                        "handleReference": {
+                                            "types": [
+                                                "DefinedTerm"
+                                            ]
+                                        }
+                                    }
+                                }
+                            },
+                            "value": {
+                                "title": "Value",
+                                "type": "number"
+                            },
+                            "valueID": {
+                                "title": "Value IDs",
+                                "type": "array",
+                                "description": "A commonly used identifier for the value represented by the property. This can be used when the value of the property is a DefinedTerm.",
+                                "uniqueItems": true,
+                                "items": {
+                                    "title": "Value ID",
+                                    "type": "string",
+                                    "cordra": {
+                                        "type": {
+                                            "handleReference": {
+                                                "types": [
+                                                    "DefinedTerm"
+                                                ]
+                                            }
+                                        }
+                                    }
+                                }
+                            },
+                            "unitText": {
+                                "title": "Unit Text",
+                                "type": "string"
+                            },
+                            "unitCode": {
+                                "title": "Unit Code",
+                                "type": "string",
+                                "cordra": {
+                                    "type": {
+                                        "handleReference": {
+                                            "types": [
+                                                "UnitOfMeasurement"
+                                            ]
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                },
+                "variableMeasured": {
+                    "type": "array",
+                    "title": "Complex/Multidimensional Quantity",
+                    "uniqueItems": true,
+                    "items": {
+                        "title": "Complex/Multidimensional Quantity",
+                        "$ref": "#/definitions/variableMeasured"
+                    }
+                },
+                "parameterControlled": {
+                    "type": "array",
+                    "title": "Parameters Controlled",
+                    "uniqueItems": true,
+                    "items": {
+                        "title": "Parameter Controlled",
+                        "$ref": "#/definitions/variableMeasured"
+                    }
+                }
+            }
+        },
         "Product": {
             "type": "object",
             "properties": {
@@ -49,6 +227,42 @@
                 },
                 "serialNumber": {
                     "type": "string"
+                }
+            }
+        },
+        "subjectOf": {
+            "type": "array",
+            "title": "Subject Of",
+            "description": "A CreativeWork about this Thing (e.g., Linked Materials, Datasets, etc.)",
+            "uniqueItems": true,
+            "items": {
+                "type": "string",
+                "title": "Referenced Item",
+                "cordra": {
+                    "type": {
+                        "handleReference": {
+                            "types": [
+                                "Citation",
+                                "Collection",
+                                "Comment",
+                                "DataCatalog",
+                                "DataFormat",
+                                "Dataset",
+                                "DefinedTermSet",
+                                "File",
+                                "Instrument",
+                                "Material",
+                                "MaterialProperty",
+                                "ProcessHistory",
+                                "ProcessProtocol",
+                                "SoftwareApplication",
+                                "SoftwareSourceCode",
+                                "TabularDataPackage",
+                                "Experiment",
+                                "Study"
+                            ]
+                        }
+                    }
                 }
             }
         }
@@ -115,6 +329,10 @@
                     "value": {
                         "title": "Identifier Value",
                         "type": "string"
+                    },
+                    "url": {
+                        "title": "Identifier URL",
+                        "type": "string"
                     }
                 }
             }
@@ -164,11 +382,11 @@
         "about": {
             "type": "array",
             "title": "About",
-            "description": "This is for linking controlled vocabulary terms and parent projects.",
+            "description": "The subject matter of the this thing (e.g., DefinedTerm, Project, Material, Experiment, Study, etc.)",
             "uniqueItems": true,
             "items": {
                 "type": "string",
-                "title": "Subject/Project",
+                "title": "Referenced Item",
                 "cordra": {
                     "type": {
                         "handleReference": {
@@ -178,7 +396,9 @@
                                 "Collection",
                                 "ProcessHistory",
                                 "ProcessProtocol",
-                                "Material"
+                                "Material",
+                                "Experiment",
+                                "Study"
                             ]
                         }
                     }
@@ -442,6 +662,24 @@
                 }
             }
         },
+        "spatial": {
+            "type": "array",
+            "title": "Specific Spatial Location",
+            "uniqueItems": true,
+            "items": {
+                "type": "string",
+                "title": "Place",
+                "cordra": {
+                    "type": {
+                        "handleReference": {
+                            "types": [
+                                "Place"
+                            ]
+                        }
+                    }
+                }
+            }
+        },
         "isPartOf": {
             "title": "Has Parent Instruments and Collections",
             "type": "array",
@@ -488,6 +726,36 @@
                 "title": "Product",
                 "$ref": "#/definitions/Product"
             }
+        },
+        "variableMeasured": {
+            "type": "array",
+            "title": "Variables Measured",
+            "uniqueItems": true,
+            "items": {
+                "title": "Variable Measured",
+                "$ref": "#/definitions/variableMeasured"
+            }
+        },
+        "parameterControlled": {
+            "type": "array",
+            "title": "Parameters Controlled",
+            "uniqueItems": true,
+            "items": {
+                "title": "Parameter Controlled",
+                "$ref": "#/definitions/variableMeasured"
+            }
+        },
+        "conditionObserved": {
+            "type": "array",
+            "title": "Conditions Observed",
+            "uniqueItems": true,
+            "items": {
+                "title": "Condition Observed",
+                "$ref": "#/definitions/variableMeasured"
+            }
+        },
+        "subjectOf": {
+            "$ref": "#/definitions/subjectOf"
         },
         "manufacturer": {
             "type": "array",

@@ -299,7 +299,7 @@
             "default": [
                 "Dataset",
                 "Action",
-                "mat:InstrumentActivity"
+                "mat:InstrumentAction"
             ]
         },
         "@id": {
@@ -345,6 +345,10 @@
                     },
                     "value": {
                         "title": "Identifier Value",
+                        "type": "string"
+                    },
+                    "url": {
+                        "title": "Identifier URL",
                         "type": "string"
                     }
                 }
@@ -521,10 +525,22 @@
             "type": "string"
         },
         "location": {
-            "type": "string",
-            "title": "Location",
-            "description": "Location where action is being performed if different from instrument location. (e.g., offsite repair)",
-            "format": "textarea"
+            "type": "array",
+            "title": "Specific Spatial Location",
+            "uniqueItems": true,
+            "items": {
+                "type": "string",
+                "title": "Place",
+                "cordra": {
+                    "type": {
+                        "handleReference": {
+                            "types": [
+                                "Place"
+                            ]
+                        }
+                    }
+                }
+            }
         },
         "material": {
             "title": "Material",
@@ -557,6 +573,15 @@
             "uniqueItems": true,
             "items": {
                 "title": "Parameter Controlled",
+                "$ref": "#/definitions/variableMeasured"
+            }
+        },
+        "conditionObserved": {
+            "type": "array",
+            "title": "Conditions Observed",
+            "uniqueItems": true,
+            "items": {
+                "title": "Condition Observed",
                 "$ref": "#/definitions/variableMeasured"
             }
         },

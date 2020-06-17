@@ -1,48 +1,14 @@
 {
     "$schema": "http://json-schema.org/draft-04/schema#",
     "type": "object",
-    "title": "Material",
-    "description": "This form is for describing any measurable substance (e.g., sample, specimen, material, chemical, etc.), or a specific sup-sample (e.g., location on a larger artifact, sub-portion of a larger artifact, item within a collection of specimens, etc.).",
+    "title": "Experiment",
+    "description": "This schema is for describing a Experiment in Cordra.",
     "required": [
         "@id",
         "@context",
         "@type"
     ],
     "definitions": {
-        "QuantitativeValue": {
-            "type": "object",
-            "properties": {
-                "@type": {
-                    "type": "string",
-                    "default": "QuantitativeValue"
-                },
-                "name": {
-                    "type": "string",
-                    "title": "Name"
-                },
-                "value": {
-                    "title": "Value",
-                    "type": "number"
-                },
-                "unitText": {
-                    "title": "Unit Text",
-                    "type": "string"
-                },
-                "unitCode": {
-                    "title": "Unit Code",
-                    "type": "string",
-                    "cordra": {
-                        "type": {
-                            "handleReference": {
-                                "types": [
-                                    "UnitOfMeasurement"
-                                ]
-                            }
-                        }
-                    }
-                }
-            }
-        },
         "variableMeasured": {
             "type": "object",
             "properties": {
@@ -265,16 +231,15 @@
                 "http://schema.org/",
                 {
                     "mat": "https://pages.nist.gov/material-schema/",
-                    "parameterControlled": "mat:parameterControlled",
-                    "variableMeasured": "mat:variableMeasured"
+                    "parameterControlled": "mat:parameterControlled"
                 }
             ]
         },
         "@type": {
             "type": "array",
             "default": [
-                "CreativeWork",
-                "mat:Material"
+                "Dataset",
+                "mat:Experiment"
             ]
         },
         "@id": {
@@ -672,82 +637,6 @@
                 }
             }
         },
-        "exampleOfWork": {
-            "type": "array",
-            "title": "Processing History/Protocol",
-            "uniqueItems": true,
-            "items": {
-                "type": "string",
-                "title": "Processing History/Protocol",
-                "cordra": {
-                    "type": {
-                        "handleReference": {
-                            "types": [
-                                "ProcessHistory",
-                                "ProcessProtocol"
-                            ]
-                        }
-                    }
-                }
-            }
-        },
-        "isSupplyFor": {
-            "type": "array",
-            "title": "This Material is a Supply/Starting Material for this Process",
-            "uniqueItems": true,
-            "items": {
-                "title": "Process",
-                "type": "string",
-                "cordra": {
-                    "type": {
-                        "handleReference": {
-                            "types": [
-                                "ProcessHistory",
-                                "ProcessProtocol"
-                            ]
-                        }
-                    }
-                }
-            }
-        },
-        "subjectOf": {
-            "$ref": "#/definitions/subjectOf"
-        },
-        "isPartOf": {
-            "title": "Has Parent Materials and Collections",
-            "type": "array",
-            "items": {
-                "title": "Has Parent Materialor Collection",
-                "type": "string",
-                "cordra": {
-                    "type": {
-                        "handleReference": {
-                            "types": [
-                                "Collection",
-                                "Material"
-                            ]
-                        }
-                    }
-                }
-            }
-        },
-        "hasPart": {
-            "title": "Has Child Materials",
-            "type": "array",
-            "items": {
-                "title": "Has Child Material",
-                "type": "string",
-                "cordra": {
-                    "type": {
-                        "handleReference": {
-                            "types": [
-                                "Material"
-                            ]
-                        }
-                    }
-                }
-            }
-        },
         "variableMeasured": {
             "type": "array",
             "title": "Variables Measured",
@@ -775,64 +664,40 @@
                 "$ref": "#/definitions/variableMeasured"
             }
         },
-        "materialExtent": {
-            "$ref": "#/definitions/QuantitativeValue"
+        "subjectOf": {
+            "$ref": "#/definitions/subjectOf"
         },
-        "isBasedOn": {
+        "isPartOf": {
+            "title": "Has Parent Experiment",
             "type": "array",
-            "title": "Material is based on",
-            "uniqueItems": true,
             "items": {
-                "type": "string",
-                "title": "Material",
+                "title": "Referenced Item",
                 "cordra": {
                     "type": {
                         "handleReference": {
                             "types": [
-                                "Material"
+                                "Experiment"
                             ]
                         }
                     }
                 }
             }
         },
-        "manufacturer": {
+        "hasPart": {
+            "title": "Has Parent Experiment",
             "type": "array",
-            "title": "Manufacturers",
-            "uniqueItems": true,
             "items": {
-                "type": "string",
-                "title": "Manufacturer",
+                "title": "Referenced Item",
                 "cordra": {
                     "type": {
                         "handleReference": {
                             "types": [
-                                "User",
-                                "Person",
-                                "Organization"
+                                "Experiment"
                             ]
                         }
                     }
                 }
             }
-        },
-        "brand": {
-            "type": "string"
-        },
-        "model": {
-            "type": "string"
-        },
-        "productID": {
-            "type": "string"
-        },
-        "productionDate": {
-            "type": "string"
-        },
-        "purchaseDate": {
-            "type": "string"
-        },
-        "serialNumber": {
-            "type": "string"
         }
     }
 }

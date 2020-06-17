@@ -1,8 +1,8 @@
 {
     "$schema": "http://json-schema.org/draft-04/schema#",
     "type": "object",
-    "title": "InstrumentAction",
-    "definitions": {"InstrumentAction": {
+    "title": "DutyAction",
+    "definitions": {"DutyAction": {
         "type": "object",
         "properties": {
             "about": {
@@ -30,19 +30,6 @@
                     "title": "Keyword"
                 }
             },
-            "accountablePerson": {
-                "type": "array",
-                "title": "Accountable Persons",
-                "uniqueItems": true,
-                "items": {
-                    "type": "string",
-                    "title": "Accountable Person",
-                    "cordra": {"type": {"handleReference": {"types": [
-                        "User",
-                        "Person"
-                    ]}}}
-                }
-            },
             "actionStatus": {
                 "type": "array",
                 "title": "Action Status",
@@ -52,16 +39,6 @@
                     "title": "Defined Term",
                     "cordra": {"type": {"handleReference": {"types": ["DefinedTerm"]}}}
                 }
-            },
-            "object": {
-                "title": "Object instrument",
-                "description": "The instrument upon which the action is carried out",
-                "$ref": "measurementTechnique.json#/definitions/measurementTechnique"
-            },
-            "instrument": {
-                "title": "Helping instrument",
-                "description": "The instrument or tool that helped the agent perform the action",
-                "$ref": "measurementTechnique.json#/definitions/measurementTechnique"
             },
             "agent": {
                 "type": "array",
@@ -93,17 +70,9 @@
                     ]}}}
                 }
             },
-            "startTime": {
-                "title": "Start Time",
-                "type": "string"
-            },
-            "endTime": {
-                "title": "End Time",
-                "type": "string"
-            },
             "location": {
                 "type": "array",
-                "title": "Specific Spatial Location",
+                "title": "Location",
                 "uniqueItems": true,
                 "items": {
                     "type": "string",
@@ -113,6 +82,7 @@
             },
             "material": {
                 "title": "Material",
+                "description": "The material upon which the action is carried out",
                 "$ref": "materialLinked.json#/definitions/materialLinked"
             },
             "materialExtent": {
@@ -127,51 +97,23 @@
                 "title": "Reference Material Quantity",
                 "$ref": "QuantitativeValue.json#/definitions/QuantitativeValue"
             },
-            "variableMeasured": {
-                "type": "array",
-                "title": "Variables Measured",
-                "uniqueItems": true,
-                "items": {
-                    "title": "Variable Measured",
-                    "$ref": "variableMeasured.json#/definitions/variableMeasured"
-                }
+            "instrument": {
+                "title": "Helping Instrument",
+                "description": "The instrument or tool that helped the agent perform the action (e.g., instrument used to perform the measurement).",
+                "$ref": "measurementTechnique.json#/definitions/measurementTechnique"
             },
-            "parameterControlled": {
-                "type": "array",
-                "title": "Parameters Controlled",
-                "uniqueItems": true,
-                "items": {
-                    "title": "Parameter Controlled",
-                    "$ref": "variableMeasured.json#/definitions/variableMeasured"
-                }
+            "object": {
+                "title": "Object/Instrument",
+                "description": "The non-material object or object instrrument upon which the action is carried out",
+                "$ref": "measurementTechnique.json#/definitions/measurementTechnique"
             },
-            "conditionObserved": {
-                "type": "array",
-                "title": "Conditions Observed",
-                "uniqueItems": true,
-                "items": {
-                    "title": "Condition Observed",
-                    "$ref": "variableMeasured.json#/definitions/variableMeasured"
-                }
+            "startTime": {
+                "title": "Start Time",
+                "type": "string"
             },
-            "hasPart": {"$ref": "datasetLinked.json#/definitions/hasPart"},
-            "error": {
-                "title": "Error Records",
-                "$ref": "datasetLinked.json#/definitions/hasPart"
-            },
-            "result": {
-                "title": "Result Records",
-                "$ref": "datasetLinked.json#/definitions/hasPart"
-            },
-            "comment": {
-                "type": "array",
-                "title": "Comments",
-                "uniqueItems": true,
-                "items": {
-                    "type": "string",
-                    "title": "Comment",
-                    "cordra": {"type": {"handleReference": {"types": ["Comment"]}}}
-                }
+            "endTime": {
+                "title": "End Time",
+                "type": "string"
             }
         }
     }}

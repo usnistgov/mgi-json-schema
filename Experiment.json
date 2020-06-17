@@ -1,8 +1,8 @@
 {
     "$schema": "http://json-schema.org/draft-04/schema#",
     "type": "object",
-    "title": "InstrumentAction",
-    "description": "This schema is for describing an Instrument Action Entry in Cordra.",
+    "title": "Experiment",
+    "description": "This schema is for describing a Experiment in Cordra.",
     "required": [
         "@id",
         "@context",
@@ -24,13 +24,13 @@
                 "type": "array",
                 "default": [
                     "Dataset",
-                    "Action",
-                    "mat:InstrumentAction"
+                    "mat:Experiment"
                 ]
             }
         },
         {"$ref": "definition-schemas/CordraObjectID.json#/definitions/CordraObjectID"},
         {"$ref": "definition-schemas/Thing.json#/definitions/Thing"},
-        {"$ref": "definition-schemas/InstrumentAction.json#/definitions/InstrumentAction"}
+        {"$ref": "definition-schemas/CreativeWork.json#/definitions/CreativeWork"},
+        {"$ref": "definition-schemas/Experiment.json#/definitions/Experiment"}
     ]
 }

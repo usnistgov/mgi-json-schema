@@ -89,6 +89,10 @@
                     "value": {
                         "title": "Identifier Value",
                         "type": "string"
+                    },
+                    "url": {
+                        "title": "Identifier URL",
+                        "type": "string"
                     }
                 }
             }
@@ -177,6 +181,25 @@
                         "handleReference": {
                             "types": [
                                 "Organization"
+                            ]
+                        }
+                    }
+                }
+            }
+        },
+        "workLocation": {
+            "type": "array",
+            "title": "Work Location",
+            "description": "A location where a person performs work (e.g., office, laboratory).",
+            "uniqueItems": true,
+            "items": {
+                "type": "string",
+                "title": "Place",
+                "cordra": {
+                    "type": {
+                        "handleReference": {
+                            "types": [
+                                "Place"
                             ]
                         }
                     }
