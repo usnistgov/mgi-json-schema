@@ -525,10 +525,22 @@
             "type": "string"
         },
         "location": {
-            "type": "string",
-            "title": "Location",
-            "description": "Location where action is being performed if different from instrument location. (e.g., offsite repair)",
-            "format": "textarea"
+            "type": "array",
+            "title": "Specific Spatial Location",
+            "uniqueItems": true,
+            "items": {
+                "type": "string",
+                "title": "Place",
+                "cordra": {
+                    "type": {
+                        "handleReference": {
+                            "types": [
+                                "Place"
+                            ]
+                        }
+                    }
+                }
+            }
         },
         "material": {
             "title": "Material",
