@@ -55,7 +55,8 @@
                     "title": "Parameter Controlled",
                     "$ref": "variableMeasured.json#/definitions/variableMeasured"
                 }
-            }
+            },
+            "subjectOf": {"$ref": "subjectOf.json#/definitions/subjectOf"}
         }
     }}
 }

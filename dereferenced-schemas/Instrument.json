@@ -229,6 +229,42 @@
                     "type": "string"
                 }
             }
+        },
+        "subjectOf": {
+            "type": "array",
+            "title": "Subject Of",
+            "description": "A CreativeWork about this Thing (e.g., Linked Materials, Datasets, etc.)",
+            "uniqueItems": true,
+            "items": {
+                "type": "string",
+                "title": "Referenced Item",
+                "cordra": {
+                    "type": {
+                        "handleReference": {
+                            "types": [
+                                "Citation",
+                                "Collection",
+                                "Comment",
+                                "DataCatalog",
+                                "DataFormat",
+                                "Dataset",
+                                "DefinedTermSet",
+                                "File",
+                                "Instrument",
+                                "Material",
+                                "MaterialProperty",
+                                "ProcessHistory",
+                                "ProcessProtocol",
+                                "SoftwareApplication",
+                                "SoftwareSourceCode",
+                                "TabularDataPackage",
+                                "Experiment",
+                                "Study"
+                            ]
+                        }
+                    }
+                }
+            }
         }
     },
     "properties": {
@@ -708,6 +744,9 @@
                 "title": "Parameter Controlled",
                 "$ref": "#/definitions/variableMeasured"
             }
+        },
+        "subjectOf": {
+            "$ref": "#/definitions/subjectOf"
         },
         "manufacturer": {
             "type": "array",
