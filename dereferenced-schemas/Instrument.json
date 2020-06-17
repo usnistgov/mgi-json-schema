@@ -220,12 +220,17 @@
                     "type": "string"
                 },
                 "productionDate": {
+                    "title": "Production Date",
+                    "description": "A date value in ISO 8601 date format, e.g.: YYYY-MM-DD, YYYY-MM-DDThh:mm:ssTZD",
                     "type": "string"
                 },
                 "purchaseDate": {
+                    "title": "Purchase Date",
+                    "description": "A date value in ISO 8601 date format, e.g.: YYYY-MM-DD, YYYY-MM-DDThh:mm:ssTZD",
                     "type": "string"
                 },
                 "serialNumber": {
+                    "title": "Serial Number",
                     "type": "string"
                 }
             }
@@ -634,14 +639,17 @@
         },
         "dateCreated": {
             "title": "Date Created",
+            "description": "A date value in ISO 8601 date format, e.g.: YYYY-MM-DD, YYYY-MM-DDThh:mm:ssTZD",
             "type": "string"
         },
         "dateModified": {
             "title": "Date Modified",
+            "description": "A date value in ISO 8601 date format, e.g.: YYYY-MM-DD, YYYY-MM-DDThh:mm:ssTZD",
             "type": "string"
         },
         "datePublished": {
             "title": "Date Published",
+            "description": "A date value in ISO 8601 date format, e.g.: YYYY-MM-DD, YYYY-MM-DDThh:mm:ssTZD",
             "type": "string"
         },
         "comment": {
@@ -787,12 +795,17 @@
             "type": "string"
         },
         "productionDate": {
+            "title": "Production Date",
+            "description": "A date value in ISO 8601 date format, e.g.: YYYY-MM-DD, YYYY-MM-DDThh:mm:ssTZD",
             "type": "string"
         },
         "purchaseDate": {
+            "title": "Purchase Date",
+            "description": "A date value in ISO 8601 date format, e.g.: YYYY-MM-DD, YYYY-MM-DDThh:mm:ssTZD",
             "type": "string"
         },
         "serialNumber": {
+            "title": "Serial Number",
             "type": "string"
         }
     }

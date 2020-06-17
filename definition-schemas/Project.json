@@ -28,10 +28,12 @@
             },
             "foundingDate": {
                 "title": "Starting Date",
+                "description": "A date value in ISO 8601 date format, e.g.: YYYY-MM-DD, YYYY-MM-DDThh:mm:ssTZD",
                 "type": "string"
             },
             "dissolutionDate": {
                 "title": "Ending Date",
+                "description": "A date value in ISO 8601 date format, e.g.: YYYY-MM-DD, YYYY-MM-DDThh:mm:ssTZD",
                 "type": "string"
             },
             "contactPoint": {

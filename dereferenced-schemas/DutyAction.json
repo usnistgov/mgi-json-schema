@@ -333,10 +333,12 @@
         },
         "startTime": {
             "title": "Start Time",
+            "description": "A date value in ISO 8601 date format, e.g.: YYYY-MM-DD, YYYY-MM-DDThh:mm:ssTZD",
             "type": "string"
         },
         "endTime": {
             "title": "End Time",
+            "description": "A date value in ISO 8601 date format, e.g.: YYYY-MM-DD, YYYY-MM-DDThh:mm:ssTZD",
             "type": "string"
         }
     }

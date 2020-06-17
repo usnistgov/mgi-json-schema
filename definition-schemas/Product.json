@@ -22,9 +22,20 @@
             "brand": {"type": "string"},
             "model": {"type": "string"},
             "productID": {"type": "string"},
-            "productionDate": {"type": "string"},
-            "purchaseDate": {"type": "string"},
-            "serialNumber": {"type": "string"}
+            "productionDate": {
+                "title": "Production Date",
+                "description": "A date value in ISO 8601 date format, e.g.: YYYY-MM-DD, YYYY-MM-DDThh:mm:ssTZD",
+                "type": "string"
+            },
+            "purchaseDate": {
+                "title": "Purchase Date",
+                "description": "A date value in ISO 8601 date format, e.g.: YYYY-MM-DD, YYYY-MM-DDThh:mm:ssTZD",
+                "type": "string"
+            },
+            "serialNumber": {
+                "title": "Serial Number",
+                "type": "string"
+            }
         }
     }}
 }
