@@ -792,6 +792,15 @@
                 "$ref": "#/definitions/variableMeasured"
             }
         },
+        "conditionObserved": {
+            "type": "array",
+            "title": "Conditions Observed",
+            "uniqueItems": true,
+            "items": {
+                "title": "Condition Observed",
+                "$ref": "#/definitions/variableMeasured"
+            }
+        },
         "hasPart": {
             "$ref": "#/definitions/hasPart"
         },

@@ -370,6 +370,15 @@
                         "$ref": "#/definitions/variableMeasured"
                     }
                 },
+                "conditionObserved": {
+                    "type": "array",
+                    "title": "Conditions Observed",
+                    "uniqueItems": true,
+                    "items": {
+                        "title": "Condition Observed",
+                        "$ref": "#/definitions/variableMeasured"
+                    }
+                },
                 "workExample": {
                     "type": "array",
                     "title": "Resulting Materials",
@@ -1025,6 +1034,15 @@
             "uniqueItems": true,
             "items": {
                 "title": "Parameter Controlled",
+                "$ref": "#/definitions/variableMeasured"
+            }
+        },
+        "conditionObserved": {
+            "type": "array",
+            "title": "Conditions Observed",
+            "uniqueItems": true,
+            "items": {
+                "title": "Condition Observed",
                 "$ref": "#/definitions/variableMeasured"
             }
         },

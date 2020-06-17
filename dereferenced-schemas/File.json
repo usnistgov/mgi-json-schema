@@ -805,6 +805,15 @@
                 "$ref": "#/definitions/variableMeasured"
             }
         },
+        "conditionObserved": {
+            "type": "array",
+            "title": "Conditions Observed",
+            "uniqueItems": true,
+            "items": {
+                "title": "Condition Observed",
+                "$ref": "#/definitions/variableMeasured"
+            }
+        },
         "material": {
             "title": "Material",
             "$ref": "#/definitions/materialLinked"

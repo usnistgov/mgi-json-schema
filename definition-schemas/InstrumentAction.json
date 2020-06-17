@@ -145,6 +145,15 @@
                     "$ref": "variableMeasured.json#/definitions/variableMeasured"
                 }
             },
+            "conditionObserved": {
+                "type": "array",
+                "title": "Conditions Observed",
+                "uniqueItems": true,
+                "items": {
+                    "title": "Condition Observed",
+                    "$ref": "variableMeasured.json#/definitions/variableMeasured"
+                }
+            },
             "hasPart": {"$ref": "datasetLinked.json#/definitions/hasPart"},
             "error": {
                 "title": "Error Records",
