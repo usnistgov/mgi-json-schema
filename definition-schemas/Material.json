@@ -18,6 +18,19 @@
                     ]}}}
                 }
             },
+            "isSupplyFor": {
+                "type": "array",
+                "title": "This Material is a Supply/Starting Material for this Process",
+                "uniqueItems": true,
+                "items": {
+                    "title": "Process",
+                    "type": "string",
+                    "cordra": {"type": {"handleReference": {"types": [
+                        "ProcessHistory",
+                        "ProcessProtocol"
+                    ]}}}
+                }
+            },
             "subjectOf": {"$ref": "subjectOf.json#/definitions/subjectOf"},
             "isPartOf": {
                 "title": "Has Parent Materials and Collections",
