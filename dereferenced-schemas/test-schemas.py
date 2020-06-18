@@ -27,34 +27,19 @@ pswd = getpass.getpass()
 
 schemas = glob.glob('*.json')
 
-for schema_file_name in schemas:
+for i,schema_file_name in enumerate(schemas):
     schema_name = schema_file_name.replace('.json','')
-    js_name = schema_file_name.replace('.json','.js')
-    with open(schema_file_name) as f:
-        schema_data = json.load(f)
     
-    with open(js_name) as f:
-        JS_data = f.read()
+    url = base_url + '/objects/?dryRun&type=' + schema_name
     
-    schema = dict()
-    schema['name'] = schema_name
-    schema['schema'] = schema_data
-    schema['javascript'] = JS_data
-    
-    url = base_url + '/objects/?query=type%3ASchema%20AND%20/name%3A' + schema_name
-    
+    print(i,schema_name)
     try:
-        r = requests.get(url, auth=(user, pswd), verify=False)
-        result = check_response(r)
-        schema_id = result['results'][0]['id']
-    except Exception as e:
-        print(e)
-    
-    url = base_url + '/objects/' + schema_id
-    print(url)
-    
-    try:
-        r = requests.put(url, data=json.dumps(schema), auth=(user, pswd), verify=False)
+        r = requests.post(
+            url,
+            data=json.dumps({'username':'username','password':'password'}),
+            auth=(user, pswd),
+            verify=False)
         print(check_response(r))
     except Exception as e:
         print(e)
+    print('\n')
