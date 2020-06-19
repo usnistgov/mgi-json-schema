@@ -17,6 +17,7 @@ function beforeSchemaValidation(object, context) {
     }
     object.content["@context"] = schema["properties"]["@context"]["default"];
     object.content["@type"] = schema["properties"]["@type"]["default"];
+    delete object.content.metadata;
     return object;
 }
 
