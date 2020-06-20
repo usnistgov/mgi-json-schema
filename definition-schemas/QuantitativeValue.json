@@ -14,8 +14,7 @@
                 "title": "Name"
             },
             "value": {
-                "title": "Value",
-                "type": "number"
+                "title": "Value"
             },
             "unitText": {
                 "title": "Unit Text",

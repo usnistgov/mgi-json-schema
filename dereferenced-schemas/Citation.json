@@ -67,8 +67,7 @@
                         "type": "string"
                     },
                     "value": {
-                        "title": "Identifier Value",
-                        "type": "string"
+                        "title": "Identifier Value"
                     },
                     "url": {
                         "title": "Identifier URL",

@@ -24,12 +24,7 @@
                 }
             },
             "value": {
-                "title": "Value",
-                "oneOf": [
-                    {"type": "string"},
-                    {"type": "number"},
-                    {"type": "null"}
-                ]
+                "title": "Value"
             },
             "valueID": {
                 "title": "Value IDs",
@@ -76,8 +71,7 @@
                             "cordra": {"type": {"handleReference": {"types": ["DefinedTerm"]}}}
                         },
                         "value": {
-                            "title": "Value",
-                            "type": "number"
+                            "title": "Value"
                         },
                         "valueID": {
                             "title": "Value IDs",

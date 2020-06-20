@@ -21,8 +21,7 @@
                     "title": "Name"
                 },
                 "value": {
-                    "title": "Value",
-                    "type": "number"
+                    "title": "Value"
                 },
                 "unitText": {
                     "title": "Unit Text",
@@ -73,18 +72,7 @@
                     }
                 },
                 "value": {
-                    "title": "Value",
-                    "oneOf": [
-                        {
-                            "type": "string"
-                        },
-                        {
-                            "type": "number"
-                        },
-                        {
-                            "type": "null"
-                        }
-                    ]
+                    "title": "Value"
                 },
                 "valueID": {
                     "title": "Value IDs",
@@ -159,8 +147,7 @@
                                 }
                             },
                             "value": {
-                                "title": "Value",
-                                "type": "number"
+                                "title": "Value"
                             },
                             "valueID": {
                                 "title": "Value IDs",
@@ -319,8 +306,7 @@
                         "type": "string"
                     },
                     "value": {
-                        "title": "Identifier Value",
-                        "type": "string"
+                        "title": "Identifier Value"
                     },
                     "url": {
                         "title": "Identifier URL",
