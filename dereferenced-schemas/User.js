@@ -1,5 +1,6 @@
 var cordra = require('cordra');
 var cordraUtil = require('cordraUtil');
+var config = require('/cordra/schemas/Config');
 var schema = require('/cordra/schemas/User.schema.json');
 
 exports.beforeSchemaValidation = beforeSchemaValidation;
@@ -15,8 +16,7 @@ function beforeSchemaValidation(object, context) {
             throw "Password is too short. Min length 8 characters";
         }
     }
-    object.content["@context"] = schema["properties"]["@context"]["default"];
-    object.content["@type"] = schema["properties"]["@type"]["default"];
+    object = config.staticMethods.getJSONLD(object, schema)
     delete object.content.metadata;
     return object;
 }

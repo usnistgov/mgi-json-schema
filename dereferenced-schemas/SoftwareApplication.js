@@ -1,5 +1,6 @@
 var cordra = require('cordra');
 var cordraUtil = require('cordraUtil');
+var config = require('/cordra/schemas/Config');
 var schema = require('/cordra/schemas/SoftwareApplication.schema.json');
 
 exports.beforeSchemaValidation = beforeSchemaValidation;
@@ -8,8 +9,7 @@ exports.onObjectResolution = onObjectResolution;
 
 function beforeSchemaValidation(object, context) {
     if (!object.content['@id']) object.content['@id'] = "";
-    object.content["@context"] = schema["properties"]["@context"]["default"];
-    object.content["@type"] = schema["properties"]["@type"]["default"];
+    object = config.staticMethods.getJSONLD(object, schema)
     delete object.content.metadata;
     return object;
 }
