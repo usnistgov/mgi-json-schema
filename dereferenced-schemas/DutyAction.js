@@ -1,18 +1,26 @@
+var cordra = require('cordra');
+var cordraUtil = require('cordraUtil');
+var config = require('/cordra/schemas/Config');
 var schema = require('/cordra/schemas/DutyAction.schema.json');
+
 exports.beforeSchemaValidation = beforeSchemaValidation;
+exports.objectForIndexing = objectForIndexing;
+exports.onObjectResolution = onObjectResolution;
 
-function beforeSchemaValidation(obj, context) {
-    if (!context.useLegacyContentOnlyJavaScriptHooks) {
-        obj.content = beforeSchemaValidationLegacy(obj.content, context);
-        return obj;
-    } else {
-        return beforeSchemaValidationLegacy(obj, context);
-    }
+function beforeSchemaValidation(object, context) {
+    if (!object.content['@id']) object.content['@id'] = "";
+    object = config.staticMethods.getJSONLD(object, schema)
+    delete object.content.metadata;
+    return object;
 }
 
-function beforeSchemaValidationLegacy(obj, context) {
-    obj["@id"] = ""
-    obj["@context"] = schema["properties"]["@context"]["default"];
-    obj["@type"] = schema["properties"]["@type"]["default"];
-    return obj;
+function objectForIndexing(object, context) {
+    object.content.metadata = object.metadata;
+    return object;
 }
+
+function onObjectResolution(object, context) {
+    object.content.metadata = object.metadata;
+    return object;
+}
+

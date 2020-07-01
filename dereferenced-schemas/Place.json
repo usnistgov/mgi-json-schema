@@ -67,8 +67,7 @@
                         "type": "string"
                     },
                     "value": {
-                        "title": "Identifier Value",
-                        "type": "string"
+                        "title": "Identifier Value"
                     },
                     "url": {
                         "title": "Identifier URL",
@@ -156,6 +155,58 @@
         "address": {
             "title": "Address",
             "type": "string"
+        },
+        "geo": {
+            "oneOf": [
+                {
+                    "type": "object",
+                    "title": "GeoCoordinates",
+                    "properties": {
+                        "@type": {
+                            "type": "string",
+                            "default": "GeoCoordinates"
+                        },
+                        "latitude": {
+                            "title": "Latitude",
+                            "type": "number"
+                        },
+                        "longitude": {
+                            "title": "Longitude",
+                            "type": "number"
+                        },
+                        "elevation": {
+                            "title": "Elevation",
+                            "type": "number"
+                        }
+                    }
+                },
+                {
+                    "type": "object",
+                    "title": "GeoShape",
+                    "properties": {
+                        "@type": {
+                            "type": "string",
+                            "default": "GeoShape"
+                        },
+                        "box": {
+                            "title": "Box"
+                        },
+                        "circle": {
+                            "title": "Circle"
+                        },
+                        "line": {
+                            "title": "Line"
+                        },
+                        "polygon": {
+                            "title": "PolyGon"
+                        },
+                        "elevation": {
+                            "title": "Elevation",
+                            "type": "number"
+                        }
+                    }
+                }
+            ]
         },
         "containedInPlace": {
             "type": "array",

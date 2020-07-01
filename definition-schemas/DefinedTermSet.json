@@ -17,6 +17,7 @@
             },
             "uploadDate": {
                 "title": "Upload Date",
+                "description": "A date value in ISO 8601 date format, e.g.: YYYY-MM-DD, YYYY-MM-DDThh:mm:ssTZD",
                 "type": "string"
             },
             "isPartOf": {

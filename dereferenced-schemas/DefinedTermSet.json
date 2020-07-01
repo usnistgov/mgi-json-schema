@@ -59,8 +59,7 @@
                         "type": "string"
                     },
                     "value": {
-                        "title": "Identifier Value",
-                        "type": "string"
+                        "title": "Identifier Value"
                     },
                     "url": {
                         "title": "Identifier URL",
@@ -366,14 +365,17 @@
         },
         "dateCreated": {
             "title": "Date Created",
+            "description": "A date value in ISO 8601 date format, e.g.: YYYY-MM-DD, YYYY-MM-DDThh:mm:ssTZD",
             "type": "string"
         },
         "dateModified": {
             "title": "Date Modified",
+            "description": "A date value in ISO 8601 date format, e.g.: YYYY-MM-DD, YYYY-MM-DDThh:mm:ssTZD",
             "type": "string"
         },
         "datePublished": {
             "title": "Date Published",
+            "description": "A date value in ISO 8601 date format, e.g.: YYYY-MM-DD, YYYY-MM-DDThh:mm:ssTZD",
             "type": "string"
         },
         "comment": {
@@ -432,6 +434,7 @@
         },
         "uploadDate": {
             "title": "Upload Date",
+            "description": "A date value in ISO 8601 date format, e.g.: YYYY-MM-DD, YYYY-MM-DDThh:mm:ssTZD",
             "type": "string"
         },
         "isPartOf": {
