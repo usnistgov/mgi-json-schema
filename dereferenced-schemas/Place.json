@@ -157,7 +157,7 @@
             "type": "string"
         },
         "geo": {
-            "oneOf": [
+            "anyOf": [
                 {
                     "type": "object",
                     "title": "GeoCoordinates",
