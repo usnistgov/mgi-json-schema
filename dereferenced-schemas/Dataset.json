@@ -311,7 +311,7 @@
         },
         "isBasedOn": {
             "type": "array",
-            "title": "Dataset is derived from",
+            "title": "Item is derived from",
             "uniqueItems": true,
             "items": {
                 "type": "string",
@@ -323,7 +323,9 @@
                                 "Dataset",
                                 "File",
                                 "MaterialProperty",
-                                "TabularDataPackage"
+                                "TabularDataPackage",
+                                "SoftwareApplication",
+                                "SoftwareSourceCode"
                             ]
                         }
                     }
@@ -445,7 +447,7 @@
         "about": {
             "type": "array",
             "title": "About",
-            "description": "The subject matter of the this thing (e.g., DefinedTerm, Project, Material, Experiment, Study, etc.)",
+            "description": "The subject matter of this thing (e.g., DefinedTerm, Project, Material, Experiment, Study, etc.)",
             "uniqueItems": true,
             "items": {
                 "type": "string",
@@ -457,6 +459,7 @@
                                 "DefinedTerm",
                                 "Project",
                                 "Collection",
+                                "Instrument",
                                 "ProcessHistory",
                                 "ProcessProtocol",
                                 "Material",

@@ -36,7 +36,7 @@
         },
         "isBasedOn": {
             "type": "array",
-            "title": "Dataset is derived from",
+            "title": "Item is derived from",
             "uniqueItems": true,
             "items": {
                 "type": "string",
@@ -45,7 +45,9 @@
                     "Dataset",
                     "File",
                     "MaterialProperty",
-                    "TabularDataPackage"
+                    "TabularDataPackage",
+                    "SoftwareApplication",
+                    "SoftwareSourceCode"
                 ]}}}
             }
         }
