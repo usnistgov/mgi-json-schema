@@ -53,6 +53,12 @@
                 "auth": "requirePasswordChange"
             }
         },
+        "publicKey": {
+            "type": "object",
+            "cordra": {
+                "auth": "publicKey"
+            }
+        },
         "identifier": {
             "type": "array",
             "title": "Identifers",

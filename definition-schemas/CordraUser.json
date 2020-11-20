@@ -9,9 +9,7 @@
                 "type": "string",
                 "title": "Username",
                 "cordra": {
-                    "preview": {
-                        "showInPreview": true
-                    },
+                    "preview": {"showInPreview": true},
                     "auth": "username"
                 }
             },
@@ -26,6 +24,10 @@
                 "title": "Require Password Change",
                 "description": "If true a new password must be set on next authentication.",
                 "cordra": {"auth": "requirePasswordChange"}
+            },
+            "publicKey": {
+                "type": "object",
+                "cordra": {"auth": "publicKey"}
             }
         }
     }}
