@@ -32,7 +32,8 @@
                     "title": "Is Part Of",
                     "cordra": {"type": {"handleReference": {"types": ["Collection"]}}}
                 }
-            }
+            },
+            "isBasedOn": {"$ref": "datasetLinked.json#/definitions/isBasedOn"}
         }
     }}
 }

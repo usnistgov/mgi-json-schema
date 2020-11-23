@@ -374,7 +374,7 @@
         "about": {
             "type": "array",
             "title": "About",
-            "description": "The subject matter of the this thing (e.g., DefinedTerm, Project, Material, Experiment, Study, etc.)",
+            "description": "The subject matter of this thing (e.g., DefinedTerm, Project, Material, Experiment, Study, etc.)",
             "uniqueItems": true,
             "items": {
                 "type": "string",
@@ -386,6 +386,7 @@
                                 "DefinedTerm",
                                 "Project",
                                 "Collection",
+                                "Instrument",
                                 "ProcessHistory",
                                 "ProcessProtocol",
                                 "Material",

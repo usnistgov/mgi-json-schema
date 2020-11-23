@@ -54,16 +54,7 @@
                 "type": "string",
                 "title": "Software Version"
             },
-            "isBasedOn": {
-                "type": "array",
-                "title": "Is based on Software Source Code",
-                "uniqueItems": true,
-                "items": {
-                    "type": "string",
-                    "title": "Is based on Software Source Code",
-                    "cordra": {"type": {"handleReference": {"types": ["SoftwareSourceCode"]}}}
-                }
-            },
+            "isBasedOn": {"$ref": "datasetLinked.json#/definitions/isBasedOn"},
             "isPartOf": {
                 "type": "array",
                 "title": "Is Part Of",

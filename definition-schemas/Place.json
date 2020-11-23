@@ -37,7 +37,7 @@
                 "title": "Address",
                 "type": "string"
             },
-            "geo": {"oneOf": [
+            "geo": {"anyOf": [
                 {
                     "type": "object",
                     "title": "GeoCoordinates",
