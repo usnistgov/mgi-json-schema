@@ -9,7 +9,7 @@ exports.onObjectResolution = onObjectResolution;
 
 function beforeSchemaValidation(object, context) {
     if (!object.content['@id']) object.content['@id'] = "";
-    object = config.staticMethods.getJSONLD(object, schema)
+    object = config.staticMethods.getJSONLD(object, schema);
     delete object.content.metadata;
     return object;
 }
@@ -21,6 +21,12 @@ function objectForIndexing(object, context) {
 
 function onObjectResolution(object, context) {
     object.content.metadata = object.metadata;
+    if(config.staticMethods.checkViewRequest(context) === 'resource') {
+        object = config.staticMethods.viewResource(object, schema);
+        object.content.view = {};
+        object.content.view.CreativeWork = true;
+        object.content.view.Citation = true;
+    }
     return object;
 }
 
