@@ -94,6 +94,54 @@ function viewResource(object, schema) {
             }
         }
     }
+
+    if('parameterControlled' in object.content) {
+        object.content.parameterControlled.forEach( function(item) {
+            item.nested = {};
+            if('parameterControlled' in item) {
+                item.nested.parameterControlled = item.parameterControlled;
+            }
+            if('variableMeasured' in item) {
+                item.nested.variableMeasured = item.variableMeasured;
+            }
+            if('conditionObserved' in item) {
+                item.nested.variableMeasured = item.conditionObserved;
+            }
+        }
+        );
+    }
+
+    if('variableMeasured' in object.content) {
+        object.content.variableMeasured.forEach( function(item) {
+            item.nested = {};
+            if('parameterControlled' in item) {
+                item.nested.parameterControlled = item.parameterControlled;
+            }
+            if('variableMeasured' in item) {
+                item.nested.variableMeasured = item.variableMeasured;
+            }
+            if('conditionObserved' in item) {
+                item.nested.variableMeasured = item.conditionObserved;
+            }
+        }
+        );
+    }
+
+    if('conditionObserved' in object.content) {
+        object.content.conditionObserved.forEach( function(item) {
+            item.nested = {};
+            if('parameterControlled' in item) {
+                item.nested.parameterControlled = item.parameterControlled;
+            }
+            if('variableMeasured' in item) {
+                item.nested.variableMeasured = item.variableMeasured;
+            }
+            if('conditionObserved' in item) {
+                item.nested.variableMeasured = item.conditionObserved;
+            }
+        }
+        );
+    }
     
     return object;
 }
