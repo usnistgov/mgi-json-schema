@@ -24,6 +24,7 @@ function onObjectResolution(object, context) {
     if(config.staticMethods.checkViewRequest(context) === 'resource') {
         object = config.staticMethods.viewResource(object, schema);
         object.content.view = {};
+        object.content.view.Thing = true;
         object.content.view.CreativeWork = true;
         object.content.view.SoftwareSourceCode = true;
     }
