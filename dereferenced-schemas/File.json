@@ -257,7 +257,7 @@
                 },
                 "variableMeasured": {
                     "type": "array",
-                    "title": "Complex/Multidimensional Quantity",
+                    "title": "Variables Measured (nested)",
                     "uniqueItems": true,
                     "items": {
                         "title": "Complex/Multidimensional Quantity",
@@ -266,10 +266,19 @@
                 },
                 "parameterControlled": {
                     "type": "array",
-                    "title": "Parameters Controlled",
+                    "title": "Parameters Controlled (nested)",
                     "uniqueItems": true,
                     "items": {
                         "title": "Parameter Controlled",
+                        "$ref": "#/definitions/variableMeasured"
+                    }
+                },
+                "conditionObserved": {
+                    "type": "array",
+                    "title": "Conditions Observed (nested)",
+                    "uniqueItems": true,
+                    "items": {
+                        "title": "Condition Observed",
                         "$ref": "#/definitions/variableMeasured"
                     }
                 }
