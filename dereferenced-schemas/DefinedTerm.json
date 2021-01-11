@@ -124,6 +124,23 @@
                 "title": "Image URL"
             }
         },
+        "subjectOf": {
+            "type": "array",
+            "title": "Subject Of",
+            "description": "A CreativeWork about this Thing (e.g., Linked Materials, Datasets, etc.)",
+            "uniqueItems": true,
+            "items": {
+                "type": "string",
+                "title": "Referenced Item",
+                "cordra": {
+                    "type": {
+                        "handleReference": {
+                            "types": []
+                        }
+                    }
+                }
+            }
+        },
         "termCode": {
             "type": "string",
             "title": "Term Code"

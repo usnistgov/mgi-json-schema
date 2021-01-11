@@ -64,8 +64,7 @@
                     "title": "Condition Observed",
                     "$ref": "variableMeasured.json#/definitions/variableMeasured"
                 }
-            },
-            "subjectOf": {"$ref": "subjectOf.json#/definitions/subjectOf"}
+            }
         }
     }}
 }

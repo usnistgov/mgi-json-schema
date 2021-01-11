@@ -32,7 +32,6 @@
                     "$ref": "variableMeasured.json#/definitions/variableMeasured"
                 }
             },
-            "subjectOf": {"$ref": "subjectOf.json#/definitions/subjectOf"},
             "isPartOf": {
                 "title": "Has Parent Experiment",
                 "type": "array",

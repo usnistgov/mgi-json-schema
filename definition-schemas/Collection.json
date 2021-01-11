@@ -5,7 +5,6 @@
     "definitions": {"Collection": {
         "type": "object",
         "properties": {
-            "subjectOf": {"$ref": "subjectOf.json#/definitions/subjectOf"},
             "hasPart": {
                 "type": "array",
                 "title": "Has Collection Items",

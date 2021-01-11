@@ -137,7 +137,6 @@
                     ]}}}
                 }
             },
-            "subjectOf": {"$ref": "subjectOf.json#/definitions/subjectOf"},
             "estimatedCost": {
                 "type": "object",
                 "title": "MonetaryAmount",

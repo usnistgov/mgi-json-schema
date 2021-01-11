@@ -183,23 +183,6 @@
                     }
                 }
             }
-        },
-        "subjectOf": {
-            "type": "array",
-            "title": "Subject Of",
-            "description": "A CreativeWork about this Thing (e.g., Linked Materials, Datasets, etc.)",
-            "uniqueItems": true,
-            "items": {
-                "type": "string",
-                "title": "Referenced Item",
-                "cordra": {
-                    "type": {
-                        "handleReference": {
-                            "types": []
-                        }
-                    }
-                }
-            }
         }
     },
     "properties": {
@@ -311,6 +294,23 @@
             "items": {
                 "type": "string",
                 "title": "Image URL"
+            }
+        },
+        "subjectOf": {
+            "type": "array",
+            "title": "Subject Of",
+            "description": "A CreativeWork about this Thing (e.g., Linked Materials, Datasets, etc.)",
+            "uniqueItems": true,
+            "items": {
+                "type": "string",
+                "title": "Referenced Item",
+                "cordra": {
+                    "type": {
+                        "handleReference": {
+                            "types": []
+                        }
+                    }
+                }
             }
         },
         "about": {
@@ -624,9 +624,6 @@
                 "title": "Condition Observed",
                 "$ref": "#/definitions/variableMeasured"
             }
-        },
-        "subjectOf": {
-            "$ref": "#/definitions/subjectOf"
         },
         "isPartOf": {
             "title": "Has Parent Experiment",

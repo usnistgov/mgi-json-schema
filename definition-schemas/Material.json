@@ -31,7 +31,6 @@
                     ]}}}
                 }
             },
-            "subjectOf": {"$ref": "subjectOf.json#/definitions/subjectOf"},
             "isPartOf": {
                 "title": "Has Parent Materials and Collections",
                 "type": "array",
