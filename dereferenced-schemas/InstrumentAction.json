@@ -271,6 +271,7 @@
                                 "Dataset",
                                 "File",
                                 "MaterialProperty",
+                                "TabularData",
                                 "TabularDataPackage"
                             ]
                         }

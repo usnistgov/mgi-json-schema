@@ -16,31 +16,7 @@
             "parentItem": {
                 "type": "string",
                 "title": "Parent Item",
-                "cordra": {"type": {"handleReference": {"types": [
-                    "Citation",
-                    "Collection",
-                    "Comment",
-                    "DataCatalog",
-                    "DataFormat",
-                    "Dataset",
-                    "DefinedTerm",
-                    "DefinedTermSet",
-                    "File",
-                    "Group",
-                    "Instrument",
-                    "Material",
-                    "MaterialProperty",
-                    "Organization",
-                    "Person",
-                    "ProcessHistory",
-                    "ProcessProtocol",
-                    "Project",
-                    "SoftwareApplication",
-                    "SoftwareSourceCode",
-                    "TabularDataPackage",
-                    "UnitOfMeasurement",
-                    "User"
-                ]}}}
+                "cordra": {"type": {"handleReference": {"types": []}}}
             },
             "text": {
                 "type": "string",

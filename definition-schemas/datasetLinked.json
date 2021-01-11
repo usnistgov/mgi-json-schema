@@ -15,6 +15,7 @@
                     "Dataset",
                     "File",
                     "MaterialProperty",
+                    "TabularData",
                     "TabularDataPackage"
                 ]}}}
             }
@@ -30,6 +31,7 @@
                     "Dataset",
                     "File",
                     "MaterialProperty",
+                    "TabularData",
                     "TabularDataPackage"
                 ]}}}
             }
@@ -45,6 +47,7 @@
                     "Dataset",
                     "File",
                     "MaterialProperty",
+                    "TabularData",
                     "TabularDataPackage",
                     "SoftwareApplication",
                     "SoftwareSourceCode"

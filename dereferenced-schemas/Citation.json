@@ -129,17 +129,7 @@
                 "cordra": {
                     "type": {
                         "handleReference": {
-                            "types": [
-                                "DefinedTerm",
-                                "Project",
-                                "Collection",
-                                "Instrument",
-                                "ProcessHistory",
-                                "ProcessProtocol",
-                                "Material",
-                                "Experiment",
-                                "Study"
-                            ]
+                            "types": []
                         }
                     }
                 }
@@ -165,17 +155,7 @@
                 "cordra": {
                     "type": {
                         "handleReference": {
-                            "types": [
-                                "Citation",
-                                "User",
-                                "Person",
-                                "Organization",
-                                "Comment",
-                                "Dataset",
-                                "File",
-                                "MaterialProperty",
-                                "TabularDataPackage"
-                            ]
+                            "types": []
                         }
                     }
                 }

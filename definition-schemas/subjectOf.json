@@ -10,26 +10,7 @@
         "items": {
             "type": "string",
             "title": "Referenced Item",
-            "cordra": {"type": {"handleReference": {"types": [
-                "Citation",
-                "Collection",
-                "Comment",
-                "DataCatalog",
-                "DataFormat",
-                "Dataset",
-                "DefinedTermSet",
-                "File",
-                "Instrument",
-                "Material",
-                "MaterialProperty",
-                "ProcessHistory",
-                "ProcessProtocol",
-                "SoftwareApplication",
-                "SoftwareSourceCode",
-                "TabularDataPackage",
-                "Experiment",
-                "Study"
-            ]}}}
+            "cordra": {"type": {"handleReference": {"types": []}}}
         }
     }}
 }

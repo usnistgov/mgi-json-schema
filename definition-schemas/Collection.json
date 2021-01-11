@@ -13,27 +13,7 @@
                 "items": {
                     "type": "string",
                     "title": "Has Collection Item",
-                    "cordra": {"type": {"handleReference": {"types": [
-                        "Citation",
-                        "Collection",
-                        "Comment",
-                        "DataCatalog",
-                        "DataFormat",
-                        "Dataset",
-                        "DefinedTerm",
-                        "DefinedTermSet",
-                        "File",
-                        "Instrument",
-                        "Material",
-                        "MaterialProperty",
-                        "ProcessHistory",
-                        "ProcessProtocol",
-                        "Project",
-                        "SoftwareApplication",
-                        "SoftwareSourceCode",
-                        "TabularDataPackage",
-                        "UnitOfMeasurement"
-                    ]}}}
+                    "cordra": {"type": {"handleReference": {"types": []}}}
                 }
             },
             "isPartOf": {
