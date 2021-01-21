@@ -248,6 +248,43 @@
                         "mat:Process"
                     ]
                 },
+                "name": {
+                    "type": "string",
+                    "title": "Name",
+                    "cordra": {
+                        "preview": {
+                            "showInPreview": true,
+                            "isPrimary": true
+                        }
+                    }
+                },
+                "about": {
+                    "type": "array",
+                    "title": "About",
+                    "description": "The subject matter of this thing (e.g., DefinedTerm, Project, Material, Experiment, Study, etc.)",
+                    "uniqueItems": true,
+                    "items": {
+                        "type": "string",
+                        "title": "Referenced Item",
+                        "cordra": {
+                            "type": {
+                                "handleReference": {
+                                    "types": []
+                                }
+                            }
+                        }
+                    }
+                },
+                "keywords": {
+                    "type": "array",
+                    "title": "Keywords",
+                    "description": "This is for user-defined terms.",
+                    "uniqueItems": true,
+                    "items": {
+                        "type": "string",
+                        "title": "Keyword"
+                    }
+                },
                 "text": {
                     "title": "Process/Step Text",
                     "type": "string",
