@@ -11,7 +11,7 @@
                 "uniqueItems": true,
                 "items": {
                     "title": "Variable Measured",
-                    "$ref": "variableMeasured.json#/definitions/variableMeasured"
+                    "$ref": "PropertyValue.json#/definitions/PropertyValue"
                 }
             },
             "parameterControlled": {
@@ -20,7 +20,7 @@
                 "uniqueItems": true,
                 "items": {
                     "title": "Parameter Controlled",
-                    "$ref": "variableMeasured.json#/definitions/variableMeasured"
+                    "$ref": "PropertyValue.json#/definitions/PropertyValue"
                 }
             },
             "conditionObserved": {
@@ -29,7 +29,7 @@
                 "uniqueItems": true,
                 "items": {
                     "title": "Condition Observed",
-                    "$ref": "variableMeasured.json#/definitions/variableMeasured"
+                    "$ref": "PropertyValue.json#/definitions/PropertyValue"
                 }
             },
             "isPartOf": {

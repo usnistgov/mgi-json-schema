@@ -82,7 +82,7 @@
                 }
             }
         },
-        "variableMeasured": {
+        "PropertyValue": {
             "type": "object",
             "properties": {
                 "@type": {
@@ -234,7 +234,7 @@
                     "uniqueItems": true,
                     "items": {
                         "title": "Complex/Multidimensional Quantity",
-                        "$ref": "#/definitions/variableMeasured"
+                        "$ref": "#/definitions/PropertyValue"
                     }
                 },
                 "parameterControlled": {
@@ -243,7 +243,7 @@
                     "uniqueItems": true,
                     "items": {
                         "title": "Parameter Controlled",
-                        "$ref": "#/definitions/variableMeasured"
+                        "$ref": "#/definitions/PropertyValue"
                     }
                 },
                 "conditionObserved": {
@@ -252,7 +252,7 @@
                     "uniqueItems": true,
                     "items": {
                         "title": "Condition Observed",
-                        "$ref": "#/definitions/variableMeasured"
+                        "$ref": "#/definitions/PropertyValue"
                     }
                 }
             }
@@ -579,7 +579,7 @@
             "uniqueItems": true,
             "items": {
                 "title": "Variable Measured",
-                "$ref": "#/definitions/variableMeasured"
+                "$ref": "#/definitions/PropertyValue"
             }
         },
         "parameterControlled": {
@@ -588,7 +588,7 @@
             "uniqueItems": true,
             "items": {
                 "title": "Parameter Controlled",
-                "$ref": "#/definitions/variableMeasured"
+                "$ref": "#/definitions/PropertyValue"
             }
         },
         "conditionObserved": {
@@ -597,7 +597,7 @@
             "uniqueItems": true,
             "items": {
                 "title": "Condition Observed",
-                "$ref": "#/definitions/variableMeasured"
+                "$ref": "#/definitions/PropertyValue"
             }
         },
         "hasPart": {
