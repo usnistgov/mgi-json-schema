@@ -141,6 +141,15 @@
                 "value": {
                     "title": "Value"
                 },
+                "minValue": {
+                    "title": "Minimum Value"
+                },
+                "maxValue": {
+                    "title": "Maximum Value"
+                },
+                "uncertainty": {
+                    "title": "Uncertainty"
+                },
                 "valueID": {
                     "title": "Value IDs",
                     "type": "array",
