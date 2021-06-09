@@ -82,7 +82,7 @@
                 }
             }
         },
-        "variableMeasured": {
+        "PropertyValue": {
             "type": "object",
             "properties": {
                 "@type": {
@@ -113,6 +113,15 @@
                 },
                 "value": {
                     "title": "Value"
+                },
+                "minValue": {
+                    "title": "Minimum Value"
+                },
+                "maxValue": {
+                    "title": "Maximum Value"
+                },
+                "uncertainty": {
+                    "title": "Uncertainty"
                 },
                 "valueID": {
                     "title": "Value IDs",
@@ -234,7 +243,7 @@
                     "uniqueItems": true,
                     "items": {
                         "title": "Complex/Multidimensional Quantity",
-                        "$ref": "#/definitions/variableMeasured"
+                        "$ref": "#/definitions/PropertyValue"
                     }
                 },
                 "parameterControlled": {
@@ -243,7 +252,7 @@
                     "uniqueItems": true,
                     "items": {
                         "title": "Parameter Controlled",
-                        "$ref": "#/definitions/variableMeasured"
+                        "$ref": "#/definitions/PropertyValue"
                     }
                 },
                 "conditionObserved": {
@@ -252,7 +261,7 @@
                     "uniqueItems": true,
                     "items": {
                         "title": "Condition Observed",
-                        "$ref": "#/definitions/variableMeasured"
+                        "$ref": "#/definitions/PropertyValue"
                     }
                 }
             }
@@ -271,6 +280,7 @@
                                 "Dataset",
                                 "File",
                                 "MaterialProperty",
+                                "TabularData",
                                 "TabularDataPackage"
                             ]
                         }
@@ -389,6 +399,23 @@
             "items": {
                 "type": "string",
                 "title": "Image URL"
+            }
+        },
+        "subjectOf": {
+            "type": "array",
+            "title": "Subject Of",
+            "description": "A CreativeWork about this Thing (e.g., Linked Materials, Datasets, etc.)",
+            "uniqueItems": true,
+            "items": {
+                "type": "string",
+                "title": "Referenced Item",
+                "cordra": {
+                    "type": {
+                        "handleReference": {
+                            "types": []
+                        }
+                    }
+                }
             }
         },
         "about": {
@@ -561,7 +588,7 @@
             "uniqueItems": true,
             "items": {
                 "title": "Variable Measured",
-                "$ref": "#/definitions/variableMeasured"
+                "$ref": "#/definitions/PropertyValue"
             }
         },
         "parameterControlled": {
@@ -570,7 +597,7 @@
             "uniqueItems": true,
             "items": {
                 "title": "Parameter Controlled",
-                "$ref": "#/definitions/variableMeasured"
+                "$ref": "#/definitions/PropertyValue"
             }
         },
         "conditionObserved": {
@@ -579,7 +606,7 @@
             "uniqueItems": true,
             "items": {
                 "title": "Condition Observed",
-                "$ref": "#/definitions/variableMeasured"
+                "$ref": "#/definitions/PropertyValue"
             }
         },
         "hasPart": {

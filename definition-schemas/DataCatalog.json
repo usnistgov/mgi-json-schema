@@ -12,12 +12,7 @@
                 "items": {
                     "type": "string",
                     "title": "Dataset",
-                    "cordra": {"type": {"handleReference": {"types": [
-                        "File",
-                        "TabularDataPackage",
-                        "MaterialProperty",
-                        "Dataset"
-                    ]}}}
+                    "cordra": {"type": {"handleReference": {"types": []}}}
                 }
             },
             "isPartOf": {

@@ -8,44 +8,6 @@
         "@context",
         "@type"
     ],
-    "definitions": {
-        "subjectOf": {
-            "type": "array",
-            "title": "Subject Of",
-            "description": "A CreativeWork about this Thing (e.g., Linked Materials, Datasets, etc.)",
-            "uniqueItems": true,
-            "items": {
-                "type": "string",
-                "title": "Referenced Item",
-                "cordra": {
-                    "type": {
-                        "handleReference": {
-                            "types": [
-                                "Citation",
-                                "Collection",
-                                "Comment",
-                                "DataCatalog",
-                                "DataFormat",
-                                "Dataset",
-                                "DefinedTermSet",
-                                "File",
-                                "Instrument",
-                                "Material",
-                                "MaterialProperty",
-                                "ProcessHistory",
-                                "ProcessProtocol",
-                                "SoftwareApplication",
-                                "SoftwareSourceCode",
-                                "TabularDataPackage",
-                                "Experiment",
-                                "Study"
-                            ]
-                        }
-                    }
-                }
-            }
-        }
-    },
     "properties": {
         "@context": {
             "type": "string",
@@ -146,6 +108,23 @@
             "items": {
                 "type": "string",
                 "title": "Image URL"
+            }
+        },
+        "subjectOf": {
+            "type": "array",
+            "title": "Subject Of",
+            "description": "A CreativeWork about this Thing (e.g., Linked Materials, Datasets, etc.)",
+            "uniqueItems": true,
+            "items": {
+                "type": "string",
+                "title": "Referenced Item",
+                "cordra": {
+                    "type": {
+                        "handleReference": {
+                            "types": []
+                        }
+                    }
+                }
             }
         },
         "about": {
@@ -283,9 +262,6 @@
                     }
                 }
             }
-        },
-        "subjectOf": {
-            "$ref": "#/definitions/subjectOf"
         },
         "isPartOf": {
             "type": "array",

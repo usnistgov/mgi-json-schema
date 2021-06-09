@@ -13,17 +13,7 @@
                 "items": {
                     "type": "string",
                     "title": "Referenced Item",
-                    "cordra": {"type": {"handleReference": {"types": [
-                        "DefinedTerm",
-                        "Project",
-                        "Collection",
-                        "Instrument",
-                        "ProcessHistory",
-                        "ProcessProtocol",
-                        "Material",
-                        "Experiment",
-                        "Study"
-                    ]}}}
+                    "cordra": {"type": {"handleReference": {"types": []}}}
                 }
             },
             "keywords": {
@@ -43,17 +33,7 @@
                 "items": {
                     "type": "string",
                     "title": "Citation",
-                    "cordra": {"type": {"handleReference": {"types": [
-                        "Citation",
-                        "User",
-                        "Person",
-                        "Organization",
-                        "Comment",
-                        "Dataset",
-                        "File",
-                        "MaterialProperty",
-                        "TabularDataPackage"
-                    ]}}}
+                    "cordra": {"type": {"handleReference": {"types": []}}}
                 }
             },
             "funder": {

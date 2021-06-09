@@ -8,44 +8,6 @@
         "@context",
         "@type"
     ],
-    "definitions": {
-        "subjectOf": {
-            "type": "array",
-            "title": "Subject Of",
-            "description": "A CreativeWork about this Thing (e.g., Linked Materials, Datasets, etc.)",
-            "uniqueItems": true,
-            "items": {
-                "type": "string",
-                "title": "Referenced Item",
-                "cordra": {
-                    "type": {
-                        "handleReference": {
-                            "types": [
-                                "Citation",
-                                "Collection",
-                                "Comment",
-                                "DataCatalog",
-                                "DataFormat",
-                                "Dataset",
-                                "DefinedTermSet",
-                                "File",
-                                "Instrument",
-                                "Material",
-                                "MaterialProperty",
-                                "ProcessHistory",
-                                "ProcessProtocol",
-                                "SoftwareApplication",
-                                "SoftwareSourceCode",
-                                "TabularDataPackage",
-                                "Experiment",
-                                "Study"
-                            ]
-                        }
-                    }
-                }
-            }
-        }
-    },
     "properties": {
         "@context": {
             "type": "string",
@@ -148,6 +110,23 @@
                 "title": "Image URL"
             }
         },
+        "subjectOf": {
+            "type": "array",
+            "title": "Subject Of",
+            "description": "A CreativeWork about this Thing (e.g., Linked Materials, Datasets, etc.)",
+            "uniqueItems": true,
+            "items": {
+                "type": "string",
+                "title": "Referenced Item",
+                "cordra": {
+                    "type": {
+                        "handleReference": {
+                            "types": []
+                        }
+                    }
+                }
+            }
+        },
         "about": {
             "type": "array",
             "title": "About",
@@ -159,17 +138,7 @@
                 "cordra": {
                     "type": {
                         "handleReference": {
-                            "types": [
-                                "DefinedTerm",
-                                "Project",
-                                "Collection",
-                                "Instrument",
-                                "ProcessHistory",
-                                "ProcessProtocol",
-                                "Material",
-                                "Experiment",
-                                "Study"
-                            ]
+                            "types": []
                         }
                     }
                 }
@@ -195,17 +164,7 @@
                 "cordra": {
                     "type": {
                         "handleReference": {
-                            "types": [
-                                "Citation",
-                                "User",
-                                "Person",
-                                "Organization",
-                                "Comment",
-                                "Dataset",
-                                "File",
-                                "MaterialProperty",
-                                "TabularDataPackage"
-                            ]
+                            "types": []
                         }
                     }
                 }
@@ -453,9 +412,6 @@
                 }
             }
         },
-        "subjectOf": {
-            "$ref": "#/definitions/subjectOf"
-        },
         "hasPart": {
             "type": "array",
             "title": "Has Collection Items",
@@ -466,27 +422,7 @@
                 "cordra": {
                     "type": {
                         "handleReference": {
-                            "types": [
-                                "Citation",
-                                "Collection",
-                                "Comment",
-                                "DataCatalog",
-                                "DataFormat",
-                                "Dataset",
-                                "DefinedTerm",
-                                "DefinedTermSet",
-                                "File",
-                                "Instrument",
-                                "Material",
-                                "MaterialProperty",
-                                "ProcessHistory",
-                                "ProcessProtocol",
-                                "Project",
-                                "SoftwareApplication",
-                                "SoftwareSourceCode",
-                                "TabularDataPackage",
-                                "UnitOfMeasurement"
-                            ]
+                            "types": []
                         }
                     }
                 }

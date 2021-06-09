@@ -97,7 +97,6 @@
                     "cordra": {"type": {"handleReference": {"types": ["Organization"]}}}
                 }
             },
-            "subjectOf": {"$ref": "subjectOf.json#/definitions/subjectOf"},
             "isPartOf": {
                 "type": "array",
                 "title": "Is Part Of",

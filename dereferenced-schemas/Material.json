@@ -42,7 +42,7 @@
                 }
             }
         },
-        "variableMeasured": {
+        "PropertyValue": {
             "type": "object",
             "properties": {
                 "@type": {
@@ -73,6 +73,15 @@
                 },
                 "value": {
                     "title": "Value"
+                },
+                "minValue": {
+                    "title": "Minimum Value"
+                },
+                "maxValue": {
+                    "title": "Maximum Value"
+                },
+                "uncertainty": {
+                    "title": "Uncertainty"
                 },
                 "valueID": {
                     "title": "Value IDs",
@@ -194,7 +203,7 @@
                     "uniqueItems": true,
                     "items": {
                         "title": "Complex/Multidimensional Quantity",
-                        "$ref": "#/definitions/variableMeasured"
+                        "$ref": "#/definitions/PropertyValue"
                     }
                 },
                 "parameterControlled": {
@@ -203,7 +212,7 @@
                     "uniqueItems": true,
                     "items": {
                         "title": "Parameter Controlled",
-                        "$ref": "#/definitions/variableMeasured"
+                        "$ref": "#/definitions/PropertyValue"
                     }
                 },
                 "conditionObserved": {
@@ -212,43 +221,7 @@
                     "uniqueItems": true,
                     "items": {
                         "title": "Condition Observed",
-                        "$ref": "#/definitions/variableMeasured"
-                    }
-                }
-            }
-        },
-        "subjectOf": {
-            "type": "array",
-            "title": "Subject Of",
-            "description": "A CreativeWork about this Thing (e.g., Linked Materials, Datasets, etc.)",
-            "uniqueItems": true,
-            "items": {
-                "type": "string",
-                "title": "Referenced Item",
-                "cordra": {
-                    "type": {
-                        "handleReference": {
-                            "types": [
-                                "Citation",
-                                "Collection",
-                                "Comment",
-                                "DataCatalog",
-                                "DataFormat",
-                                "Dataset",
-                                "DefinedTermSet",
-                                "File",
-                                "Instrument",
-                                "Material",
-                                "MaterialProperty",
-                                "ProcessHistory",
-                                "ProcessProtocol",
-                                "SoftwareApplication",
-                                "SoftwareSourceCode",
-                                "TabularDataPackage",
-                                "Experiment",
-                                "Study"
-                            ]
-                        }
+                        "$ref": "#/definitions/PropertyValue"
                     }
                 }
             }
@@ -366,6 +339,23 @@
                 "title": "Image URL"
             }
         },
+        "subjectOf": {
+            "type": "array",
+            "title": "Subject Of",
+            "description": "A CreativeWork about this Thing (e.g., Linked Materials, Datasets, etc.)",
+            "uniqueItems": true,
+            "items": {
+                "type": "string",
+                "title": "Referenced Item",
+                "cordra": {
+                    "type": {
+                        "handleReference": {
+                            "types": []
+                        }
+                    }
+                }
+            }
+        },
         "about": {
             "type": "array",
             "title": "About",
@@ -377,17 +367,7 @@
                 "cordra": {
                     "type": {
                         "handleReference": {
-                            "types": [
-                                "DefinedTerm",
-                                "Project",
-                                "Collection",
-                                "Instrument",
-                                "ProcessHistory",
-                                "ProcessProtocol",
-                                "Material",
-                                "Experiment",
-                                "Study"
-                            ]
+                            "types": []
                         }
                     }
                 }
@@ -413,17 +393,7 @@
                 "cordra": {
                     "type": {
                         "handleReference": {
-                            "types": [
-                                "Citation",
-                                "User",
-                                "Person",
-                                "Organization",
-                                "Comment",
-                                "Dataset",
-                                "File",
-                                "MaterialProperty",
-                                "TabularDataPackage"
-                            ]
+                            "types": []
                         }
                     }
                 }
@@ -709,9 +679,6 @@
                 }
             }
         },
-        "subjectOf": {
-            "$ref": "#/definitions/subjectOf"
-        },
         "isPartOf": {
             "title": "Has Parent Materials and Collections",
             "type": "array",
@@ -753,7 +720,7 @@
             "uniqueItems": true,
             "items": {
                 "title": "Variable Measured",
-                "$ref": "#/definitions/variableMeasured"
+                "$ref": "#/definitions/PropertyValue"
             }
         },
         "parameterControlled": {
@@ -762,7 +729,7 @@
             "uniqueItems": true,
             "items": {
                 "title": "Parameter Controlled",
-                "$ref": "#/definitions/variableMeasured"
+                "$ref": "#/definitions/PropertyValue"
             }
         },
         "conditionObserved": {
@@ -771,7 +738,7 @@
             "uniqueItems": true,
             "items": {
                 "title": "Condition Observed",
-                "$ref": "#/definitions/variableMeasured"
+                "$ref": "#/definitions/PropertyValue"
             }
         },
         "materialExtent": {
