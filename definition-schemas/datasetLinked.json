@@ -14,7 +14,9 @@
                     "Collection",
                     "Dataset",
                     "File",
+                    "MaterialStructure",
                     "MaterialProperty",
+                    "MaterialPerformance",
                     "TabularData",
                     "TabularDataPackage"
                 ]}}}
@@ -30,7 +32,9 @@
                 "cordra": {"type": {"handleReference": {"types": [
                     "Dataset",
                     "File",
+                    "MaterialStructure",
                     "MaterialProperty",
+                    "MaterialPerformance",
                     "TabularData",
                     "TabularDataPackage"
                 ]}}}
@@ -46,7 +50,9 @@
                 "cordra": {"type": {"handleReference": {"types": [
                     "Dataset",
                     "File",
+                    "MaterialStructure",
                     "MaterialProperty",
+                    "MaterialPerformance",
                     "TabularData",
                     "TabularDataPackage",
                     "SoftwareApplication",

@@ -1,8 +1,8 @@
 {
     "$schema": "http://json-schema.org/draft-04/schema#",
     "type": "object",
-    "title": "Form",
-    "description": "This schema is for depositing and describing a UI Form definition in Cordra.",
+    "title": "MaterialStructure",
+    "description": "This schema is for depositing and describing a Material Structure measurement or prediction in Cordra.",
     "required": [
         "@id",
         "@context",
@@ -402,7 +402,7 @@
             "type": "array",
             "default": [
                 "Dataset",
-                "mat:Form"
+                "mat:File"
             ]
         },
         "@id": {

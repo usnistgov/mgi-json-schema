@@ -1,49 +1,26 @@
 {
     "$schema": "http://json-schema.org/draft-04/schema#",
     "type": "object",
-    "title": "SoftwareSourceCode",
-    "description": "This schema is for describing a Software Source Code in Cordra.",
+    "title": "Vega",
+    "description": "This schema is for depositing and describing a Vega Specification in Cordra.",
     "required": [
         "@id",
         "@context",
         "@type"
     ],
-    "definitions": {
-        "isBasedOn": {
-            "type": "array",
-            "title": "Item is derived from",
-            "uniqueItems": true,
-            "items": {
-                "type": "string",
-                "title": "Referenced Item",
-                "cordra": {
-                    "type": {
-                        "handleReference": {
-                            "types": [
-                                "Dataset",
-                                "File",
-                                "MaterialStructure",
-                                "MaterialProperty",
-                                "MaterialPerformance",
-                                "TabularData",
-                                "TabularDataPackage",
-                                "SoftwareApplication",
-                                "SoftwareSourceCode"
-                            ]
-                        }
-                    }
-                }
-            }
-        }
-    },
     "properties": {
         "@context": {
-            "type": "string",
-            "default": "http://schema.org/"
+            "type": "array",
+            "default": [
+                "http://schema.org/"
+            ]
         },
         "@type": {
-            "type": "string",
-            "default": "SoftwareSourceCode"
+            "type": "array",
+            "default": [
+                "CreativeWork",
+                "mat:Vega"
+            ]
         },
         "@id": {
             "type": "string",
@@ -439,53 +416,6 @@
                     }
                 }
             }
-        },
-        "codeRepository": {
-            "type": "string",
-            "title": "Code Repository URL"
-        },
-        "programmingLanguage": {
-            "type": "string",
-            "title": "Programming Language"
-        },
-        "targetProduct": {
-            "type": "array",
-            "title": "Software Applications",
-            "uniqueItems": true,
-            "items": {
-                "type": "string",
-                "title": "Software Application",
-                "cordra": {
-                    "type": {
-                        "handleReference": {
-                            "types": [
-                                "SoftwareApplication"
-                            ]
-                        }
-                    }
-                }
-            }
-        },
-        "isPartOf": {
-            "type": "array",
-            "title": "Is Part Of",
-            "uniqueItems": true,
-            "items": {
-                "type": "string",
-                "title": "Is Part Of",
-                "cordra": {
-                    "type": {
-                        "handleReference": {
-                            "types": [
-                                "Collection"
-                            ]
-                        }
-                    }
-                }
-            }
-        },
-        "isBasedOn": {
-            "$ref": "#/definitions/isBasedOn"
         }
     }
 }

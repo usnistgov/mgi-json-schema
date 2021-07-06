@@ -325,7 +325,9 @@
                                 "Collection",
                                 "Dataset",
                                 "File",
+                                "MaterialStructure",
                                 "MaterialProperty",
+                                "MaterialPerformance",
                                 "TabularData",
                                 "TabularDataPackage"
                             ]
@@ -347,7 +349,9 @@
                             "types": [
                                 "Dataset",
                                 "File",
+                                "MaterialStructure",
                                 "MaterialProperty",
+                                "MaterialPerformance",
                                 "TabularData",
                                 "TabularDataPackage"
                             ]
@@ -369,7 +373,9 @@
                             "types": [
                                 "Dataset",
                                 "File",
+                                "MaterialStructure",
                                 "MaterialProperty",
+                                "MaterialPerformance",
                                 "TabularData",
                                 "TabularDataPackage",
                                 "SoftwareApplication",
