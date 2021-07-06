@@ -951,9 +951,42 @@
                                     }
                                 }
                             },
+                            "unitText": {
+                                "title": "Unit Text",
+                                "oneOf": [
+                                    {
+                                        "type": "string"
+                                    },
+                                    {
+                                        "type": "null"
+                                    }
+                                ]
+                            },
+                            "unitCode": {
+                                "title": "Unit Code",
+                                "type": "string",
+                                "cordra": {
+                                    "type": {
+                                        "handleReference": {
+                                            "types": [
+                                                "UnitOfMeasurement"
+                                            ]
+                                        }
+                                    }
+                                }
+                            },
                             "rdfType": {
                                 "type": "string",
-                                "description": "The RDF type for this field."
+                                "description": "The RDF type for this field.",
+                                "cordra": {
+                                    "type": {
+                                        "handleReference": {
+                                            "types": [
+                                                "DefinedTerm"
+                                            ]
+                                        }
+                                    }
+                                }
                             }
                         },
                         "examples": [
@@ -1075,9 +1108,42 @@
                                     }
                                 }
                             },
+                            "unitText": {
+                                "title": "Unit Text",
+                                "oneOf": [
+                                    {
+                                        "type": "string"
+                                    },
+                                    {
+                                        "type": "null"
+                                    }
+                                ]
+                            },
+                            "unitCode": {
+                                "title": "Unit Code",
+                                "type": "string",
+                                "cordra": {
+                                    "type": {
+                                        "handleReference": {
+                                            "types": [
+                                                "UnitOfMeasurement"
+                                            ]
+                                        }
+                                    }
+                                }
+                            },
                             "rdfType": {
                                 "type": "string",
-                                "description": "The RDF type for this field."
+                                "description": "The RDF type for this field.",
+                                "cordra": {
+                                    "type": {
+                                        "handleReference": {
+                                            "types": [
+                                                "DefinedTerm"
+                                            ]
+                                        }
+                                    }
+                                }
                             }
                         },
                         "examples": [
@@ -1191,9 +1257,42 @@
                                     }
                                 }
                             },
+                            "unitText": {
+                                "title": "Unit Text",
+                                "oneOf": [
+                                    {
+                                        "type": "string"
+                                    },
+                                    {
+                                        "type": "null"
+                                    }
+                                ]
+                            },
+                            "unitCode": {
+                                "title": "Unit Code",
+                                "type": "string",
+                                "cordra": {
+                                    "type": {
+                                        "handleReference": {
+                                            "types": [
+                                                "UnitOfMeasurement"
+                                            ]
+                                        }
+                                    }
+                                }
+                            },
                             "rdfType": {
                                 "type": "string",
-                                "description": "The RDF type for this field."
+                                "description": "The RDF type for this field.",
+                                "cordra": {
+                                    "type": {
+                                        "handleReference": {
+                                            "types": [
+                                                "DefinedTerm"
+                                            ]
+                                        }
+                                    }
+                                }
                             }
                         },
                         "examples": [
@@ -1271,9 +1370,42 @@
                                     }
                                 }
                             },
+                            "unitText": {
+                                "title": "Unit Text",
+                                "oneOf": [
+                                    {
+                                        "type": "string"
+                                    },
+                                    {
+                                        "type": "null"
+                                    }
+                                ]
+                            },
+                            "unitCode": {
+                                "title": "Unit Code",
+                                "type": "string",
+                                "cordra": {
+                                    "type": {
+                                        "handleReference": {
+                                            "types": [
+                                                "UnitOfMeasurement"
+                                            ]
+                                        }
+                                    }
+                                }
+                            },
                             "rdfType": {
                                 "type": "string",
-                                "description": "The RDF type for this field."
+                                "description": "The RDF type for this field.",
+                                "cordra": {
+                                    "type": {
+                                        "handleReference": {
+                                            "types": [
+                                                "DefinedTerm"
+                                            ]
+                                        }
+                                    }
+                                }
                             }
                         },
                         "examples": [
@@ -1353,9 +1485,42 @@
                                     }
                                 }
                             },
+                            "unitText": {
+                                "title": "Unit Text",
+                                "oneOf": [
+                                    {
+                                        "type": "string"
+                                    },
+                                    {
+                                        "type": "null"
+                                    }
+                                ]
+                            },
+                            "unitCode": {
+                                "title": "Unit Code",
+                                "type": "string",
+                                "cordra": {
+                                    "type": {
+                                        "handleReference": {
+                                            "types": [
+                                                "UnitOfMeasurement"
+                                            ]
+                                        }
+                                    }
+                                }
+                            },
                             "rdfType": {
                                 "type": "string",
-                                "description": "The RDF type for this field."
+                                "description": "The RDF type for this field.",
+                                "cordra": {
+                                    "type": {
+                                        "handleReference": {
+                                            "types": [
+                                                "DefinedTerm"
+                                            ]
+                                        }
+                                    }
+                                }
                             }
                         },
                         "examples": [
@@ -1434,9 +1599,42 @@
                                     }
                                 }
                             },
+                            "unitText": {
+                                "title": "Unit Text",
+                                "oneOf": [
+                                    {
+                                        "type": "string"
+                                    },
+                                    {
+                                        "type": "null"
+                                    }
+                                ]
+                            },
+                            "unitCode": {
+                                "title": "Unit Code",
+                                "type": "string",
+                                "cordra": {
+                                    "type": {
+                                        "handleReference": {
+                                            "types": [
+                                                "UnitOfMeasurement"
+                                            ]
+                                        }
+                                    }
+                                }
+                            },
                             "rdfType": {
                                 "type": "string",
-                                "description": "The RDF type for this field."
+                                "description": "The RDF type for this field.",
+                                "cordra": {
+                                    "type": {
+                                        "handleReference": {
+                                            "types": [
+                                                "DefinedTerm"
+                                            ]
+                                        }
+                                    }
+                                }
                             }
                         },
                         "examples": [
@@ -1543,9 +1741,42 @@
                                     }
                                 }
                             },
+                            "unitText": {
+                                "title": "Unit Text",
+                                "oneOf": [
+                                    {
+                                        "type": "string"
+                                    },
+                                    {
+                                        "type": "null"
+                                    }
+                                ]
+                            },
+                            "unitCode": {
+                                "title": "Unit Code",
+                                "type": "string",
+                                "cordra": {
+                                    "type": {
+                                        "handleReference": {
+                                            "types": [
+                                                "UnitOfMeasurement"
+                                            ]
+                                        }
+                                    }
+                                }
+                            },
                             "rdfType": {
                                 "type": "string",
-                                "description": "The RDF type for this field."
+                                "description": "The RDF type for this field.",
+                                "cordra": {
+                                    "type": {
+                                        "handleReference": {
+                                            "types": [
+                                                "DefinedTerm"
+                                            ]
+                                        }
+                                    }
+                                }
                             }
                         },
                         "examples": [
@@ -1626,9 +1857,42 @@
                                     }
                                 }
                             },
+                            "unitText": {
+                                "title": "Unit Text",
+                                "oneOf": [
+                                    {
+                                        "type": "string"
+                                    },
+                                    {
+                                        "type": "null"
+                                    }
+                                ]
+                            },
+                            "unitCode": {
+                                "title": "Unit Code",
+                                "type": "string",
+                                "cordra": {
+                                    "type": {
+                                        "handleReference": {
+                                            "types": [
+                                                "UnitOfMeasurement"
+                                            ]
+                                        }
+                                    }
+                                }
+                            },
                             "rdfType": {
                                 "type": "string",
-                                "description": "The RDF type for this field."
+                                "description": "The RDF type for this field.",
+                                "cordra": {
+                                    "type": {
+                                        "handleReference": {
+                                            "types": [
+                                                "DefinedTerm"
+                                            ]
+                                        }
+                                    }
+                                }
                             }
                         },
                         "examples": [
@@ -1725,9 +1989,42 @@
                                     }
                                 }
                             },
+                            "unitText": {
+                                "title": "Unit Text",
+                                "oneOf": [
+                                    {
+                                        "type": "string"
+                                    },
+                                    {
+                                        "type": "null"
+                                    }
+                                ]
+                            },
+                            "unitCode": {
+                                "title": "Unit Code",
+                                "type": "string",
+                                "cordra": {
+                                    "type": {
+                                        "handleReference": {
+                                            "types": [
+                                                "UnitOfMeasurement"
+                                            ]
+                                        }
+                                    }
+                                }
+                            },
                             "rdfType": {
                                 "type": "string",
-                                "description": "The RDF type for this field."
+                                "description": "The RDF type for this field.",
+                                "cordra": {
+                                    "type": {
+                                        "handleReference": {
+                                            "types": [
+                                                "DefinedTerm"
+                                            ]
+                                        }
+                                    }
+                                }
                             }
                         },
                         "examples": [
@@ -1821,9 +2118,42 @@
                                     }
                                 }
                             },
+                            "unitText": {
+                                "title": "Unit Text",
+                                "oneOf": [
+                                    {
+                                        "type": "string"
+                                    },
+                                    {
+                                        "type": "null"
+                                    }
+                                ]
+                            },
+                            "unitCode": {
+                                "title": "Unit Code",
+                                "type": "string",
+                                "cordra": {
+                                    "type": {
+                                        "handleReference": {
+                                            "types": [
+                                                "UnitOfMeasurement"
+                                            ]
+                                        }
+                                    }
+                                }
+                            },
                             "rdfType": {
                                 "type": "string",
-                                "description": "The RDF type for this field."
+                                "description": "The RDF type for this field.",
+                                "cordra": {
+                                    "type": {
+                                        "handleReference": {
+                                            "types": [
+                                                "DefinedTerm"
+                                            ]
+                                        }
+                                    }
+                                }
                             }
                         },
                         "examples": [
@@ -1923,9 +2253,42 @@
                                     }
                                 }
                             },
+                            "unitText": {
+                                "title": "Unit Text",
+                                "oneOf": [
+                                    {
+                                        "type": "string"
+                                    },
+                                    {
+                                        "type": "null"
+                                    }
+                                ]
+                            },
+                            "unitCode": {
+                                "title": "Unit Code",
+                                "type": "string",
+                                "cordra": {
+                                    "type": {
+                                        "handleReference": {
+                                            "types": [
+                                                "UnitOfMeasurement"
+                                            ]
+                                        }
+                                    }
+                                }
+                            },
                             "rdfType": {
                                 "type": "string",
-                                "description": "The RDF type for this field."
+                                "description": "The RDF type for this field.",
+                                "cordra": {
+                                    "type": {
+                                        "handleReference": {
+                                            "types": [
+                                                "DefinedTerm"
+                                            ]
+                                        }
+                                    }
+                                }
                             }
                         },
                         "examples": [
@@ -2022,9 +2385,42 @@
                                     }
                                 }
                             },
+                            "unitText": {
+                                "title": "Unit Text",
+                                "oneOf": [
+                                    {
+                                        "type": "string"
+                                    },
+                                    {
+                                        "type": "null"
+                                    }
+                                ]
+                            },
+                            "unitCode": {
+                                "title": "Unit Code",
+                                "type": "string",
+                                "cordra": {
+                                    "type": {
+                                        "handleReference": {
+                                            "types": [
+                                                "UnitOfMeasurement"
+                                            ]
+                                        }
+                                    }
+                                }
+                            },
                             "rdfType": {
                                 "type": "string",
-                                "description": "The RDF type for this field."
+                                "description": "The RDF type for this field.",
+                                "cordra": {
+                                    "type": {
+                                        "handleReference": {
+                                            "types": [
+                                                "DefinedTerm"
+                                            ]
+                                        }
+                                    }
+                                }
                             }
                         },
                         "examples": [
@@ -2119,9 +2515,42 @@
                                     }
                                 }
                             },
+                            "unitText": {
+                                "title": "Unit Text",
+                                "oneOf": [
+                                    {
+                                        "type": "string"
+                                    },
+                                    {
+                                        "type": "null"
+                                    }
+                                ]
+                            },
+                            "unitCode": {
+                                "title": "Unit Code",
+                                "type": "string",
+                                "cordra": {
+                                    "type": {
+                                        "handleReference": {
+                                            "types": [
+                                                "UnitOfMeasurement"
+                                            ]
+                                        }
+                                    }
+                                }
+                            },
                             "rdfType": {
                                 "type": "string",
-                                "description": "The RDF type for this field."
+                                "description": "The RDF type for this field.",
+                                "cordra": {
+                                    "type": {
+                                        "handleReference": {
+                                            "types": [
+                                                "DefinedTerm"
+                                            ]
+                                        }
+                                    }
+                                }
                             }
                         },
                         "examples": [
@@ -2202,9 +2631,42 @@
                                     }
                                 }
                             },
+                            "unitText": {
+                                "title": "Unit Text",
+                                "oneOf": [
+                                    {
+                                        "type": "string"
+                                    },
+                                    {
+                                        "type": "null"
+                                    }
+                                ]
+                            },
+                            "unitCode": {
+                                "title": "Unit Code",
+                                "type": "string",
+                                "cordra": {
+                                    "type": {
+                                        "handleReference": {
+                                            "types": [
+                                                "UnitOfMeasurement"
+                                            ]
+                                        }
+                                    }
+                                }
+                            },
                             "rdfType": {
                                 "type": "string",
-                                "description": "The RDF type for this field."
+                                "description": "The RDF type for this field.",
+                                "cordra": {
+                                    "type": {
+                                        "handleReference": {
+                                            "types": [
+                                                "DefinedTerm"
+                                            ]
+                                        }
+                                    }
+                                }
                             }
                         },
                         "examples": [
@@ -2268,9 +2730,42 @@
                                     }
                                 }
                             },
+                            "unitText": {
+                                "title": "Unit Text",
+                                "oneOf": [
+                                    {
+                                        "type": "string"
+                                    },
+                                    {
+                                        "type": "null"
+                                    }
+                                ]
+                            },
+                            "unitCode": {
+                                "title": "Unit Code",
+                                "type": "string",
+                                "cordra": {
+                                    "type": {
+                                        "handleReference": {
+                                            "types": [
+                                                "UnitOfMeasurement"
+                                            ]
+                                        }
+                                    }
+                                }
+                            },
                             "rdfType": {
                                 "type": "string",
-                                "description": "The RDF type for this field."
+                                "description": "The RDF type for this field.",
+                                "cordra": {
+                                    "type": {
+                                        "handleReference": {
+                                            "types": [
+                                                "DefinedTerm"
+                                            ]
+                                        }
+                                    }
+                                }
                             }
                         },
                         "examples": [
