@@ -42,6 +42,44 @@
                 }
             }
         },
+        "exampleOfWork": {
+            "type": "array",
+            "title": "This Material/Data was created by/during this Process",
+            "uniqueItems": true,
+            "items": {
+                "type": "string",
+                "title": "Processing History/Protocol",
+                "cordra": {
+                    "type": {
+                        "handleReference": {
+                            "types": [
+                                "ProcessHistory",
+                                "ProcessProtocol"
+                            ]
+                        }
+                    }
+                }
+            }
+        },
+        "isSupplyFor": {
+            "type": "array",
+            "title": "This Material is a Supply/Starting Material for this Process",
+            "uniqueItems": true,
+            "items": {
+                "title": "Process",
+                "type": "string",
+                "cordra": {
+                    "type": {
+                        "handleReference": {
+                            "types": [
+                                "ProcessHistory",
+                                "ProcessProtocol"
+                            ]
+                        }
+                    }
+                }
+            }
+        },
         "PropertyValue": {
             "type": "object",
             "properties": {
@@ -642,42 +680,10 @@
             }
         },
         "exampleOfWork": {
-            "type": "array",
-            "title": "Processing History/Protocol",
-            "uniqueItems": true,
-            "items": {
-                "type": "string",
-                "title": "Processing History/Protocol",
-                "cordra": {
-                    "type": {
-                        "handleReference": {
-                            "types": [
-                                "ProcessHistory",
-                                "ProcessProtocol"
-                            ]
-                        }
-                    }
-                }
-            }
+            "$ref": "#/definitions/exampleOfWork"
         },
         "isSupplyFor": {
-            "type": "array",
-            "title": "This Material is a Supply/Starting Material for this Process",
-            "uniqueItems": true,
-            "items": {
-                "title": "Process",
-                "type": "string",
-                "cordra": {
-                    "type": {
-                        "handleReference": {
-                            "types": [
-                                "ProcessHistory",
-                                "ProcessProtocol"
-                            ]
-                        }
-                    }
-                }
-            }
+            "$ref": "#/definitions/isSupplyFor"
         },
         "isPartOf": {
             "title": "Has Parent Materials and Collections",

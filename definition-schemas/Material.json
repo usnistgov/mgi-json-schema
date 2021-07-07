@@ -5,32 +5,8 @@
     "definitions": {"Material": {
         "type": "object",
         "properties": {
-            "exampleOfWork": {
-                "type": "array",
-                "title": "Processing History/Protocol",
-                "uniqueItems": true,
-                "items": {
-                    "type": "string",
-                    "title": "Processing History/Protocol",
-                    "cordra": {"type": {"handleReference": {"types": [
-                        "ProcessHistory",
-                        "ProcessProtocol"
-                    ]}}}
-                }
-            },
-            "isSupplyFor": {
-                "type": "array",
-                "title": "This Material is a Supply/Starting Material for this Process",
-                "uniqueItems": true,
-                "items": {
-                    "title": "Process",
-                    "type": "string",
-                    "cordra": {"type": {"handleReference": {"types": [
-                        "ProcessHistory",
-                        "ProcessProtocol"
-                    ]}}}
-                }
-            },
+            "exampleOfWork": {"$ref": "processLinked.json#/definitions/exampleOfWork"},
+            "isSupplyFor": {"$ref": "processLinked.json#/definitions/isSupplyFor"},
             "isPartOf": {
                 "title": "Has Parent Materials and Collections",
                 "type": "array",

@@ -61,6 +61,25 @@
                 }
             }
         },
+        "exampleOfWork": {
+            "type": "array",
+            "title": "This Material/Data was created by/during this Process",
+            "uniqueItems": true,
+            "items": {
+                "type": "string",
+                "title": "Processing History/Protocol",
+                "cordra": {
+                    "type": {
+                        "handleReference": {
+                            "types": [
+                                "ProcessHistory",
+                                "ProcessProtocol"
+                            ]
+                        }
+                    }
+                }
+            }
+        },
         "measurementTechnique": {
             "type": "array",
             "title": "Synthesis/Measurement/Computational Technique or Instrument/Software Used",
@@ -830,6 +849,9 @@
         },
         "isBasedOn": {
             "$ref": "#/definitions/isBasedOn"
+        },
+        "exampleOfWork": {
+            "$ref": "#/definitions/exampleOfWork"
         }
     }
 }
