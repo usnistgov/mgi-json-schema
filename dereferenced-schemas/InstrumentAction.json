@@ -279,7 +279,9 @@
                             "types": [
                                 "Dataset",
                                 "File",
+                                "MaterialStructure",
                                 "MaterialProperty",
+                                "MaterialPerformance",
                                 "TabularData",
                                 "TabularDataPackage"
                             ]

@@ -52,7 +52,8 @@
             },
             "hasPart": {"$ref": "datasetLinked.json#/definitions/hasPart"},
             "isPartOf": {"$ref": "datasetLinked.json#/definitions/isPartOf"},
-            "isBasedOn": {"$ref": "datasetLinked.json#/definitions/isBasedOn"}
+            "isBasedOn": {"$ref": "datasetLinked.json#/definitions/isBasedOn"},
+            "exampleOfWork": {"$ref": "processLinked.json#/definitions/exampleOfWork"}
         }
     }}
 }

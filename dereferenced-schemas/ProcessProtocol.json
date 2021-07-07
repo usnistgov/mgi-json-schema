@@ -42,6 +42,68 @@
                 }
             }
         },
+        "workExample": {
+            "type": "array",
+            "title": "Resulting Materials/Data",
+            "uniqueItems": true,
+            "items": {
+                "type": "string",
+                "title": "Resulting Material/Data",
+                "cordra": {
+                    "type": {
+                        "handleReference": {
+                            "types": [
+                                "Material",
+                                "Dataset",
+                                "File",
+                                "MaterialStructure",
+                                "MaterialProperty",
+                                "MaterialPerformance",
+                                "TabularData",
+                                "TabularDataPackage"
+                            ]
+                        }
+                    }
+                }
+            }
+        },
+        "supply": {
+            "type": "array",
+            "title": "Supply/Starting Materials",
+            "uniqueItems": true,
+            "items": {
+                "type": "object",
+                "title": "Supply/Starting Material",
+                "properties": {
+                    "@type": {
+                        "type": "array",
+                        "default": [
+                            "HowToSupply",
+                            "mat:Material"
+                        ]
+                    },
+                    "identifier": {
+                        "type": "string",
+                        "cordra": {
+                            "type": {
+                                "handleReference": {
+                                    "types": [
+                                        "Material"
+                                    ]
+                                }
+                            }
+                        }
+                    },
+                    "name": {
+                        "type": "string",
+                        "title": "Name"
+                    },
+                    "requiredQuantity": {
+                        "$ref": "#/definitions/QuantitativeValue"
+                    }
+                }
+            }
+        },
         "measurementTechnique": {
             "type": "array",
             "title": "Synthesis/Measurement/Computational Technique or Instrument/Software Used",
@@ -358,41 +420,7 @@
                     }
                 },
                 "supply": {
-                    "type": "array",
-                    "title": "Supply/Starting Materials",
-                    "uniqueItems": true,
-                    "items": {
-                        "type": "object",
-                        "title": "Supply/Starting Material",
-                        "properties": {
-                            "@type": {
-                                "type": "array",
-                                "default": [
-                                    "HowToSupply",
-                                    "mat:Material"
-                                ]
-                            },
-                            "identifier": {
-                                "type": "string",
-                                "cordra": {
-                                    "type": {
-                                        "handleReference": {
-                                            "types": [
-                                                "Material"
-                                            ]
-                                        }
-                                    }
-                                }
-                            },
-                            "name": {
-                                "type": "string",
-                                "title": "Name"
-                            },
-                            "requiredQuantity": {
-                                "$ref": "#/definitions/QuantitativeValue"
-                            }
-                        }
-                    }
+                    "$ref": "#/definitions/supply"
                 },
                 "variableMeasured": {
                     "type": "array",
@@ -422,22 +450,7 @@
                     }
                 },
                 "workExample": {
-                    "type": "array",
-                    "title": "Resulting Materials",
-                    "uniqueItems": true,
-                    "items": {
-                        "type": "string",
-                        "title": "Resulting Material",
-                        "cordra": {
-                            "type": {
-                                "handleReference": {
-                                    "types": [
-                                        "Material"
-                                    ]
-                                }
-                            }
-                        }
-                    }
+                    "$ref": "#/definitions/workExample"
                 },
                 "measurementTechnique": {
                     "$ref": "#/definitions/measurementTechnique"
@@ -986,41 +999,7 @@
             }
         },
         "supply": {
-            "type": "array",
-            "title": "Supply/Starting Materials",
-            "uniqueItems": true,
-            "items": {
-                "type": "object",
-                "title": "Supply/Starting Material",
-                "properties": {
-                    "@type": {
-                        "type": "array",
-                        "default": [
-                            "HowToSupply",
-                            "mat:Material"
-                        ]
-                    },
-                    "identifier": {
-                        "type": "string",
-                        "cordra": {
-                            "type": {
-                                "handleReference": {
-                                    "types": [
-                                        "Material"
-                                    ]
-                                }
-                            }
-                        }
-                    },
-                    "name": {
-                        "type": "string",
-                        "title": "Name"
-                    },
-                    "requiredQuantity": {
-                        "$ref": "#/definitions/QuantitativeValue"
-                    }
-                }
-            }
+            "$ref": "#/definitions/supply"
         },
         "variableMeasured": {
             "type": "array",
@@ -1050,22 +1029,7 @@
             }
         },
         "workExample": {
-            "type": "array",
-            "title": "Resulting Materials",
-            "uniqueItems": true,
-            "items": {
-                "type": "string",
-                "title": "Resulting Material",
-                "cordra": {
-                    "type": {
-                        "handleReference": {
-                            "types": [
-                                "Material"
-                            ]
-                        }
-                    }
-                }
-            }
+            "$ref": "#/definitions/workExample"
         },
         "measurementTechnique": {
             "$ref": "#/definitions/measurementTechnique"

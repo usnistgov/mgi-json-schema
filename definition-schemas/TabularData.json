@@ -87,9 +87,22 @@
                                         }
                                     }
                                 },
+                                "unitText": {
+                                    "title": "Unit Text",
+                                    "oneOf": [
+                                        {"type": "string"},
+                                        {"type": "null"}
+                                    ]
+                                },
+                                "unitCode": {
+                                    "title": "Unit Code",
+                                    "type": "string",
+                                    "cordra": {"type": {"handleReference": {"types": ["UnitOfMeasurement"]}}}
+                                },
                                 "rdfType": {
                                     "type": "string",
-                                    "description": "The RDF type for this field."
+                                    "description": "The RDF type for this field.",
+                                    "cordra": {"type": {"handleReference": {"types": ["DefinedTerm"]}}}
                                 }
                             },
                             "examples": [
@@ -183,9 +196,22 @@
                                         ]}
                                     }
                                 },
+                                "unitText": {
+                                    "title": "Unit Text",
+                                    "oneOf": [
+                                        {"type": "string"},
+                                        {"type": "null"}
+                                    ]
+                                },
+                                "unitCode": {
+                                    "title": "Unit Code",
+                                    "type": "string",
+                                    "cordra": {"type": {"handleReference": {"types": ["UnitOfMeasurement"]}}}
+                                },
                                 "rdfType": {
                                     "type": "string",
-                                    "description": "The RDF type for this field."
+                                    "description": "The RDF type for this field.",
+                                    "cordra": {"type": {"handleReference": {"types": ["DefinedTerm"]}}}
                                 }
                             },
                             "examples": [
@@ -273,9 +299,22 @@
                                         ]}
                                     }
                                 },
+                                "unitText": {
+                                    "title": "Unit Text",
+                                    "oneOf": [
+                                        {"type": "string"},
+                                        {"type": "null"}
+                                    ]
+                                },
+                                "unitCode": {
+                                    "title": "Unit Code",
+                                    "type": "string",
+                                    "cordra": {"type": {"handleReference": {"types": ["UnitOfMeasurement"]}}}
+                                },
                                 "rdfType": {
                                     "type": "string",
-                                    "description": "The RDF type for this field."
+                                    "description": "The RDF type for this field.",
+                                    "cordra": {"type": {"handleReference": {"types": ["DefinedTerm"]}}}
                                 }
                             },
                             "examples": ["{\n \"name\": \"age\",\n \"type\": \"integer\",\n \"constraints\": {\n \"unique\": true,\n \"minimum\": 100,\n \"maximum\": 9999\n }\n}\n"]
@@ -339,9 +378,22 @@
                                         "maximum": {"type": "string"}
                                     }
                                 },
+                                "unitText": {
+                                    "title": "Unit Text",
+                                    "oneOf": [
+                                        {"type": "string"},
+                                        {"type": "null"}
+                                    ]
+                                },
+                                "unitCode": {
+                                    "title": "Unit Code",
+                                    "type": "string",
+                                    "cordra": {"type": {"handleReference": {"types": ["UnitOfMeasurement"]}}}
+                                },
                                 "rdfType": {
                                     "type": "string",
-                                    "description": "The RDF type for this field."
+                                    "description": "The RDF type for this field.",
+                                    "cordra": {"type": {"handleReference": {"types": ["DefinedTerm"]}}}
                                 }
                             },
                             "examples": [
@@ -409,9 +461,22 @@
                                         "maximum": {"type": "string"}
                                     }
                                 },
+                                "unitText": {
+                                    "title": "Unit Text",
+                                    "oneOf": [
+                                        {"type": "string"},
+                                        {"type": "null"}
+                                    ]
+                                },
+                                "unitCode": {
+                                    "title": "Unit Code",
+                                    "type": "string",
+                                    "cordra": {"type": {"handleReference": {"types": ["UnitOfMeasurement"]}}}
+                                },
                                 "rdfType": {
                                     "type": "string",
-                                    "description": "The RDF type for this field."
+                                    "description": "The RDF type for this field.",
+                                    "cordra": {"type": {"handleReference": {"types": ["DefinedTerm"]}}}
                                 }
                             },
                             "examples": [
@@ -478,9 +543,22 @@
                                         "maximum": {"type": "string"}
                                     }
                                 },
+                                "unitText": {
+                                    "title": "Unit Text",
+                                    "oneOf": [
+                                        {"type": "string"},
+                                        {"type": "null"}
+                                    ]
+                                },
+                                "unitCode": {
+                                    "title": "Unit Code",
+                                    "type": "string",
+                                    "cordra": {"type": {"handleReference": {"types": ["UnitOfMeasurement"]}}}
+                                },
                                 "rdfType": {
                                     "type": "string",
-                                    "description": "The RDF type for this field."
+                                    "description": "The RDF type for this field.",
+                                    "cordra": {"type": {"handleReference": {"types": ["DefinedTerm"]}}}
                                 }
                             },
                             "examples": [
@@ -561,9 +639,22 @@
                                         ]}
                                     }
                                 },
+                                "unitText": {
+                                    "title": "Unit Text",
+                                    "oneOf": [
+                                        {"type": "string"},
+                                        {"type": "null"}
+                                    ]
+                                },
+                                "unitCode": {
+                                    "title": "Unit Code",
+                                    "type": "string",
+                                    "cordra": {"type": {"handleReference": {"types": ["UnitOfMeasurement"]}}}
+                                },
                                 "rdfType": {
                                     "type": "string",
-                                    "description": "The RDF type for this field."
+                                    "description": "The RDF type for this field.",
+                                    "cordra": {"type": {"handleReference": {"types": ["DefinedTerm"]}}}
                                 }
                             },
                             "examples": [
@@ -630,9 +721,22 @@
                                         "maximum": {"type": "string"}
                                     }
                                 },
+                                "unitText": {
+                                    "title": "Unit Text",
+                                    "oneOf": [
+                                        {"type": "string"},
+                                        {"type": "null"}
+                                    ]
+                                },
+                                "unitCode": {
+                                    "title": "Unit Code",
+                                    "type": "string",
+                                    "cordra": {"type": {"handleReference": {"types": ["UnitOfMeasurement"]}}}
+                                },
                                 "rdfType": {
                                     "type": "string",
-                                    "description": "The RDF type for this field."
+                                    "description": "The RDF type for this field.",
+                                    "cordra": {"type": {"handleReference": {"types": ["DefinedTerm"]}}}
                                 }
                             },
                             "examples": [
@@ -715,9 +819,22 @@
                                         }
                                     }
                                 },
+                                "unitText": {
+                                    "title": "Unit Text",
+                                    "oneOf": [
+                                        {"type": "string"},
+                                        {"type": "null"}
+                                    ]
+                                },
+                                "unitCode": {
+                                    "title": "Unit Code",
+                                    "type": "string",
+                                    "cordra": {"type": {"handleReference": {"types": ["UnitOfMeasurement"]}}}
+                                },
                                 "rdfType": {
                                     "type": "string",
-                                    "description": "The RDF type for this field."
+                                    "description": "The RDF type for this field.",
+                                    "cordra": {"type": {"handleReference": {"types": ["DefinedTerm"]}}}
                                 }
                             },
                             "examples": ["{\n \"name\": \"registered\",\n \"type\": \"boolean\"\n}\n"]
@@ -795,9 +912,22 @@
                                         }
                                     }
                                 },
+                                "unitText": {
+                                    "title": "Unit Text",
+                                    "oneOf": [
+                                        {"type": "string"},
+                                        {"type": "null"}
+                                    ]
+                                },
+                                "unitCode": {
+                                    "title": "Unit Code",
+                                    "type": "string",
+                                    "cordra": {"type": {"handleReference": {"types": ["UnitOfMeasurement"]}}}
+                                },
                                 "rdfType": {
                                     "type": "string",
-                                    "description": "The RDF type for this field."
+                                    "description": "The RDF type for this field.",
+                                    "cordra": {"type": {"handleReference": {"types": ["DefinedTerm"]}}}
                                 }
                             },
                             "examples": ["{\n \"name\": \"extra\"\n \"type\": \"object\"\n}\n"]
@@ -879,9 +1009,22 @@
                                         ]}
                                     }
                                 },
+                                "unitText": {
+                                    "title": "Unit Text",
+                                    "oneOf": [
+                                        {"type": "string"},
+                                        {"type": "null"}
+                                    ]
+                                },
+                                "unitCode": {
+                                    "title": "Unit Code",
+                                    "type": "string",
+                                    "cordra": {"type": {"handleReference": {"types": ["UnitOfMeasurement"]}}}
+                                },
                                 "rdfType": {
                                     "type": "string",
-                                    "description": "The RDF type for this field."
+                                    "description": "The RDF type for this field.",
+                                    "cordra": {"type": {"handleReference": {"types": ["DefinedTerm"]}}}
                                 }
                             },
                             "examples": [
@@ -966,9 +1109,22 @@
                                         }
                                     }
                                 },
+                                "unitText": {
+                                    "title": "Unit Text",
+                                    "oneOf": [
+                                        {"type": "string"},
+                                        {"type": "null"}
+                                    ]
+                                },
+                                "unitCode": {
+                                    "title": "Unit Code",
+                                    "type": "string",
+                                    "cordra": {"type": {"handleReference": {"types": ["UnitOfMeasurement"]}}}
+                                },
                                 "rdfType": {
                                     "type": "string",
-                                    "description": "The RDF type for this field."
+                                    "description": "The RDF type for this field.",
+                                    "cordra": {"type": {"handleReference": {"types": ["DefinedTerm"]}}}
                                 }
                             },
                             "examples": [
@@ -1049,9 +1205,22 @@
                                         }
                                     }
                                 },
+                                "unitText": {
+                                    "title": "Unit Text",
+                                    "oneOf": [
+                                        {"type": "string"},
+                                        {"type": "null"}
+                                    ]
+                                },
+                                "unitCode": {
+                                    "title": "Unit Code",
+                                    "type": "string",
+                                    "cordra": {"type": {"handleReference": {"types": ["UnitOfMeasurement"]}}}
+                                },
                                 "rdfType": {
                                     "type": "string",
-                                    "description": "The RDF type for this field."
+                                    "description": "The RDF type for this field.",
+                                    "cordra": {"type": {"handleReference": {"types": ["DefinedTerm"]}}}
                                 }
                             },
                             "examples": ["{\n \"name\": \"options\"\n \"type\": \"array\"\n}\n"]
@@ -1116,9 +1285,22 @@
                                         "maximum": {"type": "string"}
                                     }
                                 },
+                                "unitText": {
+                                    "title": "Unit Text",
+                                    "oneOf": [
+                                        {"type": "string"},
+                                        {"type": "null"}
+                                    ]
+                                },
+                                "unitCode": {
+                                    "title": "Unit Code",
+                                    "type": "string",
+                                    "cordra": {"type": {"handleReference": {"types": ["UnitOfMeasurement"]}}}
+                                },
                                 "rdfType": {
                                     "type": "string",
-                                    "description": "The RDF type for this field."
+                                    "description": "The RDF type for this field.",
+                                    "cordra": {"type": {"handleReference": {"types": ["DefinedTerm"]}}}
                                 }
                             },
                             "examples": ["{\n \"name\": \"period\"\n \"type\": \"duration\"\n}\n"]
@@ -1174,9 +1356,22 @@
                                         }
                                     }
                                 },
+                                "unitText": {
+                                    "title": "Unit Text",
+                                    "oneOf": [
+                                        {"type": "string"},
+                                        {"type": "null"}
+                                    ]
+                                },
+                                "unitCode": {
+                                    "title": "Unit Code",
+                                    "type": "string",
+                                    "cordra": {"type": {"handleReference": {"types": ["UnitOfMeasurement"]}}}
+                                },
                                 "rdfType": {
                                     "type": "string",
-                                    "description": "The RDF type for this field."
+                                    "description": "The RDF type for this field.",
+                                    "cordra": {"type": {"handleReference": {"types": ["DefinedTerm"]}}}
                                 }
                             },
                             "examples": ["{\n \"name\": \"notes\",\n \"type\": \"any\"\n"]

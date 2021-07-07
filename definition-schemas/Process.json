@@ -86,33 +86,7 @@
                     ]}}}
                 }
             },
-            "supply": {
-                "type": "array",
-                "title": "Supply/Starting Materials",
-                "uniqueItems": true,
-                "items": {
-                    "type": "object",
-                    "title": "Supply/Starting Material",
-                    "properties": {
-                        "@type": {
-                            "type": "array",
-                            "default": [
-                                "HowToSupply",
-                                "mat:Material"
-                            ]
-                        },
-                        "identifier": {
-                            "type": "string",
-                            "cordra": {"type": {"handleReference": {"types": ["Material"]}}}
-                        },
-                        "name": {
-                            "type": "string",
-                            "title": "Name"
-                        },
-                        "requiredQuantity": {"$ref": "QuantitativeValue.json#/definitions/QuantitativeValue"}
-                    }
-                }
-            },
+            "supply": {"$ref": "processLinked.json#/definitions/supply"},
             "variableMeasured": {
                 "type": "array",
                 "title": "Variables Measured",
@@ -140,16 +114,7 @@
                     "$ref": "PropertyValue.json#/definitions/PropertyValue"
                 }
             },
-            "workExample": {
-                "type": "array",
-                "title": "Resulting Materials",
-                "uniqueItems": true,
-                "items": {
-                    "type": "string",
-                    "title": "Resulting Material",
-                    "cordra": {"type": {"handleReference": {"types": ["Material"]}}}
-                }
-            },
+            "workExample": {"$ref": "processLinked.json#/definitions/workExample"},
             "measurementTechnique": {"$ref": "measurementTechnique.json#/definitions/measurementTechnique"},
             "tool": {
                 "type": "array",
