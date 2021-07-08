@@ -421,7 +421,7 @@
             "type": "array",
             "default": [
                 "Dataset",
-                "mat:File"
+                "mat:MaterialStructure"
             ]
         },
         "@id": {
