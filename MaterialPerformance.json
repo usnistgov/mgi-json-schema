@@ -24,7 +24,7 @@
                 "type": "array",
                 "default": [
                     "Dataset",
-                    "mat:MaterialProperty"
+                    "mat:MaterialPerformance"
                 ]
             }
         },
