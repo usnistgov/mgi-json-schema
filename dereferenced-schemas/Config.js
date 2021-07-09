@@ -6,6 +6,8 @@ exports.staticMethods.contains = contains;
 exports.staticMethods.checkViewRequest = checkViewRequest;
 exports.staticMethods.viewResource = viewResource;
 
+var design = cordra.get('design');
+
 function getJSONLD(object, schema) {
     object.content["@context"] = schema["properties"]["@context"]["default"];
     object.content["@type"] = schema["properties"]["@type"]["default"];
@@ -32,26 +34,36 @@ function checkViewRequest(context) {
     return result;
 }
 
-function dereferenceListPublicTypes(idList) {
-    var design = cordra.get('design');
-    var objectList = [];
-    idList.forEach( function(referencedID) {
-        var referencedObject = cordra.get(referencedID);
+function dereferenceObjectPublicType(referencedID) {
+    var referencedObject = cordra.get(referencedID);
+    result = null;
+    if (referencedObject !== null) {
         if( contains(design.content.authConfig.defaultAcls.defaultAclRead,'public') ) {
-            objectList.push(referencedObject.content); 
+            result = referencedObject; 
         } else if( referencedObject.type in design.content.authConfig.schemaAcls) {
             if( contains(design.content.authConfig.schemaAcls[referencedObject.type].defaultAclRead,'public') ) {
-                objectList.push(referencedObject.content);
+                result = referencedObject;
             }
         } else {
             if('acl' in referencedObject) {
                 if('readers' in referencedObject.acl) {
                     var isPublic = contains(referencedObject.acl.readers,'public');
                     if(isPublic) {
-                        objectList.push(referencedObject.content); 
+                        result = referencedObject; 
                     }
                 }
             }
+        }
+    }
+    return result;
+}
+
+function dereferenceListPublicTypes(idList) {
+    var objectList = [];
+    idList.forEach( function(referencedID) {
+        var referencedObject = dereferenceObjectPublicType(referencedID);
+        if (referencedObject !== null) {
+            objectList.push(referencedObject.content);
         }
     });
     return objectList;
@@ -60,6 +72,19 @@ function dereferenceListPublicTypes(idList) {
 function viewResource(object, schema) {
     
     object.content.dereferencedProperties = [];
+    
+    if('metadata' in object.content) {
+        var createdBy = dereferenceObjectPublicType(object.content.metadata.createdBy);
+        if (createdBy !== null) {
+            object.content.dereferencedProperties.push('metadata.createdBy');
+            object.content.metadata.createdByFull = createdBy.content;
+        }
+        var modifiedBy = dereferenceObjectPublicType(object.content.metadata.modifiedBy);
+        if (modifiedBy !== null) {
+            object.content.dereferencedProperties.push('metadata.modifiedBy');
+            object.content.metadata.modifiedByFull = modifiedBy.content;
+        }
+    }
     
     for (var property in schema.properties) {
         
