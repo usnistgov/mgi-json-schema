@@ -18,16 +18,23 @@ function beforeSchemaValidation(object, context) {
     }
     object = config.staticMethods.getJSONLD(object, schema);
     delete object.content.metadata;
+    delete object.content.acl;
     return object;
 }
 
 function objectForIndexing(object, context) {
     object.content.metadata = object.metadata;
+    if ('acl' in object) {
+        object.content.acl = object.acl;
+    }
     return object;
 }
 
 function onObjectResolution(object, context) {
     object.content.metadata = object.metadata;
+    if ('acl' in object) {
+        object.content.acl = object.acl;
+    }
     if(config.staticMethods.checkViewRequest(context) === 'resource') {
         object = config.staticMethods.viewResource(object, schema);
         object.content.view = {};

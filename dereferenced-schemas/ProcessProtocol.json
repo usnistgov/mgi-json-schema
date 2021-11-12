@@ -508,6 +508,24 @@
                     "title": "Step Number",
                     "type": "number"
                 },
+                "image": {
+                    "type": "array",
+                    "title": "Image URLs",
+                    "uniqueItems": true,
+                    "items": {
+                        "type": "string",
+                        "title": "Image URL"
+                    }
+                },
+                "thumbnailUrl": {
+                    "type": "array",
+                    "title": "Thumbnail URLs",
+                    "uniqueItems": true,
+                    "items": {
+                        "type": "string",
+                        "title": "Thumbnail URL"
+                    }
+                },
                 "step": {
                     "type": "array",
                     "title": "Process Steps",

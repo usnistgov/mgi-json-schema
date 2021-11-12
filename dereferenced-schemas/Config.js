@@ -86,6 +86,15 @@ function viewResource(object, schema) {
         }
     }
     
+    if('acl' in object.content) {
+        if('readers' in object.content.acl) {
+            object.content.acl.readersFull = dereferenceListPublicTypes(object.content.acl.readers);
+        }
+        if('writers' in object.content.acl) {
+            object.content.acl.writersFull = dereferenceListPublicTypes(object.content.acl.writers);
+        }
+    }
+    
     for (var property in schema.properties) {
         
         if ( 'items' in schema.properties[property] ) {
