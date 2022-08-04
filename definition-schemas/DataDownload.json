@@ -15,9 +15,12 @@
                 "title": "Content URL"
             },
             "encodingFormat": {
-                "type": "string",
-                "title": "Data Type",
-                "cordra": {"type": {"handleReference": {"types": ["DataFormat"]}}}
+                "type": "array",
+                "items": {
+                    "type": "string",
+                    "title": "Data Type",
+                    "cordra": {"type": {"handleReference": {"types": ["DataFormat"]}}}
+                }
             }
         }
     }}

@@ -15,7 +15,8 @@
                 "default": [
                     "http://schema.org/",
                     {
-                        "mat": "https://pages.nist.gov/material-schema/"
+                        "mat": "https://pages.nist.gov/material-schema/",
+                        "@vocab": "https://pages.nist.gov/material-schema/user-defined/"
                     }
                 ]
             },
@@ -27,8 +28,14 @@
                 ]
             }
         },
-        {"$ref": "definition-schemas/CordraObjectID.json#/definitions/CordraObjectID"},
-        {"$ref": "definition-schemas/Thing.json#/definitions/Thing"},
-        {"$ref": "definition-schemas/DutyAction.json#/definitions/DutyAction"}
+        {
+            "$ref": "definition-schemas/CordraObjectID.json#/definitions/CordraObjectID"
+        },
+        {
+            "$ref": "definition-schemas/Thing.json#/definitions/Thing"
+        },
+        {
+            "$ref": "definition-schemas/DutyAction.json#/definitions/DutyAction"
+        }
     ]
 }
