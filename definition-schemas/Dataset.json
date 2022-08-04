@@ -53,7 +53,14 @@
             "hasPart": {"$ref": "datasetLinked.json#/definitions/hasPart"},
             "isPartOf": {"$ref": "datasetLinked.json#/definitions/isPartOf"},
             "isBasedOn": {"$ref": "datasetLinked.json#/definitions/isBasedOn"},
-            "exampleOfWork": {"$ref": "processLinked.json#/definitions/exampleOfWork"}
+            "exampleOfWork": {"$ref": "processLinked.json#/definitions/exampleOfWork"},
+            "distribution": {
+                "type": "array",
+                "title": "distribution",
+                "items": {
+                    "$ref": "DataDownload.json#/definitions/DataDownload"
+                }
+            }
         }
     }}
 }
