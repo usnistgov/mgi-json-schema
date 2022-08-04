@@ -21,7 +21,8 @@
                         "narrower": "skos:narrower",
                         "related": "skos:related",
                         "exactMatch": "skos:exactMatch",
-                        "closeMatch": "skos:closeMatch"
+                        "closeMatch": "skos:closeMatch",
+                        "@vocab": "https://pages.nist.gov/material-schema/user-defined/"
                     }
                 ]
             },
@@ -33,8 +34,14 @@
                 ]
             }
         },
-        {"$ref": "definition-schemas/CordraObjectID.json#/definitions/CordraObjectID"},
-        {"$ref": "definition-schemas/Thing.json#/definitions/Thing"},
-        {"$ref": "definition-schemas/DefinedTerm.json#/definitions/DefinedTerm"}
+        {
+            "$ref": "definition-schemas/CordraObjectID.json#/definitions/CordraObjectID"
+        },
+        {
+            "$ref": "definition-schemas/Thing.json#/definitions/Thing"
+        },
+        {
+            "$ref": "definition-schemas/DefinedTerm.json#/definitions/DefinedTerm"
+        }
     ]
 }

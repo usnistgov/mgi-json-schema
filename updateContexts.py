@@ -17,8 +17,9 @@ for fp in os.listdir("./"):
         # context[0] = "https://schema.org/docs/jsonldcontext.json"
         context[1]["@vocab"] = "https://pages.nist.gov/material-schema/user-defined/"
     elif isinstance(context, str):
-        # data["allOf"][0]["@context"]["default"] = "https://schema.org/docs/jsonldcontext.json"
-        pass
+        data["allOf"][0]["@context"]["default"] = [
+            "https://schema.org/", {"@vocab":"https://pages.nist.gov/material-schema/user-defined"}
+        ]
     else:
         print("ERROR "*5)
 

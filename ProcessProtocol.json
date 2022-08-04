@@ -18,7 +18,8 @@
                         "mat": "https://pages.nist.gov/material-schema/",
                         "measurementTechnique": "mat:measurementTechnique",
                         "parameterControlled": "mat:parameterControlled",
-                        "variableMeasured": "mat:variableMeasured"
+                        "variableMeasured": "mat:variableMeasured",
+                        "@vocab": "https://pages.nist.gov/material-schema/user-defined/"
                     }
                 ]
             },
@@ -30,9 +31,17 @@
                 ]
             }
         },
-        {"$ref": "definition-schemas/CordraObjectID.json#/definitions/CordraObjectID"},
-        {"$ref": "definition-schemas/Thing.json#/definitions/Thing"},
-        {"$ref": "definition-schemas/CreativeWork.json#/definitions/CreativeWork"},
-        {"$ref": "definition-schemas/Process.json#/definitions/Process"}
+        {
+            "$ref": "definition-schemas/CordraObjectID.json#/definitions/CordraObjectID"
+        },
+        {
+            "$ref": "definition-schemas/Thing.json#/definitions/Thing"
+        },
+        {
+            "$ref": "definition-schemas/CreativeWork.json#/definitions/CreativeWork"
+        },
+        {
+            "$ref": "definition-schemas/Process.json#/definitions/Process"
+        }
     ]
 }

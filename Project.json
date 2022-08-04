@@ -12,15 +12,26 @@
         {
             "@context": {
                 "type": "string",
-                "default": "http://schema.org/"
+                "default": [
+                    "https://schema.org/",
+                    {
+                        "@vocab": "https://pages.nist.gov/material-schema/user-defined"
+                    }
+                ]
             },
             "@type": {
                 "type": "string",
                 "default": "Project"
             }
         },
-        {"$ref": "definition-schemas/CordraObjectID.json#/definitions/CordraObjectID"},
-        {"$ref": "definition-schemas/Thing.json#/definitions/Thing"},
-        {"$ref": "definition-schemas/Project.json#/definitions/Project"}
+        {
+            "$ref": "definition-schemas/CordraObjectID.json#/definitions/CordraObjectID"
+        },
+        {
+            "$ref": "definition-schemas/Thing.json#/definitions/Thing"
+        },
+        {
+            "$ref": "definition-schemas/Project.json#/definitions/Project"
+        }
     ]
 }
