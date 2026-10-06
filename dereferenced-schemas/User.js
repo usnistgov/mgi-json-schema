@@ -7,14 +7,30 @@ exports.beforeSchemaValidation = beforeSchemaValidation;
 exports.objectForIndexing = objectForIndexing;
 exports.onObjectResolution = onObjectResolution;
 
+function validatePasswordComplexity(password) {
+    if (password.length < 12) {
+        throw "Password is too short. Min length 12 characters";
+    }
+    if (!/[a-z]/.test(password)) {
+        throw "Password must include at least one lowercase letter";
+    }
+    if (!/[A-Z]/.test(password)) {
+        throw "Password must include at least one uppercase letter";
+    }
+    if (!/[0-9]/.test(password)) {
+        throw "Password must include at least one number";
+    }
+    if (!/[^A-Za-z0-9]/.test(password)) {
+        throw "Password must include at least one special character";
+    }
+}
+
 function beforeSchemaValidation(object, context) {
     if (!object.content['@id']) object.content['@id'] = "";
     if (!object.content.password) object.content.password = "";
     var password = object.content.password;
     if (context.isNew || password) {
-        if (password.length < 8) {
-            throw "Password is too short. Min length 8 characters";
-        }
+        validatePasswordComplexity(password);
     }
     object = config.staticMethods.getJSONLD(object, schema);
     return object;
@@ -33,4 +49,3 @@ function onObjectResolution(object, context) {
     }
     return object;
 }
-
